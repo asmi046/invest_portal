@@ -9,4 +9,25 @@
 @import 'components/footer';
 @import 'components/forms';
 @import 'components/greeting-section';
+
+@import 'poor-eyesight/vizpanel';
+@import 'poor-eyesight/_common-viz';
+@import 'poor-eyesight/all-img';
+@import 'poor-eyesight/font-size-large';
+@import 'poor-eyesight/font-size-normal';
+@import 'poor-eyesight/font-size-very-large';
+@import 'poor-eyesight/theme-black';
+@import 'poor-eyesight/theme-blue';
+@import 'poor-eyesight/theme-white';
+@import 'poor-eyesight/theme-brown';
+@import 'poor-eyesight/theme-green';
+
 @import 'media';
+
+
+.vizpanel .inner{
+    max-width: 100%;
+}
+.vizpanel .vizpanel__block .vizpanel__block__btn.white-theme{
+    border: 1px solid black;
+}

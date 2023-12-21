@@ -1,0 +1,20 @@
+.theme_brown{
+    &.common-viz .news-vidget__container .btn {
+        color: var(--text-color);
+    }
+}
+// -----------------стили текущего сайта--------------------------
+.theme_brown{
+    .project-stage--completed::after {
+        border: none;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        background-image: url(http://127.0.0.1:5173/public/img/stages-checked-icon-beige.svg);
+    }
+    .project-cell-porgress {
+        .project-cell-porgress__text{
+            color: #4d4b43;
+        }
+    }
+}

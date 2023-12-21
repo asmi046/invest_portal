@@ -1,0 +1,58 @@
+.theme_black{
+    .vizpanel {
+        .vizpanel__block {
+            .vizpanel__block__btn{
+
+                &.white-theme {
+                }
+                &.black-theme {
+                    border: 2px solid #ffffff;
+                    &::after{
+                        visibility: visible;
+                    }
+                }
+            }
+            // .vizpanel .vizpanel__block .vizpanel__block__btn.vizpanel__block__btn-arrow::after
+            .vizpanel__block__btn{
+                &.switch-img,
+                &.regular-version{
+                    color: #000000;
+                }
+            }
+        }
+    }
+    .vizpanel-big-btn{
+        border: 3px solid var(--text-color);
+        background-color: var(--text-color);
+        box-shadow: inset 0 0 0 2px var(--bg-color);
+        color: var(--bg-color);
+
+        &:hover{
+            border: 3px solid var(--viz-yellow);
+            background-color: var(--viz-yellow);
+            box-shadow: inset 0 0 0 2px var(--bg-color);
+            color: var(--bg-color);
+        }
+    }
+}
+
+// -----------------стили текущего сайта------------------------
+.theme_black{
+    // #header {
+    //     .header__btn{
+    //         border: 1px solid var(--black);
+    //     }
+    // }
+    .project-stage--completed::after {
+        border: none;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        background-image: url(http://127.0.0.1:5173/public/img/stages-checked-icon-white.svg);
+    }
+    .project-cell-porgress {
+        .project-cell-porgress__text{
+            color: #000000;
+        }
+    }
+}

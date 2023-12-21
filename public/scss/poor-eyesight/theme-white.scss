@@ -1,0 +1,30 @@
+.theme_white{
+    .theme_white .vizpanel .vizpanel__block .vizpanel__block__btn.white-theme {
+        border: 2px solid #fff;
+      }
+
+    .vizpanel .vizpanel__block .white-theme.vizpanel__block__btn-arrow::after{
+        visibility: visible;
+    }
+}
+
+
+
+// -----------------стили текущего сайта--------------------------
+.theme_white {
+    .project-stage--completed::after {
+        border: none;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        background-image: url(http://127.0.0.1:5173/public/img/stages-checked-icon-black.svg);
+    }
+    .podpisant_wrapper {
+        .podpisant_blk{
+            &:hover{
+                background-color: #fffb00;
+                color: var(--black);
+            }
+        }
+    }
+}

@@ -57,9 +57,17 @@
             }
         }
     }
+    .gallery {
+        grid-gap: 1rem;
+    }
 }
 @media screen and (max-width: 950px){
     .indecators-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 900px){
+    .gallery--three {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -123,6 +131,14 @@
     .useful-resources-grid {
         grid-template-columns: 1fr;
         grid-gap: 1rem;
+    }
+    .gallery{
+        &--two {
+            grid-template-columns: 1fr;
+        }
+        &--three {
+            grid-template-columns: 1fr;
+        }
     }
 }
 @media screen and (max-width: 400px){

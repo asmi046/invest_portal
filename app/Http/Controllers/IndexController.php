@@ -21,4 +21,10 @@ class IndexController extends Controller
     public function about_gchp() {
         return view('about_gchp');
     }
+    public function presentationRegion() {
+        return view('presentationRegion');
+    }
+    public function industrial_sites() {
+        return view('industrial_sites');
+    }
 }

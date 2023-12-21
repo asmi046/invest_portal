@@ -1,0 +1,20 @@
+.theme_blue{
+    .vizpanel .vizpanel__block .blue-theme.vizpanel__block__btn-arrow::after{
+        visibility: visible;
+    }
+}
+// -----------------стили текущего сайта------------------------
+.theme_blue{
+    .project-stage--completed::after {
+        border: none;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        background-image: url(http://127.0.0.1:5173/public/img/stages-checked-icon-blue.svg);
+    }
+    .project-cell-porgress {
+        .project-cell-porgress__text{
+            color: #063462;
+        }
+    }
+}

@@ -535,3 +535,33 @@
         }
     }
 }
+
+
+.gallery {
+    display: grid;
+    grid-gap: 2rem;
+    &--two{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    &--three{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.gallery-item{
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-top: 60%;
+    box-sizing: border-box;
+    cursor: pointer;
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}

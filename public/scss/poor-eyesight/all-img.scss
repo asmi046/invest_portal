@@ -1,0 +1,84 @@
+.all-img_on {
+    .vizpanel .vizpanel__block .vizpanel__block__btn {
+        &.switch-img_off {
+            display: block;
+        }
+
+        &.switch-img_on {
+            display: none;
+        }
+    }
+    &.all-image-monochrome .hall-section {
+        background: var(--bg-color);
+    }
+}
+
+.all-img_off {
+
+    .vizpanel .vizpanel__block .vizpanel__block__btn {
+        &.switch-img_off {
+            display: none;
+        }
+
+        &.switch-img_on {
+            display: block;
+        }
+    }
+
+    img, .img {
+        display: none !important;
+    }
+
+    .logo img {
+        display: block !important;
+    }
+
+    .vizpanel .vizpanel__block .vizpanel__block__btn.vizpanel__block__btn__settings img {
+        display: block !important;
+    }
+
+}
+
+
+.all-image-color {
+    .switch-img__colored {
+        display: none !important;
+    }
+}
+
+.all-image-monochrome {
+    .switch-img__monochrome{
+        display: none !important;
+    }
+    img,
+    .img,
+    svg {
+        filter: grayscale(100%);
+    }
+
+}
+
+// ------------------------стили сайта-------------------
+.all-img_off {
+    .open-data::before,
+    .email-subscription::before,
+    .rss-subscription::before,
+    .link-estimation::before,
+    .link-transformation::before{
+        display: none;
+    }
+    .captcha-box__img{
+        img{
+            display: block !important;
+        }
+    }
+}
+.all-image-monochrome{
+    .open-data::before,
+    .email-subscription::before,
+    .rss-subscription::before,
+    .link-estimation::before,
+    .link-transformation::before{
+        filter: grayscale(100%);
+    }
+}

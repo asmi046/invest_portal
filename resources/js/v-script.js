@@ -122,7 +122,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
             loupeBtn.classList.remove('active');
             globalSearchForm.classList.remove('show');
         }
-
     });
 
 
@@ -146,6 +145,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
         });
     }
 
+    let sversion = document.querySelector('.sversion');
+    let regularVersion = document.querySelector('.regular-version');
+    sversion.addEventListener('click', function(){
+        document.body.classList.toggle('common-viz')
+    })
+    regularVersion.addEventListener('click', function(){
+        document.body.classList.toggle('common-viz')
+    })
 
 });
 
