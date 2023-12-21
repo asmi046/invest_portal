@@ -1,0 +1,114 @@
+
+.invest-map-section{
+    position: relative;
+    padding: 6rem 0;
+    margin-top: 10rem;
+    background-image: url(../img/region-map.webp);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: var(--light);
+    box-sizing: border-box;
+    &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(23, 23, 23, 0.5);
+    }
+    .section-title{
+        margin-bottom: 2rem;
+    }
+    .btn{
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+}
+
+.gus-support{
+    padding: 5rem 0;
+    text-align: center;
+    background-color: var(--bg-color);
+    // background-image: url(../img/gos-support.jpg);
+    // background-position: right center;
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    .section-title{
+        margin-bottom: 3rem;
+    }
+    .btn{
+        max-width: 200px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.section-space{
+    padding-top: 10rem;
+}
+
+.news-section{
+    .section-title{
+        margin-bottom: 3rem;
+    }
+    .subtitle{
+        margin: 0;
+        max-width: 600px;
+    }
+    .news-grid{
+        margin-top: 4rem;
+    }
+}
+
+.useful-resources-section{
+
+    .section-title{
+
+    }
+}
+.news-page-section{
+    .inner{
+        &>.back-link{
+            margin-bottom: 2rem;
+        }
+    }
+    .page-photo{
+        img{
+            max-height: 800px;
+            object-fit: contain;
+            object-position: center center;
+        }
+    }
+}
+
+.section-with-submenu{
+    .inner{
+        display: flex;
+        gap: 3rem;
+
+    }
+    .section-with-submenu__content{
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        min-width: 0;
+    }
+    .section-with-submenu__submenu{
+        .submenu{
+            width: 300px;
+        }
+    }
+}
+
+.about-gchp-section{
+    .btn{
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+    }
+}

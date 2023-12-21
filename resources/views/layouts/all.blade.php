@@ -32,8 +32,9 @@
     ])
 </head>
 <body>
-
-    @yield('main')
-
+    <main id="main">
+        @yield('main')
+    </main>
+    <x-footer></x-footer>
 </body>
 </html>

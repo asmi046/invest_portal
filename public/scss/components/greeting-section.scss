@@ -1,0 +1,113 @@
+.greeting-section{
+    .inner{
+        display: flex;
+        gap: 7rem;
+    }
+    .governor{
+        flex-shrink: 0;
+        // display: flex;
+        // gap: 2rem;
+        // flex-direction: column;
+        max-width: 300px;;
+        width: 30%;
+
+        .governor__photo{
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+        .governor__name{
+            display: block;
+            // margin-bottom: 1rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+        .governor__position{
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: var(--grey-color);
+        }
+        .btn{
+            margin: 1rem 0;
+            width: 100%;
+        }
+        .governor__contact-list{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            li{
+                font-weight: 500;
+                &:not(:first-child){
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+    }
+    .governor-message{
+        flex-grow: 1;
+        width: 70%;
+        .governor-message__title{
+            margin-top: 0;
+        }
+        p{
+            text-align: justify;
+        }
+    }
+}
+
+
+
+// =====================================
+@media screen and (max-width: 1024px){
+    .greeting-section {
+        .inner {
+            gap: 4rem;
+        }
+    }
+}
+@media screen and (max-width: 800px){
+    .greeting-section {
+        .inner {
+            gap: 2rem;
+        }
+        .governor-message {
+            width: 65%;
+        }
+        .governor {
+            width: 35%;
+        }
+    }
+}
+@media screen and (max-width: 640px){
+    .greeting-section {
+        .inner{
+            flex-direction: column;
+        }
+        .governor {
+            width: 100%;
+            max-width: 100%;
+            .governor__photo{
+                max-width: 350px;
+                margin: 0 auto;
+                margin-bottom: 2rem;
+                max-width: 90%;
+            }
+            .governor__name{
+                margin-bottom: 0.5rem;
+                font-size: 1.8rem;
+                text-align: center;
+            }
+            .governor__position{
+                text-align: center;
+            }
+            .governor__contact-list{
+                text-align: center;
+            }
+        }
+        .governor-message{
+            width: 100%;
+        }
+    }
+}

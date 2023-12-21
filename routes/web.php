@@ -16,3 +16,11 @@ use App\Http\Controllers\IndexController;
 */
 
 Route::get('/', [IndexController::class, "index"])->name('home');
+
+Route::get('/news-page', [IndexController::class, "news_page"])->name('news_page');
+
+Route::get('/news-list', [IndexController::class, "news_list"])->name('news_list');
+
+Route::get('/socio-economic-development', [IndexController::class, "socioEconomicDevelopment"])->name('socioEconomicDevelopment');
+
+Route::get('/about-gchp', [IndexController::class, "about_gchp"])->name('about_gchp');

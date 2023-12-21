@@ -1,0 +1,38 @@
+.search-form{
+    position: relative;
+    .search-field{
+        display: block;
+        width: 100%;
+        border: 1px solid var(--light);
+        border-radius: 6px;
+        padding: 1rem 1.5rem;
+        padding-right: 4rem;
+        min-height: 4rem;
+        box-sizing: border-box;
+    }
+    .search-form__loupe-btn{
+        position: absolute;
+        display: block;
+        right: 1.5rem;
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        background-color: var(--black);
+        -webkit-mask-image: url(../img/loup-icon.svg);
+        mask-image: url(../img/loup-icon.svg);
+        -webkit-mask-size: contain;
+                mask-size: contain;
+        -webkit-mask-position: center center;
+                mask-position: center center;
+        -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+        transform: translate(-50%, -50%);
+        transition: var(--great-transition);
+        transform: translateY(-50%);
+        transition: var(--great-transition);
+        &:hover{
+            background-color: var(--blue-color);
+        }
+    }
+}
+

@@ -1,3 +1,12 @@
-h1{
-    color:yellow;
-}
+@import 'fonts';
+@import 'global';
+@import 'typography';
+@import 'lightgallery-bundle';
+@import 'common';
+@import 'components/elements';
+@import 'components/sections';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/forms';
+@import 'components/greeting-section';
+@import 'media';
