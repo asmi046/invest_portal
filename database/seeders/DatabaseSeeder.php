@@ -17,7 +17,11 @@ class DatabaseSeeder extends Seeder
                 OptionSeeder::class,
                 MenuSeeder::class,
                 PageSeeder::class,
-                UserSeeder::class
+                UserSeeder::class,
+                AreaSeeder::class,
+                InvestDocumentSeeder::class,
+                NewsSeeder::class,
+                SupportSeeder::class
             ]
         );
 
