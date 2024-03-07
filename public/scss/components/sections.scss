@@ -1,51 +1,4 @@
 
-.invest-map-section{
-    position: relative;
-    padding: 6rem 0;
-    margin-top: 10rem;
-    background-image: url(../img/region-map.webp);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-    color: var(--light);
-    box-sizing: border-box;
-    &::before{
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-color: rgba(23, 23, 23, 0.5);
-    }
-    .section-title{
-        margin-bottom: 2rem;
-    }
-    .btn{
-        width: 100%;
-        max-width: 250px;
-        margin: 0 auto;
-    }
-}
-
-.gus-support{
-    padding: 5rem 0;
-    text-align: center;
-    background-color: var(--bg-color);
-    // background-image: url(../img/gos-support.jpg);
-    // background-position: right center;
-    // background-size: contain;
-    // background-repeat: no-repeat;
-    .section-title{
-        margin-bottom: 3rem;
-    }
-    .btn{
-        max-width: 200px;
-        width: 100%;
-        margin: 0 auto;
-    }
-}
 
 .section-space{
     padding-top: 10rem;
@@ -57,10 +10,15 @@
     }
     .subtitle{
         margin: 0;
-        max-width: 600px;
     }
     .news-grid{
         margin-top: 4rem;
+    }
+    .btn{
+        max-width: 26rem;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 6rem;
     }
 }
 
@@ -110,5 +68,106 @@
         width: 100%;
         margin: 0 auto;
         margin-bottom: 3rem;
+    }
+}
+
+.news-section, .advantages-section{
+    padding-bottom: 12rem;
+}
+.invest-map-link-section{
+    position: relative;
+    overflow: hidden;
+    .inner{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .invest-map-link__left-col{
+        position: relative;
+        padding-top: 140px;
+        padding-bottom: 130px;
+        padding-right: 7%;
+        background-color: var(--active);
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 100%;
+            width: 500%;
+            height: 100%;
+            background-color: var(--active);
+        }
+        .section-title{
+            color: var(--light);
+            margin-bottom: 4rem;
+        }
+        p{
+            font-size: 2rem;
+            color: var(--light);
+        }
+        .btn{
+            margin-top: 6rem;
+        }
+    }
+    .invest-map-link__left-right{
+        position: relative;
+        .invest-map-link__map{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+}
+
+.government-support-section{
+    position: relative;
+    overflow: hidden;
+    .inner{
+        display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    }
+    .government-support-section__left-col{
+        position: relative;
+        .government-support-section__img{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+
+    .government-support-section__right-col{
+        position: relative;
+        padding-top: 140px;
+        padding-bottom: 130px;
+        padding-left: 20%;
+        background-color: var(--active);
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            height: 100%;
+            background-color: var(--active);
+            width: 500%;
+        }
+        .section-title{
+            color: var(--light);
+            margin-bottom: 4rem;
+        }
+        p{
+            font-size: 2rem;
+            color: var(--light);
+        }
+        .btn {
+            margin-top: 6rem;
+        }
     }
 }

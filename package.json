@@ -10,5 +10,10 @@
         "laravel-vite-plugin": "^0.8.0",
         "sass": "^1.69.5",
         "vite": "^4.0.0"
+    },
+    "dependencies": {
+        "resize-observer-polyfill": "^1.5.1",
+        "simplebar": "^6.2.5",
+        "swiper": "^11.0.6"
     }
 }

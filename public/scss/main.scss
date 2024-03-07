@@ -3,11 +3,16 @@
 @import 'typography';
 @import 'lightgallery-bundle';
 @import 'common';
+
+
+@import 'components/icons';
+@import 'components/sliders';
 @import 'components/elements';
 @import 'components/sections';
 @import 'components/header';
 @import 'components/footer';
 @import 'components/forms';
+@import 'components/modals';
 @import 'components/greeting-section';
 
 @import 'poor-eyesight/vizpanel';

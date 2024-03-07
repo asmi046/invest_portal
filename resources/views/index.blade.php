@@ -46,10 +46,10 @@
             <h2 class="section-title">Основные показатели региона</h2>
             <div class="ip-tab indecators-tab">
                 <div class="ip-tab-controller">
-                    <button class="ip-tab-controller__btn active">Показатели региона</button>
-                    <button class="ip-tab-controller__btn">Промышленность</button>
-                    <button class="ip-tab-controller__btn">Сельское хозяйство</button>
-                    <button class="ip-tab-controller__btn">Строительство</button>
+                    <button class="ip-tab-controller__btn active">01 Показатели региона</button>
+                    <button class="ip-tab-controller__btn">02 Промышленность</button>
+                    <button class="ip-tab-controller__btn">03 Сельское хозяйство</button>
+                    <button class="ip-tab-controller__btn">04 Строительство</button>
                 </div>
                 <div class="ip-tab__display active">
                     <div class="indecators-grid">
@@ -274,7 +274,8 @@
             </h2>
             <div class="advantages-grid">
                 <div class="advantages">
-                    <span class="advantages__caption">
+                    <div class="advantages__icon sprout-icon"></div>
+                    <span class="advantages__caption ">
                         Природные ресурсы
                     </span>
                     <span class="advantages__description">
@@ -282,6 +283,7 @@
                     </span>
                 </div>
                 <div class="advantages">
+                    <div class="advantages__icon mapmarker-icon"></div>
                     <span class="advantages__caption">
                         Энергообеспеченность
                     </span>
@@ -290,6 +292,7 @@
                     </span>
                 </div>
                 <div class="advantages">
+                    <div class="advantages__icon lamp-icon"></div>
                     <span class="advantages__caption">
                         Логистика
                     </span>
@@ -298,6 +301,7 @@
                     </span>
                 </div>
                 <div class="advantages">
+                    <div class="advantages__icon truck-icon"></div>
                     <span class="advantages__caption">
                         Географическое положение
                     </span>
@@ -308,21 +312,20 @@
             </div>
         </div>
     </section>
-    <section class="invest-map-section">
+    <section class="invest-map-link-section">
         <div class="inner">
-            <h2 class="section-title">Инвестиционная карта региона</h2>
-            <p>
-                Наглядно представить экономические возможности региона помогает интерактивная инвестиционная карта Курской области
-            </p>
-            <button class="btn btn--white">Открыть карту</button>
-        </div>
-    </section>
-    <section class="gus-support">
-        <div class="inner">
-            <h2 class="section-title">
-                Получить государственную поддержку
-            </h2>
-            <a href="#" class="btn">Узнайте как</a>
+            <div class="invest-map-link__left-col">
+                <h2 class="section-title">
+                    Инвестиционная карта региона
+                </h2>
+                <p>
+                    Наглядно представить экономические возможности региона помогает интерактивная инвестиционная карта Курской области
+                </p>
+                <a href="#" class="btn btn--white-hollow">Открыть карту</a>
+            </div>
+            <div class="invest-map-link__left-right">
+                <img src="{{asset('img/region-map.jpg')}}" aria-hidden="true" alt="" class="invest-map-link__map">
+            </div>
         </div>
     </section>
     <section class="news-section section-space">
@@ -330,94 +333,161 @@
             <h2 class="section-title">Новости портала</h2>
             <p class="subtitle">Актуальная информация об экономике региона, как для жителей области, так и для потенциальных инвесторов.</p>
             <div class="news-grid">
-                <a href="{{route("news_page")}}" class="news">
+                <article  class="news">
+                    <img src="../img/news-img-1.jpg" class="news__news-img" alt="">
+                    <div class="news__content">
+                        <span class="news__date">05.02.2024</span>
+                        <h3 class="news__caption">
+                            <a href="{{route("news_page")}}">
+                                Курский бизнес поддержат грантами до 500 тысяч рублей
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="news__footer">
+                        <span class="hashtag">#бизнес</span>
+                        <span class="hashtag">#господдержка</span>
+                    </div>
+                </article>
+                <article  class="news">
                     <img src="../img/news-img.webp" class="news__news-img" alt="">
-                    <span class="news__content">
-                        <span class="news__date">08.12.2023</span>
-                        <span class="news__caption">
-                            Курская область в 2023 году досрочно внедрила Региональный экспортный стандарт 2.0
-                        </span>
-                    </span>
-                </a>
-                <a href="{{route("news_page")}}"  class="news">
+                    <div class="news__content">
+                        <span class="news__date">05.02.2024</span>
+                        <h3 class="news__caption">
+                            <a href="{{route("news_page")}}">
+                                Курская область в 2023 году досрочно внедрила Региональный экспортный стандарт 2.0
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="news__footer">
+                        <span class="hashtag">#бизнес</span>
+                        <span class="hashtag">#господдержка</span>
+                    </div>
+                </article>
+                <article  class="news">
+                    <img src="../img/news-img-2.jpg" class="news__news-img" alt="">
+                    <div class="news__content">
+                        <span class="news__date">02.02.2024</span>
+                        <h3 class="news__caption">
+                            <a href="{{route("news_page")}}">
+                                Итоги цифровой платформы «Мой экспорт» за 2023 год
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="news__footer">
+                        <span class="hashtag">#бизнес</span>
+                        <span class="hashtag">#господдержка</span>
+                    </div>
+                </article>
+                <article  class="news">
+                    <img src="../img/news-img-1.jpg" class="news__news-img" alt="">
+                    <div class="news__content">
+                        <span class="news__date">05.02.2024</span>
+                        <h3 class="news__caption">
+                            <a href="{{route("news_page")}}">
+                                Курский бизнес поддержат грантами до 500 тысяч рублей
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="news__footer">
+                        <span class="hashtag">#бизнес</span>
+                        <span class="hashtag">#господдержка</span>
+                    </div>
+                </article>
+                <article  class="news">
                     <img src="../img/news-img.webp" class="news__news-img" alt="">
-                    <span class="news__content">
-                        <span class="news__date">08.12.2023</span>
-                        <span class="news__caption">
-                            Курская область в 2023
-                        </span>
-                    </span>
-                </a>
-                <a href="{{route("news_page")}}"  class="news">
-                    <img src="../img/news-img.webp" class="news__news-img" alt="">
-                    <span class="news__content">
-                        <span class="news__date">08.12.2023</span>
-                        <span class="news__caption">
-                            Курская область в 2023 году досрочно внедрила Региональный экспортный стандарт 2.0
-                        </span>
-                    </span>
-                </a>
-                <a href="{{route("news_page")}}"  class="news">
-                    <img src="../img/news-img.webp" class="news__news-img" alt="">
-                    <span class="news__content">
-                        <span class="news__date">08.12.2023</span>
-                        <span class="news__caption">
-                            Курская область в 2023 году досрочно внедрила Региональный экспортный стандарт 2.0
-                        </span>
-                    </span>
-                </a>
-                <a href="{{route("news_page")}}"  class="news">
-                    <img src="../img/news-img.webp" class="news__news-img" alt="">
-                    <span class="news__content">
-                        <span class="news__date">08.12.2023</span>
-                        <span class="news__caption">
-                            Курская область в 2023 году досрочно внедрила Региональный экспортный стандарт 2.0
-                        </span>
-                    </span>
-                </a>
-                <a href="{{route("news_page")}}"  class="news">
-                    <img src="../img/news-img.webp" class="news__news-img" alt="">
-                    <span class="news__content">
-                        <span class="news__date">08.12.2023</span>
-                        <span class="news__caption">
-                            Курская область в 2023 году досрочно внедрила Региональный экспортный стандарт 2.0
-                        </span>
-                    </span>
-                </a>
+                    <div class="news__content">
+                        <span class="news__date">05.02.2024</span>
+                        <h3 class="news__caption">
+                            <a href="{{route("news_page")}}">
+                                Курская область в 2023 году досрочно внедрила Региональный экспортный стандарт 2.0
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="news__footer">
+                        <span class="hashtag">#бизнес</span>
+                        <span class="hashtag">#господдержка</span>
+                    </div>
+                </article>
+                <article  class="news">
+                    <img src="../img/news-img-2.jpg" class="news__news-img" alt="">
+                    <div class="news__content">
+                        <span class="news__date">02.02.2024</span>
+                        <h3 class="news__caption">
+                            <a href="{{route("news_page")}}">
+                                Итоги цифровой платформы «Мой экспорт» за 2023 год
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="news__footer">
+                        <span class="hashtag">#бизнес</span>
+                        <span class="hashtag">#господдержка</span>
+                    </div>
+                </article>
+            </div>
+            <a href="{{route('news_page')}}" class="btn">Все новости</a>
+        </div>
+    </section>
+    <section class="government-support-section">
+        <div class="inner">
+            <div class="government-support-section__left-col">
+                <img src="{{asset('img/government-support-section__img.jpg')}}" aria-hidden="true" alt="" class="government-support-section__img">
+            </div>
+            <div class="government-support-section__right-col">
+                <h2 class="section-title">
+                    Государственная поддержка
+                </h2>
+                <p>
+                    Узнайте, как получить поддержку от государства в виде субсидий, грантов, льготных кредитов
+                </p>
+                <a href="#" class="btn btn--white-hollow">Подробнее</a>
             </div>
         </div>
     </section>
     <section class="useful-resources-section section-space">
         <div class="inner">
             <h2 class="section-title">Полезные ресурсы</h2>
-            <div class="useful-resources-grid">
-                <a href="#" class="useful-resource">
-                    <img src="{{asset('img/logos/krko.webp')}}" alt="">
-                </a>
-                <a href="3" class="useful-resource">
-                    <img src="{{asset('img/logos/asi.svg')}}" alt="">
-                </a>
-                <a href="#" class="useful-resource">
-                    <img src="{{asset('img/logos/akitr.webp')}}" alt="">
-                </a>
-                <a href="#" class="useful-resource">
-                    <img src="{{asset('img/logos/gosservices.svg')}}" alt="">
-                </a>
-                <a href="#" class="useful-resource">
-                    <img src="{{asset('img/logos/kursk-gerb.webp')}}" alt="">
-                </a>
-                <a href="#" class="useful-resource">
-                    <img src="{{asset('img/logos/pr.svg')}}" alt="">
-                </a>
-                <a href="#" class="useful-resource">
-                    <img src="{{asset('img/logos/vcr.webp')}}" alt="">
-                </a>
-                <a href="#" class="useful-resource">
-                    <img src="{{asset('img/logos/nacproject.webp')}}" alt="">
-                </a>
-                <a href="#" class="useful-resource">
-                    <img src="{{asset('img/logos/corpmcp.webp')}}" alt="">
-                </a>
+
+            <div class="useful-resources-sl-box">
+                <!-- Slider main container -->
+                <div class="swiper useful-resources-sl">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                    <!-- Slides -->
+                        <div class="swiper-slide">
+                            <a href="#" class="useful-resource">
+                                <img src="{{asset('img/logos/krko.webp')}}" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="3" class="useful-resource">
+                                <img src="{{asset('img/logos/asi.svg')}}" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="useful-resource">
+                                <img src="{{asset('img/logos/akitr.webp')}}" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="useful-resource">
+                                <img src="{{asset('img/logos/akitr.webp')}}" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="useful-resource">
+                                <img src="{{asset('img/logos/akitr.webp')}}" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="useful-resource">
+                                <img src="{{asset('img/logos/akitr.webp')}}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
     </section>

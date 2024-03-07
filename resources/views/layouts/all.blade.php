@@ -36,5 +36,6 @@
         @yield('main')
     </main>
     <x-footer></x-footer>
+    <x-gread-shadow></x-gread-shadow>
 </body>
 </html>
