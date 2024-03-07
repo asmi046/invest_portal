@@ -182,7 +182,7 @@ class InvestDocumentSeeder extends Seeder
         ];
 
         foreach ($data_doc as $item) {
-            Storage::disk('public')->put("portal_documents/".$item['file'], file_get_contents(public_path('tmp/zakon_document/'.$item['file'])), 'public');
+            Storage::disk('public')->put("portal_documents/".$item['file'], file_get_contents(public_path('old_data/zakon_document/'.$item['file'])), 'public');
 
             DB::table("invest_documents")->insert(
                 [
