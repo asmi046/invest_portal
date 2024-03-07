@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\IndexController;
 
+use App\Http\Controllers\Page\PageController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,3 +30,7 @@ Route::get('/about-gchp', [IndexController::class, "about_gchp"])->name('about_g
 Route::get('/presentation-of-the-region', [IndexController::class, "presentationRegion"])->name('presentationRegion');
 
 Route::get('/industrial-sites', [IndexController::class, "industrial_sites"])->name('industrial_sites');
+
+//------------------------------
+
+Route::get('/page/{slug}', [PageController::class, "index"])->name('page');
