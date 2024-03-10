@@ -259,6 +259,21 @@ document.addEventListener('DOMContentLoaded', ()=>{
         investMapAutoWidthLeft(govementSupportImg);
     });
 
+         // работа видеоконтейнера
+
+         let nlPlayBtn = document.querySelectorAll('.video-box__video-play');
+         if(nlPlayBtn.length > 0){
+             nlPlayBtn.forEach(btn=>{
+                 btn.addEventListener('click', function(e){
+                     e.preventDefault();
+                     let video = this.previousElementSibling;
+                     video.setAttribute('controls', 'controls')
+                     video.play();
+                     this.remove();
+                 })
+             })
+         }
+
 
 });
 

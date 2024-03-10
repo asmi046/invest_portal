@@ -31,6 +31,7 @@ Route::get('/presentation-of-the-region', [IndexController::class, "presentation
 
 Route::get('/industrial-sites', [IndexController::class, "industrial_sites"])->name('industrial_sites');
 
+Route::get('/exemple', [IndexController::class, "exemple"])->name('exemple');
 //------------------------------
 
 Route::get('/page/{slug}', [PageController::class, "index"])->name('page');

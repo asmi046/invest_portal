@@ -9,6 +9,9 @@ class IndexController extends Controller
     public function index() {
         return view('index');
     }
+    public function exemple() {
+        return view('exemple');
+    }
     public function news_page() {
         return view('newsPage');
     }

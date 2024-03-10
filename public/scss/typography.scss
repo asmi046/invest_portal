@@ -1,16 +1,22 @@
-p{
+p, ul, ol{
     margin: 2rem 0;
-}
-
-a{
-    color: var(--active);
 }
 
 ul, ol{
     margin: 2rem 0;
-    padding-left: 1.8rem;
+    padding-left: 2rem;
     box-sizing: border-box;
+    li{
+        &::marker{
+            color: var(--active);
+        }
+    }
 }
+a{
+    color: var(--active);
+}
+
+
 h1, .h1{
     display: block;
     margin-bottom: 2rem;
@@ -59,18 +65,65 @@ h6, .h6{
     font-weight: 600;
     line-height: 1.2;
 }
-
+b{
+    font-weight: 600;
+}
+abbr{
+    text-decoration: none;
+    font-weight: 600;
+}
 .subtitle{
     font-size: 1.8rem;
     // color: var(--grey-color);
 }
-
-
+blockquote{
+    position: relative;
+    padding: 2rem 0 2rem 6rem;
+    margin: 0;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5rem;
+        height: 5rem;
+        background-color: var(--active);
+        -webkit-mask-image: url(../img/quote-svgrepo-com.svg);
+        mask-image: url(../img/quote-svgrepo-com.svg);
+        -webkit-mask-size: contain;
+                mask-size: contain;
+        -webkit-mask-position: center center;
+                mask-position: center center;
+        -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+        opacity: 0.5;
+    }
+    p{
+        margin-top: 0;
+    }
+    footer{
+        text-align: right;
+    }
+}
+.table-box{
+    position: relative;
+    margin: 2rem 0;
+    overflow: auto;
+}
+.table{
+    width: 99.9%;
+    th{
+        text-align: left;
+    }
+    th, td{
+        padding: 1rem;
+        border: 1px solid var(--black);
+        box-sizing: border-box;
+    }
+}
 // ================================
 @media screen and (max-width: 700px){
-    p {
-        margin: 1rem 0;
-    }
+
     h1, .h1{
         display: block;
         margin-bottom: 1rem;
@@ -118,9 +171,6 @@ h6, .h6{
 }
 
 @media screen and (max-width: 600px){
-    p {
-        margin: 1rem 0;
-    }
     h1, .h1{
         display: block;
         margin-bottom: 1rem;
@@ -164,5 +214,17 @@ h6, .h6{
         font-size: 1.8rem;
         font-weight: 600;
         line-height: 1.2;
+    }
+}
+@media screen and (max-width: 500px){
+    blockquote{
+        padding: 2rem 0 2rem 5rem;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0.5rem;
+            width: 5rem;
+            height: 5rem;
+        }
     }
 }

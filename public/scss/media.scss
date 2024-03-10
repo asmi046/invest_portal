@@ -236,6 +236,11 @@
     :root{
         font-size: 9px;
     }
+    .columns-box{
+        &--two-col{
+            grid-template-columns: 1fr;
+        }
+    }
 }
 @media screen and (max-width: 600px){
     #main {

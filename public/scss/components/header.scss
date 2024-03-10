@@ -50,20 +50,25 @@
         }
     }
     .header__bottom{
+
         flex-grow: 1;
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
         width: 100%;
-        padding-top: 2rem;
+        padding-top: 12rem;
         padding-bottom: 6rem;
         box-sizing: border-box;
         .inner{
+            // max-width: 1820px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             gap: 3rem;
+        }
+        .page-title, h1{
+            max-width: 1200px;
         }
         .btn{
             width: 100%;
@@ -897,6 +902,14 @@
     .side-menu {
         padding: 20px;
         padding-top: 70px;
+    }
+}
+@media screen and (max-width: 531px){
+
+    #header{
+        .header__bottom{
+            padding-top: 14rem;
+        }
     }
 }
 @media screen and (max-width: 520px){
