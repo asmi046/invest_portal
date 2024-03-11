@@ -24,6 +24,7 @@ h1, .h1{
     font-size: 4.3rem;
     font-weight: 500;
     line-height: 1.2;
+    color: var(--active);
 }
 h2, .h2{
     display: block;
@@ -32,6 +33,7 @@ h2, .h2{
     font-size: 3.8rem;
     font-weight: 500;
     line-height: 1.2;
+    color: var(--active);
 }
 h3, .h3{
     display: block;
@@ -40,6 +42,7 @@ h3, .h3{
     font-size: 3.2rem;
     font-weight: 500;
      line-height: 1.2;
+     color: var(--active);
 }
 h4, .h4{
     display: block;
@@ -48,6 +51,7 @@ h4, .h4{
     font-size: 2.8rem;
     font-weight: 500;
      line-height: 1.2;
+     color: var(--active);
 }
 h5, .h5{
     display: block;
@@ -56,6 +60,7 @@ h5, .h5{
     font-size: 2.2rem;
     font-weight: 500;
      line-height: 1.2;
+     color: var(--active);
 }
 h6, .h6{
     display: block;
@@ -64,6 +69,7 @@ h6, .h6{
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 1.2;
+    color: var(--active);
 }
 b{
     font-weight: 600;

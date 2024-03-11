@@ -38,6 +38,17 @@
             height: 25rem;
         }
     }
+    .section-with-submenu {
+        .inner {
+            flex-direction: column;
+        }
+        .section-with-submenu__submenu{
+            order: -1;
+            .submenu{
+                width: 100%;
+            }
+        }
+    }
 }
 @media screen and (max-width: 1024px){
     .indecators {
@@ -67,17 +78,7 @@
         padding-top: 6rem;
         padding-bottom: 8rem;
     }
-    .section-with-submenu {
-        .inner {
-            flex-direction: column;
-        }
-        .section-with-submenu__submenu{
-            order: -1;
-            .submenu{
-                width: 100%;
-            }
-        }
-    }
+
     .gallery {
         grid-gap: 1rem;
     }
