@@ -33,7 +33,7 @@
             </li>
         </ul>
     </div>
-    <div class="section-with-submenu about-gchp-section">
+    <div class="section-with-submenu">
         <div class="inner">
             <div class="section-with-submenu__content">
 
