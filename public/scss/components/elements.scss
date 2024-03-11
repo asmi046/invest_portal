@@ -389,7 +389,7 @@
     }
     a{
         &.active{
-            background-color: var(--light-blue-color);
+            background-color: var(--active);
             color: var(--light);
         }
         &:hover{
@@ -693,6 +693,7 @@
     padding: 0;
     // margin-bottom: 2rem;
     list-style-type: none;
+    font-size: 14px;
     li{
         position: relative;
         font-size: 1.4rem;

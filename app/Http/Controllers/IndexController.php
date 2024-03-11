@@ -2,22 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\News;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
     public function index() {
-        return view('index');
+        $main_news = News::orderBy('public_time', "DESC")->take(6)->get();
+
+        return view('index', ['main_news' => $main_news]);
     }
     public function exemple() {
         return view('exemple');
     }
-    public function news_page() {
-        return view('newsPage');
-    }
-    public function news_list() {
-        return view('newsList');
-    }
+
     public function socioEconomicDevelopment() {
         return view('socioEconomicDevelopment');
     }

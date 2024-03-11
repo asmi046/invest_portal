@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\IndexController;
+use App\Http\Controllers\NewsController;
 
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\Page\PageController;
 
 /*
@@ -19,9 +20,6 @@ use App\Http\Controllers\Page\PageController;
 
 Route::get('/', [IndexController::class, "index"])->name('home');
 
-Route::get('/news-page', [IndexController::class, "news_page"])->name('news_page');
-
-Route::get('/news-list', [IndexController::class, "news_list"])->name('news_list');
 
 Route::get('/socio-economic-development', [IndexController::class, "socioEconomicDevelopment"])->name('socioEconomicDevelopment');
 
@@ -35,3 +33,8 @@ Route::get('/exemple', [IndexController::class, "exemple"])->name('exemple');
 //------------------------------
 
 Route::get('/page/{slug}', [PageController::class, "index"])->name('page');
+
+//------------Новости------------
+
+Route::get('/news/{slug}', [NewsController::class, "page"])->name('news_page');
+Route::get('/news', [NewsController::class, "index"])->name('news_list');

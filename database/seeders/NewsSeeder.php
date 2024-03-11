@@ -137,12 +137,12 @@ class NewsSeeder extends Seeder
                 'dir' => "11_09_2023_10_36",
                 'seo_title' => "Максим Решетников: товарооборот России и Китая в 2023 году может превысить 200 млрд долларов",
                 'seo_description' => "Партнерские отношения России и Китая выходят на новый уровень благодаря продуктивному диалогу руководства двух стран. В результате интенсивных контактов"
-            ]
+            ],
 
         ];
         foreach ($data_news as $item){
             Storage::disk('public')->put("portal_news/".$item['img'], file_get_contents(public_path('old_data/news/'.$item['dir'].'/'.$item['img'])), 'public');
-            
+
             DB::table("news")->insert(
                 [
                     'title'=> $item['title'],

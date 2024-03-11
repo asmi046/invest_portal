@@ -170,6 +170,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\MoonShineServiceProvider::class,
         App\Providers\OptionsProvider::class,
+        App\Providers\HelpersLoadProvider::class,
     ])->toArray(),
 
     /*

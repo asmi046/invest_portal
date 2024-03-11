@@ -2,14 +2,15 @@
 
 namespace App\Providers;
 
+use View;
+use App\Models\Shop;
 use App\Models\Option;
 use App\Models\Category;
-use App\Models\Celebration;
-use App\Models\Shop;
-use Illuminate\Support\ServiceProvider;
 use App\Models\Menu\Menu;
+use App\Models\Celebration;
 
-use View;
+use App\Actions\MenuStructAction;
+use Illuminate\Support\ServiceProvider;
 
 class OptionsProvider extends ServiceProvider
 {
@@ -32,7 +33,8 @@ class OptionsProvider extends ServiceProvider
     {
         View::composer('*', function ($view) {
             $all_options = Option::all();
-            $menus = Menu::orderBy('order')->get();
+            $menusAction = new MenuStructAction();
+            $menus = $menusAction->handle();
 
             $opt = [];
 
@@ -40,7 +42,7 @@ class OptionsProvider extends ServiceProvider
                 $opt[$otion['name']] = $otion['value'];
             }
 
-            View::share('main_menu', $menus);
+            View::share('all_menu', $menus);
             View::share('options', $opt);
         });
     }

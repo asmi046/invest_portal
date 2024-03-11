@@ -328,103 +328,20 @@
             </div>
         </div>
     </section>
+
     <section class="news-section section-space">
         <div class="inner">
             <h2 class="section-title">Новости портала</h2>
             <p class="subtitle">Актуальная информация об экономике региона, как для жителей области, так и для потенциальных инвесторов.</p>
             <div class="news-grid">
-                <article  class="news">
-                    <img src="../img/news-img-1.jpg" class="news__news-img" alt="">
-                    <div class="news__content">
-                        <span class="news__date">05.02.2024</span>
-                        <h3 class="news__caption">
-                            <a href="{{route("news_page")}}">
-                                Курский бизнес поддержат грантами до 500 тысяч рублей
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="news__footer">
-                        <span class="hashtag">#бизнес</span>
-                        <span class="hashtag">#господдержка</span>
-                    </div>
-                </article>
-                <article  class="news">
-                    <img src="../img/news-img.webp" class="news__news-img" alt="">
-                    <div class="news__content">
-                        <span class="news__date">05.02.2024</span>
-                        <h3 class="news__caption">
-                            <a href="{{route("news_page")}}">
-                                Курская область в 2023 году досрочно внедрила Региональный экспортный стандарт 2.0
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="news__footer">
-                        <span class="hashtag">#бизнес</span>
-                        <span class="hashtag">#господдержка</span>
-                    </div>
-                </article>
-                <article  class="news">
-                    <img src="../img/news-img-2.jpg" class="news__news-img" alt="">
-                    <div class="news__content">
-                        <span class="news__date">02.02.2024</span>
-                        <h3 class="news__caption">
-                            <a href="{{route("news_page")}}">
-                                Итоги цифровой платформы «Мой экспорт» за 2023 год
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="news__footer">
-                        <span class="hashtag">#бизнес</span>
-                        <span class="hashtag">#господдержка</span>
-                    </div>
-                </article>
-                <article  class="news">
-                    <img src="../img/news-img-1.jpg" class="news__news-img" alt="">
-                    <div class="news__content">
-                        <span class="news__date">05.02.2024</span>
-                        <h3 class="news__caption">
-                            <a href="{{route("news_page")}}">
-                                Курский бизнес поддержат грантами до 500 тысяч рублей
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="news__footer">
-                        <span class="hashtag">#бизнес</span>
-                        <span class="hashtag">#господдержка</span>
-                    </div>
-                </article>
-                <article  class="news">
-                    <img src="../img/news-img.webp" class="news__news-img" alt="">
-                    <div class="news__content">
-                        <span class="news__date">05.02.2024</span>
-                        <h3 class="news__caption">
-                            <a href="{{route("news_page")}}">
-                                Курская область в 2023 году досрочно внедрила Региональный экспортный стандарт 2.0
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="news__footer">
-                        <span class="hashtag">#бизнес</span>
-                        <span class="hashtag">#господдержка</span>
-                    </div>
-                </article>
-                <article  class="news">
-                    <img src="../img/news-img-2.jpg" class="news__news-img" alt="">
-                    <div class="news__content">
-                        <span class="news__date">02.02.2024</span>
-                        <h3 class="news__caption">
-                            <a href="{{route("news_page")}}">
-                                Итоги цифровой платформы «Мой экспорт» за 2023 год
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="news__footer">
-                        <span class="hashtag">#бизнес</span>
-                        <span class="hashtag">#господдержка</span>
-                    </div>
-                </article>
+
+                @isset($main_news)
+                    @foreach ($main_news as $item)
+                        <x-news.card :item="$item"></x-news.card>
+                    @endforeach
+                @endisset
             </div>
-            <a href="{{route('news_page')}}" class="btn">Все новости</a>
+            <a href="{{route('news_list')}}" class="btn">Все новости</a>
         </div>
     </section>
     <section class="government-support-section">
