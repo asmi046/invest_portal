@@ -10,7 +10,7 @@
 @section('title', $title)
 @section('description', $description)
 
-<x-header-inner  :pageTitle="$pageTitle"></x-header-inner>
+<x-header-inner  :title="$title"></x-header-inner>
 
 @section('main')
     <div class="usual-section">

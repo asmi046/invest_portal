@@ -42,6 +42,7 @@ class OptionsProvider extends ServiceProvider
                 $opt[$otion['name']] = $otion['value'];
             }
 
+            // dd($menus);
             View::share('all_menu', $menus);
             View::share('options', $opt);
         });
