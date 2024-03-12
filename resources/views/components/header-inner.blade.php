@@ -3,7 +3,12 @@
 <x-menu.side-menu></x-menu.side-menu>
 
 
-<header id="header" style="background-image: url({{asset('img/ex-bg-header.jpg')}})">
+@if (isset($banner))
+    <header id="header" style="background-image: url({{asset('img/top_img/'.$banner)}})">
+@else
+    <header id="header" style="background-image: url({{asset('img/ex-bg-header.jpg')}})">
+@endif
+
     <div class="header__top">
         <div class="inner">
             <x-header.logo></x-header.logo>
