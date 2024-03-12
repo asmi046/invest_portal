@@ -15,15 +15,20 @@ class Page extends Model
     protected $fillable = [
         'title',
         'slug',
+        'template',
         'img',
         'description',
+        'images',
+        'files',
         'seo_title',
         'seo_description',
     ];
 
-    protected $allowedSorts = [
-        'title',
+    protected $casts = [
+        "files" => 'array',
+        "images" => 'array'
     ];
+
 
     public function setSlugAttribute($value)
     {

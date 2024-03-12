@@ -18,6 +18,13 @@ class PageSeeder extends Seeder
     public function run(): void
     {
 
+        $page_data = [
+            'Презентация региона' => [],
+            'Социально-экономическое развитие. Стратегия социально-экономического развития Курской области до 2030 года' => [
+
+
+            ],
+        ];
         // Storage::disk('public')->put("main_bnr.webp", file_get_contents(public_path('img/main_bnr.webp')), 'public');
 
         // DB::table("pages")->insert(
