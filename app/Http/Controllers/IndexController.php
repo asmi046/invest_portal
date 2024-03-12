@@ -3,14 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\News;
+use App\Models\PolResurs;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
     public function index() {
         $main_news = News::orderBy('public_time', "DESC")->take(6)->get();
-
-        return view('index', ['main_news' => $main_news]);
+        $resurces = PolResurs::all();
+        return view('index', [
+            'main_news' => $main_news,
+            'resurces' => $resurces
+        ]);
     }
     public function exemple() {
         return view('exemple');

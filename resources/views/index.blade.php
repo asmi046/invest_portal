@@ -1,8 +1,8 @@
 @extends('layouts.all')
 
 @php
-    $title = "Заголовок";
-    $description = "Дескрипшен";
+    $title = "Инвестиционный портал Курской области";
+    $description = "Привлекательный регион для осуществления эффективных международных проектов и инвестиционных программ.";
 @endphp
 
 @section('title', $title)
@@ -11,36 +11,8 @@
 <x-header></x-header>
 
 @section('main')
-    <section class="greeting-section">
-        <div class="inner">
-            <div class="governor">
-                <img src="{{asset('img/governor.jpg')}}" alt="" class="governor__photo">
-                <span class="governor__name">Роман Владимирович Старовойт</span>
-                <span class="governor__position">Губернатор Курской области</span>
-                <a href="#" class="btn" target="_blank">Написать губернатору</a>
-                <ul class="governor__contact-list">
-                    <li>Красная площадь, д.1, Курск</li>
-                    <li>+7 (4712) 70-21-21</li>
-                    <li><a href="mailto:glava@rkursk.ru">glava@rkursk.ru</a></li>
-                </ul>
-            </div>
-            <div class="governor-message">
-                <h2 class="h4 governor-message__title">Рад приветствовать Вас на Инвестиционном портале Курской области!</h2>
-                <p>
-                    Курская область – развитый и достаточно экологически чистый промышленно-аграрный регион, располагается в климатической зоне, благоприятной для ведения интенсивного земледелия и животноводства, обладает уникальными по объемам и разнообразию природными ресурсами, развитой транспортной инфраструктурой, высоким уровнем энергообеспеченности.
-                </p>
-                <p>
-                    Все это позволяет нашему региону быть привлекательным для осуществления эффективных международных проектов и инвестиционных программ.
-                </p>
-                <p>
-                    В регионе создано АО «Корпорация развития Курской области», осуществляющие работу по подбору земельных участков для создания промышленных парков и инвестиционных площадок, которые можно предложить потенциальным инвесторам для строительства предприятий промышленности. Работа с инвестором реализуется по принципу «одного окна». Действует Совет по улучшению инвестиционного климата и взаимодействию с инвесторами, основной задачей которого является принятие решений по наиболее важным вопросам в инвестиционной сфере.
-                </p>
-                <p>
-                    Ежегодно проводятся мероприятия, способствующие продвижению инвестиционного потенциала региона.
-                </p>
-            </div>
-        </div>
-    </section>
+    <x-main-page.gubernator></x-main-page.gubernator>
+
     <section class="indecators-section section-space">
         <div class="inner">
             <h2 class="section-title">Основные показатели региона</h2>
@@ -312,22 +284,9 @@
             </div>
         </div>
     </section>
-    <section class="invest-map-link-section">
-        <div class="inner">
-            <div class="invest-map-link__left-col">
-                <h2 class="section-title">
-                    Инвестиционная карта региона
-                </h2>
-                <p>
-                    Наглядно представить экономические возможности региона помогает интерактивная инвестиционная карта Курской области
-                </p>
-                <a href="#" class="btn btn--white-hollow">Открыть карту</a>
-            </div>
-            <div class="invest-map-link__left-right">
-                <img src="{{asset('img/region-map.jpg')}}" aria-hidden="true" alt="" class="invest-map-link__map">
-            </div>
-        </div>
-    </section>
+
+    <x-main-page.map-section></x-main-page.map-section>
+
 
     <section class="news-section section-space">
         <div class="inner">
@@ -344,22 +303,9 @@
             <a href="{{route('news_list')}}" class="btn">Все новости</a>
         </div>
     </section>
-    <section class="government-support-section">
-        <div class="inner">
-            <div class="government-support-section__left-col">
-                <img src="{{asset('img/government-support-section__img.jpg')}}" aria-hidden="true" alt="" class="government-support-section__img">
-            </div>
-            <div class="government-support-section__right-col">
-                <h2 class="section-title">
-                    Государственная поддержка
-                </h2>
-                <p>
-                    Узнайте, как получить поддержку от государства в виде субсидий, грантов, льготных кредитов
-                </p>
-                <a href="#" class="btn btn--white-hollow">Подробнее</a>
-            </div>
-        </div>
-    </section>
+
+    <x-main-page.gos-support></x-main-page.gos-support>
+
     <section class="useful-resources-section section-space">
         <div class="inner">
             <h2 class="section-title">Полезные ресурсы</h2>
@@ -370,36 +316,9 @@
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                     <!-- Slides -->
-                        <div class="swiper-slide">
-                            <a href="#" class="useful-resource">
-                                <img src="{{asset('img/logos/krko.webp')}}" alt="">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="3" class="useful-resource">
-                                <img src="{{asset('img/logos/asi.svg')}}" alt="">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="useful-resource">
-                                <img src="{{asset('img/logos/akitr.webp')}}" alt="">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="useful-resource">
-                                <img src="{{asset('img/logos/akitr.webp')}}" alt="">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="useful-resource">
-                                <img src="{{asset('img/logos/akitr.webp')}}" alt="">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="useful-resource">
-                                <img src="{{asset('img/logos/akitr.webp')}}" alt="">
-                            </a>
-                        </div>
+                        @foreach ($resurces as $item)
+                            <x-resurc.card :item="$item"></x-resurc.card>
+                        @endforeach
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>

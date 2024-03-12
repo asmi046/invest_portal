@@ -1,5 +1,5 @@
 <span class="anniversary"></span>
-<a href="#" class="logo">
+<a href="{{ route('home')}}" class="logo">
     <img src="{{asset('img/logo.svg')}}" alt="" class="logo__img">
     <span class="logo__text">
         <span class="upp">Инвестиционный портал </span>

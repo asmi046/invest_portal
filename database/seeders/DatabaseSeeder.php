@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
                 PageSeeder::class,
                 UserSeeder::class,
                 // AreaSeeder::class,
+                PolResursSeeder::class,
                 InvestDocumentSeeder::class,
                 NewsSeeder::class,
                 SupportSeeder::class

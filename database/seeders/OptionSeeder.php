@@ -19,45 +19,100 @@ class OptionSeeder extends Seeder
         DB::table("options")->insert(
             [
                 [
-                    "name" => "phone",
+                    "name" => "gubernator_message",
                     "type" => "plan",
-                    'title' => 'Телефон',
-                    "value" => "+7 000 000 00 00",
+                    'title' => 'Написать губернатору',
+                    "value" => "https://og.rkursk.ru/send",
                 ],
+
                 [
-                    "name" => "phone2",
+                    "name" => "gubernator_name",
                     "type" => "plan",
-                    'title' => 'Телефон дополнительный',
-                    "value" => "+7 000 000 00 00",
+                    'title' => 'Имя губернатора',
+                    "value" => "Роман Владимирович Старовойт",
+                ],
+
+                [
+                    "name" => "gubernator_email",
+                    "type" => "plan",
+                    'title' => 'E-mail губернатора',
+                    "value" => "glava@rkursk.ru",
+                ],
+
+                [
+                    "name" => "gubernator_phone",
+                    "type" => "plan",
+                    'title' => 'Телефон губернатора',
+                    "value" => "+7 (4712) 70-21-21",
+                ],
+
+                [
+                    "name" => "gubernator_adres",
+                    "type" => "plan",
+                    'title' => 'Адрес губернатора',
+                    "value" => "Красная площадь, д.1, Курск",
+                ],
+
+                [
+                    "name" => "gubernator_text",
+                    "type" => "rich",
+                    'title' => 'Текст о губернаторе',
+                    "value" => file_get_contents(public_path('old_data//main.html')),
+                ],
+
+                //-------------------------
+
+                [
+                    "name" => "invest_map_lnk",
+                    "type" => "plan",
+                    'title' => 'Ссылка на инвестиционную карту',
+                    "value" => "https://map.kurskoblinvest.ru/",
+                ],
+
+                //-------------------------Контакты
+
+                [
+                    "name" => "adress",
+                    "type" => "plan",
+                    'title' => 'Адрес коммитета',
+                    "value" => "Моковская, 11а, Курск, Россия",
                 ],
 
                 [
                     "name" => "email",
                     "type" => "plan",
-                    'title' => 'email',
-                    "value" => "info@mail.com",
+                    'title' => 'E-mail коммитета',
+                    "value" => "komitet46ec@yandex.ru",
+                ],
+
+                [
+                    "name" => "hotline",
+                    "type" => "plan",
+                    'title' => 'Телефон горячей линни',
+                    "value" => "+7 (4712) 330 750",
+                ],
+
+                [
+                    "name" => "hotline_dob",
+                    "type" => "plan",
+                    'title' => 'Добавочный номер горячей линни',
+                    "value" => "106",
                 ],
 
                 [
                     "name" => "tg_lnk",
                     "type" => "plan",
                     'title' => 'Ссылка на Telegram',
-                    "value" => "#",
+                    "value" => "https://t.me/econom46",
                 ],
 
                 [
                     "name" => "vk_lnk",
                     "type" => "plan",
                     'title' => 'Ссылка на Vk',
-                    "value" => "#",
+                    "value" => "https://vk.com/komeconom46",
                 ],
 
-                [
-                    "name" => "main_text",
-                    "type" => "rich",
-                    'title' => 'Текст на главной',
-                    "value" => file_get_contents(public_path('text//main.html')),
-                ],
 
             ]);
     }
