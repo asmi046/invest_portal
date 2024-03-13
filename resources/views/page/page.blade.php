@@ -8,8 +8,19 @@
 @section('title', $title)
 @section('description', $description)
 
+<x-header-inner :title="$title"></x-header-inner>
+
+
 @section('main')
-    <h1>{{$page->title}}</h1>
-    {!! $page->description !!}
+    <div class="section-with-submenu">
+        <div class="inner">
+            <x-breadcrumbs.main :page="$title" :parent="$parent"></x-breadcrumbs.main>
+
+            <div class="section-with-submenu__content">
+
+            </div>
+            <x-page.submenu :puncts="$puncts"></x-page.submenu>
+        </div>
+    </div>
 @endsection
 

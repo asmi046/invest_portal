@@ -3,7 +3,7 @@
     <ul class="main-menu">
         @foreach ($all_menu['Меню в шапке'] as $item)
             <li class="main-menu__parent-item">
-                <a href="{{ $item['item']['lnk'] }}">{{ $item['item']['title'] }}</a>
+                <a href="{{ $item['item']['lnk'] }}">{{ __($item['item']['title']) }}</a>
             </li>
         @endforeach
 

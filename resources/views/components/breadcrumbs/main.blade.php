@@ -20,11 +20,33 @@
                     </a>
                 </span>
 
+
                 <span class="sep"> / </span>
 
                 <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">
                     <span title="{{ $news }}" itemprop="item">
                         <span itemprop="name">{{ $news }}</span>
+                        <meta itemprop="position" content="2">
+                    </span>
+                </span>
+            @endif
+
+            @if (Request::route()->named('page'))
+                @if (isset($parent))
+                <span class="sep"> / </span>
+                    <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a title="{{$parent->title}}" itemprop="item" href="{{route('page', $parent->slug)}}">
+                            <span itemprop="name">{{$parent->title}}</span>
+                            <meta itemprop="position" content="1">
+                        </a>
+                    </span>
+                @endif
+
+                <span class="sep"> / </span>
+
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">
+                    <span title="{{ $page }}" itemprop="item">
+                        <span itemprop="name">{{ $page }}</span>
                         <meta itemprop="position" content="2">
                     </span>
                 </span>

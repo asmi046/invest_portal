@@ -26,25 +26,25 @@
                     <div class="header-sl__item header-sl-item" style="background-image: url({{asset('img/main-sl-1.jpg')}})">
                         <div class="inner">
                             <div class="header-sl-item__title">
-                                Курская область <br> это сельское хозяйство
+                                {!! __('Курская область <br> это сельское хозяйство') !!}
                             </div>
                             <div class="header-sl-item__parameters-box">
                                 <div class="header-sl-item-parameters">
                                     <span class="header-sl-item-parameters__value">5</span>
                                     <span class="header-sl-item-parameters__deskription">
-                                        млн. тонн сахарной свеклы
+                                        {!! __('млн. тонн сахарной свеклы') !!}
                                     </span>
                                 </div>
                                 <div class="header-sl-item-parameters">
                                     <span class="header-sl-item-parameters__value">427,6</span>
                                     <span class="header-sl-item-parameters__deskription">
-                                        тыс. тонн молока
+                                        {!! __('тыс. тонн молока') !!}
                                     </span>
                                 </div>
                                 <div class="header-sl-item-parameters">
                                     <span class="header-sl-item-parameters__value">163,3</span>
                                     <span class="header-sl-item-parameters__deskription">
-                                        млн. штук яиц
+                                        {!! __('млн. штук яиц') !!}
                                     </span>
                                 </div>
                             </div>
@@ -55,25 +55,26 @@
                     <div class="header-sl__item header-sl-item" style="background-image: url({{asset('img/main-sl-2.jpg')}})">
                         <div class="inner">
                             <div class="header-sl-item__title">
-                                Курская область <br> это строительство
+                                {!! __('Курская область <br> это строительство') !!}
                             </div>
                             <div class="header-sl-item__parameters-box">
                                 <div class="header-sl-item-parameters">
                                     <span class="header-sl-item-parameters__value">106,3 %</span>
                                     <span class="header-sl-item-parameters__deskription">
-                                        индекс физического объема работ, выполненных по виду деятельности «Строительство»
+                                        {{ __('индекс физического объема работ, выполненных по виду деятельности «Строительство»') }}
                                     </span>
                                 </div>
                                 <div class="header-sl-item-parameters">
                                     <span class="header-sl-item-parameters__value">517,1</span>
                                     <span class="header-sl-item-parameters__deskription">
-                                        тыс. м2 жилых домов введено в эксплуатацию
+                                        {{ __('тыс. м2 жилых домов введено в эксплуатацию') }}
                                     </span>
                                 </div>
                                 <div class="header-sl-item-parameters">
                                     <span class="header-sl-item-parameters__value">49,9</span>
                                     <span class="header-sl-item-parameters__deskription">
-                                        км. газовых труб введено в эксплуатацию
+
+                                        {{ __('км. газовых труб введено в эксплуатацию') }}
                                     </span>
                                 </div>
                             </div>

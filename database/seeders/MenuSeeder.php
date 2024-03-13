@@ -2,9 +2,10 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 use DB;
+use Illuminate\Support\Str;
+use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class MenuSeeder extends Seeder
 {
@@ -85,7 +86,7 @@ class MenuSeeder extends Seeder
                 if ($key === "main_lnk") continue;
                 $sub_element = [
                     'menu_name' => "Общее меню",
-                    'lnk' => $subitem,
+                    'lnk' => '/page/'.Str::slug($key),
                     'order' => $j,
                     'parent' => $p_id,
                     'title' => $key,
@@ -119,7 +120,7 @@ class MenuSeeder extends Seeder
                 if ($key === "main_lnk") continue;
                 $sub_element = [
                     'menu_name' => "Аналитика Курской области",
-                    'lnk' => $subitem,
+                    'lnk' => '/page/'.Str::slug($key),
                     'order' => $j,
                     'parent' => 0,
                     'title' => $key,
@@ -138,7 +139,7 @@ class MenuSeeder extends Seeder
                 if ($key === "main_lnk") continue;
                 $sub_element = [
                     'menu_name' => "Путь инвестора",
-                    'lnk' => $subitem,
+                    'lnk' => '/page/'.Str::slug($key),
                     'order' => $j,
                     'parent' => 0,
                     'title' => $key,
@@ -157,7 +158,7 @@ class MenuSeeder extends Seeder
                 if ($key === "main_lnk") continue;
                 $sub_element = [
                     'menu_name' => "Инвестиционные площадки",
-                    'lnk' => $subitem,
+                    'lnk' => '/page/'.Str::slug($key),
                     'order' => $j,
                     'parent' => 0,
                     'title' => $key,
@@ -176,7 +177,7 @@ class MenuSeeder extends Seeder
                 if ($key === "main_lnk") continue;
                 $sub_element = [
                     'menu_name' => "Навигатор мер поддержки",
-                    'lnk' => $subitem,
+                    'lnk' => '/page/'.Str::slug($key),
                     'order' => $j,
                     'parent' => 0,
                     'title' => $key,
@@ -195,7 +196,7 @@ class MenuSeeder extends Seeder
                 if ($key === "main_lnk") continue;
                 $sub_element = [
                     'menu_name' => "Экспертам АСИ",
-                    'lnk' => $subitem,
+                    'lnk' => '/page/'.Str::slug($key),
                     'order' => $j,
                     'parent' => 0,
                     'title' => $key,

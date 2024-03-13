@@ -8,7 +8,12 @@
     <ul class="submenu">
         @foreach ($puncts as $item)
             <li>
-                <a href="{{ $item->lnk }}">{{ $item->title }}</a>
+                @if ($item->lnk)
+                    <a href="{{ $item->lnk }}">{{ $item->title }}</a>
+                @else
+                    <a href="{{ route('page', $item->slug) }}">{{ $item->title }}</a>
+                @endif
+
             </li>
         @endforeach
 

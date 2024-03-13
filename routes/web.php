@@ -48,3 +48,11 @@ Route::get('/invest_areas', [GlobalPageController::class, "invest_areas"])->name
 Route::get('/invest_support', [GlobalPageController::class, "invest_support"])->name('global_invest_support');
 Route::get('/asi', [GlobalPageController::class, "asi"])->name('global_asi');
 
+
+Route::get('/leng/{locale}', function (string $locale) {
+    if (! in_array($locale, ['en', 'ru'])) {
+        abort(400);
+    }
+    session(['locale' => $locale]);
+    return redirect()->back();
+})->name('lang');
