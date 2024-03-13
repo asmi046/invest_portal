@@ -69,6 +69,13 @@ class OptionSeeder extends Seeder
                     "value" => "https://map.kurskoblinvest.ru/",
                 ],
 
+                [
+                    "name" => "kabinet_lnk",
+                    "type" => "plan",
+                    'title' => 'Ссылка на личный кабинет',
+                    "value" => "https://investlk.rkursk.ru",
+                ],
+
                 //-------------------------Контакты
 
                 [
