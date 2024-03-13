@@ -7,7 +7,7 @@ import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
 import Simplebar from 'simplebar'; // or "import SimpleBar from 'simplebar';" if you want to use it manually.
-import 'simplebar/dist/simplebar.css';
+// import 'simplebar/dist/simplebar.css';
 
 document.addEventListener('DOMContentLoaded', ()=>{
 
