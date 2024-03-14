@@ -26,14 +26,14 @@
             <div class="footer-list-box footer-list-box--contacts">
                 <span class="footer-list-box__caption">Контакты</span>
                 <ul class="footer-list">
-                    <li>Адрес: {{ $options["adress"] }}</li>
-                    <li>Телефон: <a href="+7{{ phone_format($options['hotline']) }}"></a>{{ $options['hotline'] }} (доб. {{ $options['hotline_dob'] }})</li>
-                    <li>E-mail: <a href="mailto:{{ phone_format($options['email']) }}"></a>{{ phone_format($options['email']) }}</li>
+                    <li>Адрес: {{ $optionsa["adress"] }}</li>
+                    <li>Телефон: <a href="+7{{ phone_format($optionsa['hotline']) }}"></a>{{ $optionsa['hotline'] }} (доб. {{ $optionsa['hotline_dob'] }})</li>
+                    <li>E-mail: <a href="mailto:{{ phone_format($optionsa['email']) }}"></a>{{ phone_format($optionsa['email']) }}</li>
                 </ul>
                 <span class="footer-list-box__caption we-in-social">Мы в соцсетях</span>
                 <ul class="social-list">
-                    <li><a target="_blank" class="social-link social-link--vk" href="{{ phone_format($options['vk_lnk']) }}">ВКонтакте</a></li>
-                    <li><a target="_blank" class="social-link social-link--telegram" href="{{ phone_format($options['tg_lnk']) }}">Телеграм</a></li>
+                    <li><a target="_blank" class="social-link social-link--vk" href="{{ phone_format($optionsa['vk_lnk']) }}">ВКонтакте</a></li>
+                    <li><a target="_blank" class="social-link social-link--telegram" href="{{ phone_format($optionsa['tg_lnk']) }}">Телеграм</a></li>
                 </ul>
             </div>
             <div class="footer-list-box footer-list-box--social">
@@ -42,7 +42,7 @@
                     <li><a href="#">Контактная информация</a></li>
                     <li><a href="#">Линия прямых обращений</a></li>
                     <li><a href="#">Телефоны горячей линии</a></li>
-                    <li><a target="_blank" href="{{ phone_format($options['gubernator_message']) }}" class="btn btn--white-hollow">Написать губернатору</a></li>
+                    <li><a target="_blank" href="{{ phone_format($optionsa['gubernator_message']) }}" class="btn btn--white-hollow">Написать губернатору</a></li>
                 </ul>
             </div>
 

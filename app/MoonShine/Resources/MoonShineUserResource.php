@@ -76,19 +76,19 @@ class MoonShineUserResource extends ModelResource
                             ->required(),
                     ]),
 
-                    // Tab::make(__('moonshine::ui.resource.password'), [
-                    //     Heading::make('Change password'),
+                    Tab::make(__('moonshine::ui.resource.password'), [
+                        Heading::make('Change password'),
 
-                    //     Password::make(__('moonshine::ui.resource.password'), 'password')
-                    //         ->customAttributes(['autocomplete' => 'new-password'])
-                    //         ->hideOnIndex()
-                    //         ->eye(),
+                        Password::make(__('moonshine::ui.resource.password'), 'password')
+                            ->customAttributes(['autocomplete' => 'new-password'])
+                            ->hideOnIndex()
+                            ->eye(),
 
-                    //     PasswordRepeat::make(__('moonshine::ui.resource.repeat_password'), 'password_repeat')
-                    //         ->customAttributes(['autocomplete' => 'confirm-password'])
-                    //         ->hideOnIndex()
-                    //         ->eye(),
-                    // ]),
+                        PasswordRepeat::make(__('moonshine::ui.resource.repeat_password'), 'password_repeat')
+                            ->customAttributes(['autocomplete' => 'confirm-password'])
+                            ->hideOnIndex()
+                            ->eye(),
+                    ]),
                 ]),
             ]),
         ];

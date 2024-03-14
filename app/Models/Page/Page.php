@@ -15,6 +15,7 @@ class Page extends Model
     protected $fillable = [
         'title',
         'slug',
+        'parent',
         'template',
         'img',
         'description',
@@ -28,6 +29,11 @@ class Page extends Model
         "files" => 'array',
         "images" => 'array'
     ];
+
+    public function parent_page()
+    {
+        return $this->BelongsTo(Page::class, 'parent');
+    }
 
 
     public function setSlugAttribute($value)

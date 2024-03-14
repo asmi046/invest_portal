@@ -7,7 +7,9 @@ namespace App\Providers;
 use MoonShine\MoonShine;
 use MoonShine\Menu\MenuItem;
 use MoonShine\Menu\MenuGroup;
+use App\MoonShine\Resources\PageResource;
 use App\MoonShine\Resources\OptionResource;
+use App\MoonShine\Resources\UserTestResource;
 use App\MoonShine\Resources\MoonShineUserResource;
 use App\MoonShine\Resources\MoonShineUserRoleResource;
 use MoonShine\Providers\MoonShineApplicationServiceProvider;
@@ -43,6 +45,10 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
                 new OptionResource()
             ),
 
+            MenuItem::make(
+                "Страницы",
+                new PageResource()
+            ),
         ];
     }
 

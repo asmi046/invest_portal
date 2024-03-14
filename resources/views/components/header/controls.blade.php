@@ -14,6 +14,6 @@
     </div>
 
     <button class="header-control-btn header-control-btn--poor-eyesight "></button>
-    <a href="{{ $options['kabinet_lnk'] }}" class="header-control-btn header-control-btn--lk"></a>
+    <a href="{{ $optionsa['kabinet_lnk'] }}" class="header-control-btn header-control-btn--lk"></a>
     <button class="boorger-btn header-control-btn "><span class="boorger-btn__icon"><span></span></span></button>
 </div>
