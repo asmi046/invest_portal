@@ -35,6 +35,7 @@ class OptionsProvider extends ServiceProvider
             $all_options = Option::all();
             $menusAction = new MenuStructAction();
             $menus = $menusAction->handle();
+            // $menus = [];
 
             $opt = [];
 

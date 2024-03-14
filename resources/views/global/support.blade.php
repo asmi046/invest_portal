@@ -13,10 +13,13 @@
 @section('main')
     <div class="section-with-submenu">
         <div class="inner">
-            <x-breadcrumbs.main :title="$title"></x-breadcrumbs.main>
+
 
             <div class="section-with-submenu__content">
-
+                <x-breadcrumbs.main :title="$title"></x-breadcrumbs.main>
+                @isset($info)
+                    {!! $info->description !!}
+                @endisset
             </div>
             <x-page.submenu title="Подробнее:" :puncts="$puncts"></x-page.submenu>
         </div>

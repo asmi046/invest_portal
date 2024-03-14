@@ -8,14 +8,16 @@
 @section('title', $title)
 @section('description', $description)
 
-<x-header-inner banner="analitics.webp" :title="$title"></x-header-inner>
+<x-header-inner banner="img/top_img/analitics.webp" :title="$title"></x-header-inner>
 
 @section('main')
     <div class="section-with-submenu">
         <div class="inner">
-            <x-breadcrumbs.main :title="$title"></x-breadcrumbs.main>
-
             <div class="section-with-submenu__content">
+                <x-breadcrumbs.main :title="$title"></x-breadcrumbs.main>
+                @isset($info)
+                    {!! $info->description !!}
+                @endisset
 
             </div>
             <x-page.submenu title="Подробнее:" :puncts="$puncts"></x-page.submenu>

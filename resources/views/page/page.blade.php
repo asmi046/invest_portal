@@ -8,15 +8,20 @@
 @section('title', $title)
 @section('description', $description)
 
-<x-header-inner :title="$title"></x-header-inner>
-
+<x-header-inner :banner="$page->banner" :title="$title"></x-header-inner>
 
 @section('main')
     <div class="section-with-submenu">
         <div class="inner">
-            <x-breadcrumbs.main :page="$title" :parent="$parent"></x-breadcrumbs.main>
-
             <div class="section-with-submenu__content">
+                <x-breadcrumbs.main :page="$title" :parent="$parent"></x-breadcrumbs.main>
+
+                @if($page->img)
+                    <a href="{{ $page->img }}" class="lg-gallery page-photo">
+                        <img src="{{$page->img}}" alt="">
+                    </a>
+                @endif
+                {!! $page->description !!}
 
             </div>
             <x-page.submenu :puncts="$puncts"></x-page.submenu>

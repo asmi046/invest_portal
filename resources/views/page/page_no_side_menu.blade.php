@@ -8,8 +8,7 @@
 @section('title', $title)
 @section('description', $description)
 
-<x-header-inner :title="$title"></x-header-inner>
-
+<x-header-inner :banner="$page->banner" :title="$title"></x-header-inner>
 
 @section('main')
     <div class="news-page-section">

@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('slug')->comment('Слаг');
             $table->integer('parent')->default(0)->comment('Родительская страница');
             $table->string('template')->nullable()->comment('Имя шаблона');
-            $table->string('img')->nullable()->comment('Картинка баннера');
+            $table->string('banner')->nullable()->comment('Баннер');
+            $table->string('img')->nullable()->comment('Картинка страницы');
             $table->text('description')->nullable()->comment('Текст страницы');
             $table->json('images')->nullable()->comment('Галерея изображений');
             $table->json('files')->nullable()->comment('Файлы');

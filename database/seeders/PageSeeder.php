@@ -29,20 +29,8 @@ class PageSeeder extends Seeder
     public function run(): void
     {
 
-        $page_data = [
-            'Презентация региона' => [
-                "menu_marker" => "Презентация региона",
-                "text" => "presentattion.html",
-                "img" => "",
-                "banner" => "",
-            ],
 
-            'Социально-экономическое развитие. Стратегия социально-экономического развития Курской области до 2030 года' => [
-                "menu_marker" => "Социально-экономическое развитие",
-                "text" => "presentattion.html",
-                "img" => "",
-                "banner" => "",
-            ],
+        $page_data = [
 
             'Государственно-частное партнерство в Курской области' => [
                 "menu_marker" => "О ГЧП в регионе",
@@ -153,28 +141,67 @@ class PageSeeder extends Seeder
 
         ];
 
+        include 'PageArrays/HeadPage.php';
+        include 'PageArrays/sots-ekonom.php';
+
+        $page_data = array_merge(
+            $head_page,
+            $sots_ec,
+            $page_data
+        );
+
         foreach ($page_data as $key => $item){
+
+
+            $adding_item = [
+                'title'=> $key,
+                'slug' => Str::slug($item['menu_marker']),
+                'description' => file_get_contents(public_path('old_data//pages//'.$item['text'])),
+                'seo_title' => $item["menu_marker"],
+                'seo_description' => $key
+            ];
+
+            if (!empty($item['banner'])) {
+                Storage::disk('public')->put("page_banners/".$item['banner'], file_get_contents(public_path('old_data/pages/banners/'.$item['banner'])), 'public');
+                $adding_item['banner'] = Storage::url("page_banners/".$item['banner']);
+            }
+
+            if (!empty($item['img'])) {
+                Storage::disk('public')->put("page_images/".$item['img'], file_get_contents(public_path('old_data/pages/img/'.$item['img'])), 'public');
+                $adding_item['img'] = Storage::url("page_images/".$item['img']);
+            }
+
+
             $p_id = DB::table("pages")->insertGetId(
-                        [
-                            'title'=> $key,
-                            'slug' => Str::slug($item['menu_marker']),
-                            'description' => file_get_contents(public_path('old_data//pages//'.$item['text'])),
-                            'seo_title' => $item["menu_marker"],
-                            'seo_description' => $key
-                        ]
+                $adding_item
             );
 
             if (isset($item['subpage'])) {
+
+
+
                 foreach ($item['subpage'] as $sp_key => $subitem){
+                    $inserted_sub_item = [
+                        'title'=> $sp_key,
+                        'slug' => Str::slug($sp_key),
+                        'parent' => $p_id,
+                        'description' => file_get_contents(public_path('old_data//pages//'.$subitem['text'])),
+                        'seo_title' => $sp_key,
+                        'seo_description' => $sp_key
+                    ];
+
+                    if (!empty($subitem['banner'])) {
+                        Storage::disk('public')->put("page_banners/".$subitem['banner'], file_get_contents(public_path('old_data/pages/banners/'.$subitem['banner'])), 'public');
+                        $inserted_sub_item['banner'] = Storage::url("page_banners/".$subitem['banner']);
+                    }
+
+                    if (!empty($subitem['img'])) {
+                        Storage::disk('public')->put("page_images/".$subitem['img'], file_get_contents(public_path('old_data/pages/img/'.$subitem['img'])), 'public');
+                        $inserted_sub_item['img'] = Storage::url("page_images/".$subitem['img']);
+                    }
+
                     DB::table("pages")->insert(
-                        [
-                            'title'=> $sp_key,
-                            'slug' => Str::slug($sp_key),
-                            'parent' => $p_id,
-                            'description' => file_get_contents(public_path('old_data//pages//'.$item['text'])),
-                            'seo_title' => $sp_key,
-                            'seo_description' => $sp_key
-                        ]
+                        $inserted_sub_item
                     );
                 }
 

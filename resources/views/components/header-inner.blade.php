@@ -3,8 +3,8 @@
 <x-menu.side-menu></x-menu.side-menu>
 
 
-@if (isset($banner))
-    <header id="header" style="background-image: url({{asset('img/top_img/'.$banner)}})">
+@if (isset($banner) && !empty($banner))
+    <header id="header" style="background-image: url({{$banner}})">
 @else
     <header id="header" style="background-image: url({{asset('img/ex-bg-header.jpg')}})">
 @endif
