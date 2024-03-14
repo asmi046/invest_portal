@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\News;
 use App\Models\PolResurs;
 use Illuminate\Http\Request;
+use App\Actions\MenuStructAction;
 
 class IndexController extends Controller
 {
@@ -18,6 +19,11 @@ class IndexController extends Controller
     }
     public function exemple() {
         return view('exemple');
+    }
+
+    public function test() {
+        $menusAction = new MenuStructAction();
+        $menus = $menusAction->handle();
     }
 
     public function socioEconomicDevelopment() {
