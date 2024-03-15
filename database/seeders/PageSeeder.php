@@ -143,10 +143,12 @@ class PageSeeder extends Seeder
 
         include 'PageArrays/HeadPage.php';
         include 'PageArrays/sots-ekonom.php';
+        include 'PageArrays/support.php';
 
         $page_data = array_merge(
             $head_page,
             $sots_ec,
+            $support_pages,
             $page_data
         );
 
