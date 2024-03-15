@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('slug')->comment('Слаг');
             $table->string('type')->default("Общая")->comment('Тип');
             $table->string('img')->nullable()->comment('Картинка');
+            $table->string('innet_img')->nullable()->comment('Картинка презентации');
             $table->text('description')->nullable()->comment('Описание меры поддержки');
 
             $table->string('seo_title')->nullable()->comment('SEO заголовок');

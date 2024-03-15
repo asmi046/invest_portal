@@ -14,6 +14,7 @@ class Support extends Model
         'slug',
         'type',
         'img',
+        'innet_img',
         'description',
         'seo_title',
         'seo_description',
