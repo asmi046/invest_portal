@@ -56,7 +56,6 @@ class OptionsProvider extends ServiceProvider
                 return $menus;
             });
 
-
             View::share('all_menu', $menus);
             View::share('optionsa', $opt);
         });

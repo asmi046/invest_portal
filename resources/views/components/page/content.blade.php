@@ -1,4 +1,4 @@
-<x-breadcrumbs.main :page="$title" :parent="$parent"></x-breadcrumbs.main>
+
 
 @if($page->img)
     <a href="{{ $page->img }}" class="lg-gallery page-photo">

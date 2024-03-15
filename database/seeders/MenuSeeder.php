@@ -47,7 +47,7 @@ class MenuSeeder extends Seeder
 
             "Навигатор мер поддержки" => [
                 "main_lnk" => "/invest_support",
-                "Законодательство" => "#",
+                "Законодательство" => "/law",
                 "Меры господдержки" => "#",
             ],
 
@@ -83,9 +83,13 @@ class MenuSeeder extends Seeder
             $j = 0;
             foreach ($item as $key => $subitem) {
                 if ($key === "main_lnk") continue;
+
+                $m_lnk = ($subitem === "#")?'/page/'.Str::slug($key):$subitem;
+
+
                 $sub_element = [
                     'menu_name' => "Общее меню",
-                    'lnk' => '/page/'.Str::slug($key),
+                    'lnk' => $m_lnk,
                     'order' => $j,
                     'parent' => $p_id,
                     'title' => $key,
@@ -117,9 +121,12 @@ class MenuSeeder extends Seeder
             $j = 0;
             foreach ($item as $key => $subitem) {
                 if ($key === "main_lnk") continue;
+
+                $m_lnk = ($subitem === "#")?'/page/'.Str::slug($key):$subitem;
+
                 $sub_element = [
                     'menu_name' => "Аналитика Курской области",
-                    'lnk' => '/page/'.Str::slug($key),
+                    'lnk' => $m_lnk,
                     'order' => $j,
                     'parent' => 0,
                     'title' => $key,
@@ -136,9 +143,12 @@ class MenuSeeder extends Seeder
             $j = 0;
             foreach ($item as $key => $subitem) {
                 if ($key === "main_lnk") continue;
+
+                $m_lnk = ($subitem === "#")?'/page/'.Str::slug($key):$subitem;
+
                 $sub_element = [
                     'menu_name' => "Путь инвестора",
-                    'lnk' => '/page/'.Str::slug($key),
+                    'lnk' => $m_lnk,
                     'order' => $j,
                     'parent' => 0,
                     'title' => $key,
@@ -155,9 +165,12 @@ class MenuSeeder extends Seeder
             $j = 0;
             foreach ($item as $key => $subitem) {
                 if ($key === "main_lnk") continue;
+
+                $m_lnk = ($subitem === "#")?'/page/'.Str::slug($key):$subitem;
+
                 $sub_element = [
                     'menu_name' => "Инвестиционные площадки",
-                    'lnk' => '/page/'.Str::slug($key),
+                    'lnk' => $m_lnk,
                     'order' => $j,
                     'parent' => 0,
                     'title' => $key,
@@ -174,9 +187,12 @@ class MenuSeeder extends Seeder
             $j = 0;
             foreach ($item as $key => $subitem) {
                 if ($key === "main_lnk") continue;
+
+                $m_lnk = ($subitem === "#")?'/page/'.Str::slug($key):$subitem;
+
                 $sub_element = [
                     'menu_name' => "Навигатор мер поддержки",
-                    'lnk' => '/page/'.Str::slug($key),
+                    'lnk' => $m_lnk,
                     'order' => $j,
                     'parent' => 0,
                     'title' => $key,
@@ -193,9 +209,12 @@ class MenuSeeder extends Seeder
             $j = 0;
             foreach ($item as $key => $subitem) {
                 if ($key === "main_lnk") continue;
+
+                $m_lnk = ($subitem === "#")?'/page/'.Str::slug($key):$subitem;
+
                 $sub_element = [
                     'menu_name' => "Экспертам АСИ",
-                    'lnk' => '/page/'.Str::slug($key),
+                    'lnk' => $m_lnk,
                     'order' => $j,
                     'parent' => 0,
                     'title' => $key,

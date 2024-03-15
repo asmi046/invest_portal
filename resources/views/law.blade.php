@@ -11,17 +11,15 @@
 <x-header-inner :banner="$page->banner" :title="$title"></x-header-inner>
 
 @section('main')
-    <div class="section-with-submenu">
+    <div class="news-page-section">
         <div class="inner">
-            <div class="section-with-submenu__content">
-                <x-breadcrumbs.main :page="$title" :parent="$parent"></x-breadcrumbs.main>
 
-                <x-page.content
+            <x-breadcrumbs.main :title="$title"></x-breadcrumbs.main>
+
+            <x-page.content
                     :page="$page"
-                ></x-page.content>
+            ></x-page.content>
 
-            </div>
-            <x-page.submenu :puncts="$puncts"></x-page.submenu>
         </div>
     </div>
 @endsection

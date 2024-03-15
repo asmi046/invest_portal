@@ -13,10 +13,9 @@
 @section('main')
     <div class="news-page-section">
         <div class="inner">
+            <x-breadcrumbs.main :page="$title" :parent="$parent"></x-breadcrumbs.main>
 
             <x-page.content
-                    :title="$title"
-                    :parent="$parent"
                     :page="$page"
                 ></x-page.content>
 
