@@ -158,16 +158,21 @@ class AreaSeeder extends Seeder
             ],
         ];
         foreach ($data_area as $item){
-            Storage::disk('public')->put("portal_areas/".$item['img'], file_get_contents(public_path('old_data/areas/'.$item['dir'].'/'.$item['img'])), 'public');
+            $insert_item = [
+                'name' => $item['name'],
+                'description' => file_get_contents(public_path('old_data//areas//'.$item['dir'].'//text.html')),
+                'cadastral' => $item['cadastral'],
+                'lnk' => $item['lnk'],
+            ];
+
+            if (isset($item['img']) && !empty($item['img'])) {
+                Storage::disk('public')->put("portal_areas/".$item['img'], file_get_contents(public_path('old_data/areas/'.$item['dir'].'/'.$item['img'])), 'public');
+                $insert_item['img'] = $item['img'];
+            }
+
 
             DB::table("areas")->insert(
-                [
-                    'name' => $item['name'],
-                    'description' => file_get_contents(public_path('old_data//areas//'.$item['dir'].'//text.html')),
-                    'cadastral' => $item['cadastral'],
-                    'lnk' => $item['lnk'],
-                    'img' => Storage::url("portal_areas/".$item['img'])
-                ]
+                $insert_item
             );
         }
     }

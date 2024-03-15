@@ -6,6 +6,7 @@ use App\Http\Controllers\LawController;
 
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\CadastrController;
 use App\Http\Controllers\Page\PageController;
 use App\Http\Controllers\GlobalPageController;
 
@@ -51,6 +52,8 @@ Route::get('/invest_support', [GlobalPageController::class, "invest_support"])->
 Route::get('/asi', [GlobalPageController::class, "asi"])->name('global_asi');
 
 Route::get('/law', [LawController::class, "index"])->name('law');
+
+Route::get('/cadastr', [CadastrController::class, "index"])->name('cadastr');
 
 Route::get('/leng/{locale}', function (string $locale) {
     if (! in_array($locale, ['en', 'ru'])) {
