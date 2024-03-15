@@ -16,6 +16,8 @@ return new class extends Migration
             $table->timestamps();
             $table->string('title', 600)->comment("Название документа");
             $table->string('subtype')->comment("Раздел");
+            $table->string('title_en', 600)->nullable()->comment("Название документа (en)");
+            $table->string('subtype_en')->nullable()->comment("Раздел (en)");
             $table->string('file')->comment("Файл для скачивания");
         });
     }

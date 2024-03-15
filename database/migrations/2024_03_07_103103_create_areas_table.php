@@ -15,8 +15,10 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name')->comment('Имя участка');
+            $table->string('name_en')->nullable()->comment('Имя участка (en)');
             $table->string('cadastral')->comment('Кадастровый №');
             $table->text('description')->comment('Описание');
+            $table->text('description_en')->nullable()->comment('Описание (en)');
             $table->string('lnk')->comment('Ссылка на карту');
             $table->string('img')->nullable()->comment('Картинка карты');
         });
