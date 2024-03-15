@@ -14,14 +14,11 @@
     <div class="section-with-submenu">
         <div class="inner">
             <div class="section-with-submenu__content">
-                <x-breadcrumbs.main :page="$title" :parent="$parent"></x-breadcrumbs.main>
-
-                @if($page->img)
-                    <a href="{{ $page->img }}" class="lg-gallery page-photo">
-                        <img src="{{$page->img}}" alt="">
-                    </a>
-                @endif
-                {!! $page->description !!}
+                <x-page.content
+                    :title="$title"
+                    :parent="$parent"
+                    :page="$page"
+                ></x-page.content>
 
             </div>
             <x-page.submenu :puncts="$puncts"></x-page.submenu>

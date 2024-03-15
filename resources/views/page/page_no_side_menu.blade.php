@@ -13,14 +13,13 @@
 @section('main')
     <div class="news-page-section">
         <div class="inner">
-            <x-breadcrumbs.main :page="$title" :parent="$parent"></x-breadcrumbs.main>
 
-            @if($page->img)
-                <a href="{{ $page->img }}" class="lg-gallery page-photo">
-                    <img src="{{$page->img}}" alt="">
-                </a>
-            @endif
-            {!! $page->description !!}
+            <x-page.content
+                    :title="$title"
+                    :parent="$parent"
+                    :page="$page"
+                ></x-page.content>
+
         </div>
     </div>
 @endsection
