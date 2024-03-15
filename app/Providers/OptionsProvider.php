@@ -31,19 +31,32 @@ class OptionsProvider extends ServiceProvider
      */
     public function boot()
     {
+
+
         View::composer('*', function ($view) {
-            $all_options = Option::all();
-            $menusAction = new MenuStructAction();
-            $menus = $menusAction->handle();
-            // $menus = [];
 
-            $opt = [];
+            $opt = \Cache::rememberForever('all_opt', function () {
 
-            foreach ($all_options as $otion) {
-                $opt[$otion['name']] = $otion['value'];
-            }
+                $all_options = Option::all();
 
-            // dd($menus);
+                $opt = [];
+
+                foreach ($all_options as $otion) {
+                    $opt[$otion['name']] = $otion['value'];
+                }
+
+                return $opt;
+            });
+
+            $menus = \Cache::rememberForever('all_menues', function () {
+
+                $menusAction = new MenuStructAction();
+                $menus = $menusAction->handle();
+
+                return $menus;
+            });
+
+
             View::share('all_menu', $menus);
             View::share('optionsa', $opt);
         });

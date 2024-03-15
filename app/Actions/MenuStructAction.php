@@ -34,23 +34,23 @@ class MenuStructAction {
 
             $punct = [
                         'item' => $item,
-                        'submeny21' => []
+                        'submeny' => []
                     ];
 
             $menu_struct[$item->menu_name][] = $punct;
         }
 
         foreach ($menu_struct as $key => $item) {
+            $i = 0;
             foreach ($item as $sub_item) {
-                // $sub_item['submeny'] = Menu::where('menu_name', $key)
-                //     ->where('parent', $sub_item['item']->id)
-                //     ->orderBy('order',"DESC")
-                //     ->get();
+                $tmp = Menu::where('menu_name', $key)
+                    ->where('parent', $sub_item['item']->id)
+                    ->orderBy('order',"DESC")
+                    ->get();
 
-                $sub_item['submeny']["rrr"] = 1;
+                $menu_struct[$key][$i]['submeny'] = $tmp;
             }
         }
-        dd($menu_struct);
         return $menu_struct;
     }
 }
