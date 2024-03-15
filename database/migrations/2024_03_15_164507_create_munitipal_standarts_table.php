@@ -31,7 +31,7 @@ return new class extends Migration
             $table->string('glava_photo')->comment('Фото главы субъекта');
             $table->text('description')->nullable()->comment('Описание');
             $table->text('description_en')->nullable()->comment('Описание (en)');
-            $table->text('passport_files')->nullable()->comment('Паспорт муниципального образования');
+            $table->json('passport_files')->nullable()->comment('Паспорт муниципального образования');
         });
     }
 
