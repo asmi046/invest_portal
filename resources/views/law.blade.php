@@ -20,6 +20,19 @@
                     :page="$page"
             ></x-page.content>
 
+
+            @foreach ($docs as $key => $value)
+                <h4>{{ $key }}</h4>
+                <div class="columns-box columns-box--two-col">
+                    @foreach ($value as $item)
+                        <x-widget-file
+                        :lnk="$item->file"
+                        :title="$item->title"
+                        ></x-widget-file>
+                    @endforeach
+                </div>
+            @endforeach
+
         </div>
     </div>
 @endsection
