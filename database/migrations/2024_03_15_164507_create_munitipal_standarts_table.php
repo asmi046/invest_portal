@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('address')->comment('Адрес');
             $table->string('phone')->comment('Телефон');
             $table->string('site')->comment('Сайт');
-            $table->string('email')->comment('e-mail');
+            $table->string('email')->nullable()->comment('e-mail');
             $table->string('folder')->comment('Папка');
             $table->string('gerb')->comment('Герб');
             $table->string('glava_photo')->comment('Фото главы субъекта');
