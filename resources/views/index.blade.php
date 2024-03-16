@@ -8,9 +8,10 @@
 @section('title', $title)
 @section('description', $description)
 
-<x-header></x-header>
-
 @section('main')
+
+    <x-header></x-header>
+
     <x-main-page.gubernator></x-main-page.gubernator>
 
     <section class="indecators-section section-space">

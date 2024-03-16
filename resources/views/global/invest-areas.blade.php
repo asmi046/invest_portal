@@ -8,9 +8,10 @@
 @section('title', $title)
 @section('description', $description)
 
-<x-header-inner banner="img/top_img/areas.webp" :title="$title"></x-header-inner>
+
 
 @section('main')
+    <x-header-inner banner="img/top_img/areas.webp" :title="$title"></x-header-inner>
     <div class="section-with-submenu">
         <div class="inner">
             <div class="section-with-submenu__content">

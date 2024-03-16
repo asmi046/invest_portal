@@ -10,9 +10,10 @@
 @section('title', $title)
 @section('description', $description)
 
-<x-header-inner  :title="$pageTitle"></x-header-inner>
+
 
 @section('main')
+    <x-header-inner  :title="$pageTitle"></x-header-inner>
     <div class="usual-section">
         <div class="inner">
             <div class="gallery gallery--three lg-gallery mb3">

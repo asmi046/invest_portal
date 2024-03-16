@@ -33,6 +33,9 @@
     ])
 </head>
 <body>
+    <x-vizpanel.main></x-vizpanel.main>
+    <x-menu.side-menu></x-menu.side-menu>
+
     <main id="main">
         @yield('main')
     </main>

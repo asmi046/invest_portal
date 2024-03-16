@@ -10,9 +10,8 @@
 @section('title', $title)
 @section('description', $description)
 
-<x-header-inner  :title="$pageTitle"></x-header-inner>
-
 @section('main')
+    <x-header-inner :title="$pageTitle"></x-header-inner>
     <div class="section-with-submenu about-gchp-section">
         <div class="inner">
             <div class="section-with-submenu__content">

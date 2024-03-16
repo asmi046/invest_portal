@@ -8,9 +8,11 @@
 @section('title', $title)
 @section('description', $description)
 
-<x-header-inner :title="$title"></x-header-inner>
+
 
 @section('main')
+    <x-header-inner :title="$title"></x-header-inner>
+
     <section class="news-page-section">
         <div class="inner">
             <x-breadcrumbs.main :news="$title"></x-breadcrumbs.main>

@@ -10,9 +10,10 @@
 @section('title', $title)
 @section('description', $description)
 
-<x-header-inner  :title="$title"></x-header-inner>
+
 
 @section('main')
+    <x-header-inner  :title="$title"></x-header-inner>
     <div class="usual-section">
         <div class="inner">
             <h2>Что такое индустриальный парк?</h2>

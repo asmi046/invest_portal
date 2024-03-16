@@ -1,8 +1,3 @@
-<x-vizpanel.main></x-vizpanel.main>
-
-<x-menu.side-menu></x-menu.side-menu>
-
-
 @if (isset($banner) && !empty($banner))
     <header id="header" style="background-image: url({{$banner}})">
 @else
