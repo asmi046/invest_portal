@@ -16,12 +16,16 @@ return new class extends Migration
             $table->timestamps();
 
             $table->string('title')->comment('Название меры поддержки');
+            $table->string('title_en')->comment('Название меры поддержки (en)');
             $table->string('slug')->comment('Слаг');
             $table->string('type')->default("Общая")->comment('Тип');
             $table->string('img')->nullable()->comment('Картинка');
             $table->string('innet_img')->nullable()->comment('Картинка презентации');
+            $table->string('innet_img_en')->nullable()->comment('Картинка презентации (en)');
+            $table->text('short_description')->comment('Короткое описание');
+            $table->text('short_description_en')->comment('Короткое описание (en)');
             $table->text('description')->nullable()->comment('Описание меры поддержки');
-
+            $table->text('description_en')->nullable()->comment('Описание меры поддержки (en)');
             $table->string('seo_title')->nullable()->comment('SEO заголовок');
             $table->text('seo_description')->nullable()->comment('SEO описание');
         });
