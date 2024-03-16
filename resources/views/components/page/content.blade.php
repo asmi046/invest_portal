@@ -9,7 +9,7 @@
 @if($page->files)
     @foreach ($page->files as $item)
         <x-widget-file
-        :lnk="$item['file']"
+        :lnk="Storage::url('page_files/'.$item['file'])"
         :title="$item['title']"
         ></x-widget-file>
     @endforeach

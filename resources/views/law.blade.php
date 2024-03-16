@@ -26,7 +26,7 @@
                 <div class="columns-box columns-box--two-col">
                     @foreach ($value as $item)
                         <x-widget-file
-                        :lnk="$item->file"
+                        :lnk="Storage::url($item->file)"
                         :title="$item->title"
                         ></x-widget-file>
                     @endforeach

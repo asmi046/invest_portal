@@ -16,7 +16,7 @@ class MenuStructAction {
 
             $punct['submeny'] = Menu::where('menu_name', $item->menu_name)
                     ->where('parent', $item->id)
-                    ->orderBy('order',"DESC")
+                    ->orderBy('order',"ASC")
                     ->get();
 
             $menu_struct[$item->menu_name][] = $punct;
