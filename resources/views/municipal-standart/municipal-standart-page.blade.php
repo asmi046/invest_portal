@@ -15,7 +15,6 @@
 
 
 @section('main')
-    <x-header-inner :banner="asset('img/top_img/industry.webp')" :title="_tr($page->title, $page->title_en)"></x-header-inner>
     <div class="news-page-section">
         <div class="inner">
             <x-breadcrumbs.main :ms="_tr($page->title, $page->title_en)"></x-breadcrumbs.main>

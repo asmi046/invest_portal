@@ -16,7 +16,7 @@
 @section('main')
     <div class="news-page-section">
         <div class="inner">
-            <x-breadcrumbs.main :title="$page_title"></x-breadcrumbs.main>
+            <x-breadcrumbs.main :sovet="$page_title"></x-breadcrumbs.main>
 
             @if (isset($page))
                 <x-page.content

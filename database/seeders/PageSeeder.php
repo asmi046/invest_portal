@@ -104,7 +104,9 @@ class PageSeeder extends Seeder
 
             'Муниципальный инвестиционный стандарт в Курской области' => [
                 "menu_marker" => "Муниципальный инвестиционный стандарт Курской области",
+                'title_en' => "Municipal Investment Standard of the Kursk region",
                 "text" => "RUS_municipal_investment_standard.html",
+                "text_en" => "ENG_municipal_investment_standard.html",
                 "img" => "",
                 "banner" => "industry.webp",
             ],
