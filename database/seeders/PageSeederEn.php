@@ -32,27 +32,38 @@ class PageSeederEn extends Seeder
 
         $page_data = [
 
-            'Государственно-частное партнерство в Курской области' => [
-                "menu_marker" => "О ГЧП в регионе",
-                "text" => "ENG_presentattion.html",
+            'Public-private partnership in the Kursk region' => [
+                "menu_marker" => "About GHP in the region",
+                "text" => "ENG_public_private_partnership.html",
                 "img" => "",
                 "banner" => "",
                 "subpage" => [
-                    "Перечень мер поддержки ГЧП" => [
-                        "text" => "ENG_presentattion.html",
+                    "PPP projects of the Kursk region" => [
+                        "text" => "ENG_project_gph_KO.html",
                         "img" => "",
                         "banner" => ""
                     ],
-                    "Ответственные по направлению ГЧП" => [
-                        "text" => "ENG_presentattion.html",
+                    "Information on ongoing PPP competitions" => [
+                        "text" => "ENG_inform_conkurs_gph.html",
                         "img" => "",
                         "banner" => ""
                     ],
-                    "Информация о проводимых конкурсах ГЧП" => [
-                        "text" => "ENG_presentattion.html",
+                    "Practice implementation of the PPP mechanism" => [
+                        "text" => "ENG_practic_realis_gph.html",
                         "img" => "",
                         "banner" => ""
                     ],
+                    "List of PPP support measures" => [
+                        "text" => "ENG_partnership__list_support_gph.html",
+                        "img" => "",
+                        "banner" => ""
+                    ],
+                    "Responsible for PPP" => [
+                        "text" => "ENG_partnership__responsible_gph.html",
+                        "img" => "",
+                        "banner" => ""
+                    ],
+
                 ]
             ],
 
