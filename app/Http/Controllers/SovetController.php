@@ -22,8 +22,23 @@ class SovetController extends Controller
 
         if (!$sovet) abort(404);
 
+        $protocols = [];
+
+        foreach ($sovet->protocols as $item){
+            $protocols[$item['year']][] = $item;
+        }
+
+        $video = [];
+
+        foreach ($sovet->video as $item){
+            $video[$item['year']][] = $item;
+        }
+
+
         return view('sovet.sovet-page', [
             'page' => $sovet,
+            'protocols' => $protocols,
+            'video' => $video,
         ]);
     }
 

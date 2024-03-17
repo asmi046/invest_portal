@@ -24,16 +24,75 @@
                 ></x-page.content>
             @endif
 
-            @if ($page->files)
-                <h2>{{__('Презентация проекта')}}</h2>
-                @foreach ($page->files as $item)
+            <h3>{{__('Нормативная правовая база о деятельности Совета')}}</h3>
+
+            @if ($page->pologenie)
+                <x-widget-file
+                    :lnk="Storage::url('sovets/'.$page['pologenie'])"
+                    :title="_tr($page['pologenie_title'], isset($page['pologenie_title_en'])?$page['pologenie_title_en']:null)"
+                ></x-widget-file>
+            @endif
+
+            <h3>{{__('Состав Совета')}}</h3>
+
+            <div class="columns-box columns-box--two-col">
+                @foreach ($page->sostav as $item)
                     <x-widget-file
-                        :lnk="Storage::url('invest-project/'.$item['file'])"
+                        :lnk="$item['lnk']"
                         :title="_tr($item['title'], isset($item['title_en'])?$item['title_en']:null)"
                     ></x-widget-file>
                 @endforeach
-            @endif
+            </div>
 
+            <h3>{{__('Планы работы Совета')}}</h3>
+
+            <div class="columns-box columns-box--two-col">
+                @foreach ($page->work_planes as $item)
+                    <x-widget-file
+                        :lnk="$item['lnk']"
+                        :title="_tr($item['title'], isset($item['title_en'])?$item['title_en']:null)"
+                    ></x-widget-file>
+                @endforeach
+            </div>
+
+            <h3>{{__('Протоколы заседания Совета')}}</h3>
+
+            @foreach ($protocols as $key => $item)
+
+                <details>
+                    <summary>
+                        {{$key}} {{__('год')}}
+                    </summary>
+                    <div class="response">
+                        @foreach ($item as $subitem)
+                            <x-widget-file
+                                :lnk="$subitem['lnk']"
+                                :title="_tr($subitem['title'], isset($subitem['title_en'])?$subitem['title_en']:null)"
+                            ></x-widget-file>
+                        @endforeach
+                    </div>
+                </details>
+
+            @endforeach
+
+            <h3>{{__('Видео заседаний Совета')}}</h3>
+            @foreach ($video as $key => $item)
+
+                <details>
+                    <summary>
+                        {{$key}} {{__('год')}}
+                    </summary>
+                    <div class="response">
+                        @foreach ($item as $subitem)
+                            <x-widget-file
+                                :lnk="$subitem['lnk']"
+                                :title="_tr($subitem['title'], isset($subitem['title_en'])?$subitem['title_en']:null)"
+                            ></x-widget-file>
+                        @endforeach
+                    </div>
+                </details>
+
+            @endforeach
         </div>
     </div>
 @endsection

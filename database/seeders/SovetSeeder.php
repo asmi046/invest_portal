@@ -91,7 +91,7 @@ class SovetSeeder extends Seeder
             ],
 
             'video' => [
-                [
+
                     [
                         'title' => "Заседание Совета 23.07.2021 года (доступ к просмотру видео в один клик по ссылке)",
                         'title_en' => "Council meeting on 07/23/2021 (one-click access to the video)",
@@ -118,7 +118,7 @@ class SovetSeeder extends Seeder
                         'description_en' => "",
                         'lnk' => "#"
                     ],
-                ]
+
             ],
             'description' => "RUS_invest_klimat.html",
             'description_en' => "ENG_invest_klimat.html",
@@ -135,6 +135,9 @@ class SovetSeeder extends Seeder
             $adding_item['protocols'] = json_encode($adding_item['protocols']);
             $adding_item['video'] = json_encode($adding_item['video']);
 
+            if (!empty($item['pologenie'])) {
+                Storage::disk('public')->put("sovets/".$item['pologenie'], file_get_contents(public_path('old_data/sovet/'.$item['pologenie'])), 'public');
+            }
 
             if (isset($adding_item['description']) && !empty($adding_item['description']))
                 $adding_item['description'] = file_get_contents(public_path('old_data//sovet//'.$item['description']));
