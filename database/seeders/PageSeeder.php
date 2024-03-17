@@ -86,7 +86,7 @@ class PageSeeder extends Seeder
 
             'Инвестиционные предложения' => [
                 "menu_marker" => "Витрина инвестиционных проектов",
-                "text" => "RUS_presentattion.html",
+                "text" => "RUS_invest_projects.html",
                 "img" => "",
                 "banner" => "industry.webp",
             ],
