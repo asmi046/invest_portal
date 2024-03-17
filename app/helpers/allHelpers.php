@@ -2,7 +2,31 @@
 
 use Illuminate\Support\Facades\App;
 
-// Дата с меяцем по русски
+
+
+if (!function_exists("_get_page_meta")) {
+    function get_page_meta($default, $page){
+
+        if (isset($page)) {
+            $page_title = _tr($page->title, isset($page->title_en)?$page->title_en:null);
+            $page_banner = $page->banner;
+            $title = (empty($page->seo_title))?$page->title:$page->seo_title;
+            $description = (empty($page->seo_description))?$page->title:$page->seo_description;
+        } else {
+            $page_title = $default;
+            $page_banner = "";
+            $title = $default;
+            $description = $default;
+        }
+
+        return [
+            'page_title' => $page_title,
+            'title' => $title,
+            'page_banner' => $page_banner,
+            'description' => $description,
+        ];
+    }
+}
 
 if (!function_exists("_tr")) {
     function _tr($rus, $eng){
@@ -14,6 +38,10 @@ if (!function_exists("_tr")) {
     }
 }
 
+
+
+
+// Дата с меяцем по русски
 if (!function_exists("data_ru")) {
     function data_ru($data) {
         $t_data = strtotime($data);

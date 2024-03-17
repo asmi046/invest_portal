@@ -7,7 +7,8 @@
 
 @section('title', $title)
 @section('description', $description)
-
+@section('banner', '')
+@section('page_title', $title)
 
 
 @section('main')

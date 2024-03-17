@@ -6,6 +6,7 @@ use App\Http\Controllers\LawController;
 
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\SovetController;
 use App\Http\Controllers\CadastrController;
 use App\Http\Controllers\MunicipalController;
 use App\Http\Controllers\Page\PageController;
@@ -61,6 +62,9 @@ Route::get('/municipal-standart/{slug}', [MunicipalController::class, "page"])->
 
 Route::get('/invest-projects', [InvestProjectController::class, "index"])->name('invest_project');
 Route::get('/invest-projects/{slug}', [InvestProjectController::class, "page"])->name('invest_project_page');
+
+Route::get('/sovets', [SovetController::class, "index"])->name('sovet');
+Route::get('/sovets/{slug}', [SovetController::class, "page"])->name('sovet_page');
 
 
 

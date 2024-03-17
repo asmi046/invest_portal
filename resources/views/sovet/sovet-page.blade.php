@@ -2,7 +2,7 @@
 
 @php
     extract(get_page_meta(
-        "Презентация инвестиционного проекта в Курской области",
+        "Совет связанный с инвестиционной деятельностью в Курской области",
         isset($page)? $page : null
     ));
 @endphp
@@ -14,12 +14,15 @@
 
 
 @section('main')
-    <x-header-inner :banner="asset('img/top_img/industry.webp')" :title="_tr($page->title, $page->title_en)"></x-header-inner>
     <div class="news-page-section">
         <div class="inner">
-            <x-breadcrumbs.main :invest="_tr($page->title, $page->title_en)"></x-breadcrumbs.main>
+            <x-breadcrumbs.main :title="$page_title"></x-breadcrumbs.main>
 
-            {!! _tr($page->description, $page->description_en) !!}
+            @if (isset($page))
+                <x-page.content
+                    :page="$page"
+                ></x-page.content>
+            @endif
 
             @if ($page->files)
                 <h2>{{__('Презентация проекта')}}</h2>

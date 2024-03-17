@@ -1,7 +1,7 @@
-@if (isset($banner) && !empty($banner))
-    <header id="header" style="background-image: url({{$banner}})">
-@else
+@if($banner->isEmpty())
     <header id="header" style="background-image: url({{asset('img/ex-bg-header.jpg')}})">
+@else
+    <header id="header" style="background-image: url({{$banner}})">
 @endif
 
     <div class="header__top">

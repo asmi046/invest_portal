@@ -7,11 +7,11 @@
 
 @section('title', $title)
 @section('description', $description)
-
+@section('banner', 'img/top_img/areas.webp')
+@section('page_title', $title)
 
 
 @section('main')
-    <x-header-inner banner="img/top_img/areas.webp" :title="$title"></x-header-inner>
     <div class="section-with-submenu">
         <div class="inner">
             <div class="section-with-submenu__content">

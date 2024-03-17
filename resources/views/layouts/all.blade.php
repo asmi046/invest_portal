@@ -36,6 +36,18 @@
     <x-vizpanel.main></x-vizpanel.main>
     <x-menu.side-menu></x-menu.side-menu>
 
+    @if (Request::route()->named('home'))
+        <x-header></x-header>
+    @else
+        <x-header-inner>
+            <x-slot:banner>@yield('banner')</x-slot>
+
+            <x-slot:title>
+                @yield('page_title')
+            </x-slot>
+        </x-header-inner>
+    @endif
+
     <main id="main">
         @yield('main')
     </main>

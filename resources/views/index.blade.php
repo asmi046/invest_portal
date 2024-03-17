@@ -9,9 +9,6 @@
 @section('description', $description)
 
 @section('main')
-
-    <x-header></x-header>
-
     <x-main-page.gubernator></x-main-page.gubernator>
 
     <section class="indecators-section section-space">

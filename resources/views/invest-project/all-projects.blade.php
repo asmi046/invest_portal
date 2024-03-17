@@ -1,20 +1,16 @@
 @extends('layouts.all')
 
 @php
-    $main_title = "Витрина инвестиционных проектов Курской области";
-
-    if (isset($page)) {
-        $title = (empty($page->seo_title))?$page->title:$page->seo_title;
-        $description = (empty($page->seo_description))?$page->title:$page->seo_description;
-    } else {
-        $title = $main_title;
-        $description = $main_title;
-    }
-
+    extract(get_page_meta(
+        "Витрина инвестиционных проектов Курской области",
+        isset($page)? $page : null
+    ));
 @endphp
 
 @section('title', $title)
 @section('description', $description)
+@section('banner', $page_banner)
+@section('page_title', $page_title)
 
 
 

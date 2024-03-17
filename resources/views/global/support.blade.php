@@ -7,11 +7,10 @@
 
 @section('title', $title)
 @section('description', $description)
-
-
+@section('banner', '')
+@section('page_title', $title)
 
 @section('main')
-    <x-header-inner :title="$title"></x-header-inner>
     <div class="section-with-submenu">
         <div class="inner">
 

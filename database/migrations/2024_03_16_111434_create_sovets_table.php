@@ -14,8 +14,11 @@ return new class extends Migration
         Schema::create('sovets', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('slug')->comment('Слаг');
             $table->string('title')->comment('Название совета');
             $table->string('title_en')->comment('Название совета (en)');
+            $table->string('pologenie_title')->comment('Название положения о совете');
+            $table->string('pologenie_title_en')->comment('Название положения о совете (en)');
             $table->string('pologenie')->comment('Положение о совете');
             $table->json('sostav')->nullable()->comment('Состав совета');
             $table->json('work_planes')->nullable()->comment('Планы работы');

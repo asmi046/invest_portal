@@ -1,12 +1,16 @@
 @extends('layouts.all')
 
 @php
-    $title = (empty($page->seo_title))?$page->title:$page->seo_title;
-    $description = (empty($page->seo_description))?$page->title:$page->seo_description;
+    extract(get_page_meta(
+        "Реестр земельных участков",
+        isset($page)? $page : null
+    ));
 @endphp
 
 @section('title', $title)
 @section('description', $description)
+@section('banner', $page_banner)
+@section('page_title', $page_title)
 
 
 

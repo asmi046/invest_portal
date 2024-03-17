@@ -13,6 +13,8 @@ class Sovet extends Model
         'title',
         'title_en',
         'pologenie',
+        'pologenie_title',
+        'pologenie_title_en',
         'sostav',
         'work_planes',
         'protocols',
