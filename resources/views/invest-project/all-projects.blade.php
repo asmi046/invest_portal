@@ -29,9 +29,11 @@
                     :page="$page"
             ></x-page.content>
 
-            @foreach ($all_projects as $item)
-                <x-invest-projects.card :item="$item"></x-invest-projects.card>
-            @endforeach
+            <div class="news-grid">
+                @foreach ($all_projects as $item)
+                    <x-invest-projects.card :item="$item"></x-invest-projects.card>
+                @endforeach
+            </div>
         </div>
     </div>
 @endsection

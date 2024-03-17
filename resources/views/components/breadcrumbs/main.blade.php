@@ -72,6 +72,26 @@
                 </span>
             @endif
 
+            @if (Request::route()->named('invest_project_page'))
+                <span class="sep"> / </span>
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a title="{{ __('Все проекты') }}" itemprop="item" href="{{route('invest_project')}}">
+                        <span itemprop="name">{{ __('Все проекты') }}</span>
+                        <meta itemprop="position" content="1">
+                    </a>
+                </span>
+
+
+                <span class="sep"> / </span>
+
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">
+                    <span title="{{ $invest }}" itemprop="item">
+                        <span itemprop="name">{{ $invest }}</span>
+                        <meta itemprop="position" content="2">
+                    </span>
+                </span>
+            @endif
+
             @if (isset($title))
                 <span class="sep"> / </span>
                     <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">

@@ -25,6 +25,45 @@ class InvestProjectSeeder extends Seeder
                 'slug' => Str::slug("ООО «Курский кролик»"),
                 'description' => "OOO-Kurskij-krolik.html",
                 'description_en' => "en_OOO-Kurskij-krolik.html",
+                "files" => [
+                    [
+                        "title" => "Информация по проекту",
+                        "title_en" => "Информация по проекту",
+                        "file" => "zerno_1.webp"
+                    ],
+                    [
+                        "title" => "Информация по проекту",
+                        "title_en" => "Информация по проекту",
+                        "file" => "zerno_2.webp"
+                    ],
+                    [
+                        "title" => "Информация по проекту",
+                        "title_en" => "Информация по проекту",
+                        "file" => "zerno_3.webp"
+                    ],
+                    [
+                        "title" => "Информация по проекту",
+                        "title_en" => "Информация по проекту",
+                        "file" => "zerno_4.webp"
+                    ],
+                    [
+                        "title" => "Информация по проекту",
+                        "title_en" => "Информация по проекту",
+                        "file" => "zerno_5.webp"
+                    ],
+                    [
+                        "title" => "Информация по проекту",
+                        "title_en" => "Информация по проекту",
+                        "file" => "zerno_6.webp"
+                    ],
+                    [
+                        "title" => "Информация по проекту",
+                        "title_en" => "Информация по проекту",
+                        "file" => "zerno_7.webp"
+                    ],
+
+                ]
+
             ],
             [
                 'title' => "АО «Иннпромбиотех»",
@@ -33,6 +72,14 @@ class InvestProjectSeeder extends Seeder
                 'slug' => Str::slug("АО «Иннпромбиотех»"),
                 'description' => "AO-Innprombioteh.html",
                 'description_en' => "en_AO-Innprombioteh.html",
+
+                "files" => [
+                    [
+                        "title" => "Информация по проекту",
+                        "title_en" => "Информация по проекту",
+                        "file" => "zerno-inner.webp"
+                    ],
+                ]
             ],
         ];
 
@@ -44,12 +91,20 @@ class InvestProjectSeeder extends Seeder
                 $adding_item['description'] = file_get_contents(public_path('old_data//invest-project//'.$item['description']));
 
             if (isset($item['img']) && !empty($item['img'])) {
-                Storage::disk('public')->put("invest-project/".$item['img'], file_get_contents(public_path('old_data//municipal_standart//'.$item['invest-project'])), 'public');
+                Storage::disk('public')->put("invest-project/".$item['img'], file_get_contents(public_path('old_data//invest-project//'.$item['img'])), 'public');
             }
 
+            $adding_item['files'] = json_encode($adding_item['files']);
             $p_id = DB::table("invest_projects")->insertGetId(
                 $adding_item
             );
+
+            if (isset($item['files']) && !empty($item['files'])) {
+                foreach ($item['files'] as $fitem) {
+                    if (empty($fitem['file'])) continue;
+                    Storage::disk('public')->put("invest-project/".$fitem['file'], file_get_contents(public_path('old_data/invest-project/'.$fitem['file'])), 'public');
+                }
+            }
         }
 
     }

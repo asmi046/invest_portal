@@ -21,7 +21,7 @@ class InvestProjectController extends Controller
     public function page($slug) {
         $project = InvestProject::where('slug', $slug)->first();
 
-        return view('invest-project.all-projects', [
+        return view('invest-project.project-page', [
             'page' => $project
         ]);
 
