@@ -10,6 +10,8 @@
     </a>
 @endif
 
+{!! _tr($page->description, $page->description_en) !!}
+
 @if($page->files)
     @foreach ($page->files as $item)
         <x-widget-file
@@ -19,4 +21,4 @@
     @endforeach
 @endif
 
-{!! _tr($page->description, $page->description_en) !!}
+

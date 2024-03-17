@@ -76,9 +76,43 @@ class PageSeeder extends Seeder
 
             'Стандарт развития конкуренции' => [
                 "menu_marker" => "Стандарт развития конкуренции",
-                "text" => "RUS_presentattion.html",
+                'title_en'=>"Competition development standard",
+                "text" => "RUS_st_concuration.html",
+                "text_en" => "ENG_st_concuration.html",
                 "img" => "",
                 "banner" => "",
+                "files" => [
+                    [
+                        'title' => "Доклад «Состояние и развитие конкурентной среды на рынках товаров, работ и услуг Курской области» по итогам 2022 года",
+                        'title_en' => "The report 'The state and development of the competitive environment in the markets of goods, works and services of the Kursk region' by the end of 2022",
+                        'description' => "",
+                        'description_en' => "",
+                        'file' => "DOKLAD-2022.docx"
+                    ],
+                    [
+                        'title' => "Доклад «Состояние и развитие конкурентной среды на рынках товаров, работ и услуг Курской области» по итогам 2021 года",
+                        'title_en' => "The report 'The state and development of the competitive environment in the markets of goods, works and services of the Kursk region' by the end of 2021",
+                        'description' => "",
+                        'description_en' => "",
+                        'file' => "DOKLAD-2021.docx"
+                    ],
+                    [
+                        'title' => "Доклад Курской области за 2020 год",
+                        'title_en' => "Kursk Region Report for 2020",
+                        'description' => "",
+                        'description_en' => "",
+                        'file' => "DOKLAD-2020.docx"
+                    ],
+                    [
+                        'title' => "Доклад Курской области за 2019 год",
+                        'title_en' => "Kursk Region Report for 2019",
+                        'description' => "",
+                        'description_en' => "",
+                        'file' => "DOKLAD-2019-god.docx"
+                    ],
+
+
+                ],
             ],
 
             'Совет по улучшению инвестиционного климата, взаимодействию с инвесторами, поддержке и развитию экспорта при Губернаторе Курской области' => [
