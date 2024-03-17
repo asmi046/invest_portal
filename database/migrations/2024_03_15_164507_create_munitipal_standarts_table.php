@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('glava')->comment('Глава субъекта');
             $table->string('glava_en')->nullable()->comment('Глава субъекта (en)');
             $table->string('address')->comment('Адрес');
+            $table->string('address_en')->nullable()->comment('Адрес (en)');
             $table->string('phone')->comment('Телефон');
             $table->string('site')->comment('Сайт');
             $table->string('email')->nullable()->comment('e-mail');

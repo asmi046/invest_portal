@@ -1,6 +1,18 @@
 <?php
 
+use Illuminate\Support\Facades\App;
+
 // Дата с меяцем по русски
+
+if (!function_exists("_tr")) {
+    function _tr($rus, $eng){
+        $rez = $rus;
+        if (App::isLocale('en') && !empty($eng)) {
+            $rez = $eng;
+        }
+        return $rez;
+    }
+}
 
 if (!function_exists("data_ru")) {
     function data_ru($data) {

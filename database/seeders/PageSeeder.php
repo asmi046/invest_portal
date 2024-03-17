@@ -88,14 +88,14 @@ class PageSeeder extends Seeder
                 "menu_marker" => "Витрина инвестиционных проектов",
                 "text" => "RUS_presentattion.html",
                 "img" => "",
-                "banner" => "",
+                "banner" => "industry.webp",
             ],
 
             'Муниципальный инвестиционный стандарт в Курской области' => [
                 "menu_marker" => "Муниципальный инвестиционный стандарт Курской области",
-                "text" => "RUS_presentattion.html",
+                "text" => "RUS_municipal_investment_standard.html",
                 "img" => "",
-                "banner" => "",
+                "banner" => "industry.webp",
             ],
 
             //----------------------

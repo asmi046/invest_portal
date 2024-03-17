@@ -18,11 +18,21 @@ class MunitipalStandart extends Model
         'title_en',
         'glava',
         'glava_en',
+        'address',
+        'address_en',
         'phone',
         'site',
         'email',
+        'folder',
+        'gerb',
+        'glava_photo',
         'description',
         'description_en',
+        'passport_files',
+    ];
+
+    protected $casts = [
+        "passport_files" => 'array',
     ];
 
 }

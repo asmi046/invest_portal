@@ -4,7 +4,7 @@
         <div itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumbs">
             <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a itemprop="item" href="{{route('home')}}" >
-                    <span itemprop="name">Главная</span>
+                    <span itemprop="name">{{ __('Главная') }}</span>
                     <meta itemprop="position" content="0">
                 </a>
             </span>
@@ -14,8 +14,8 @@
             @if (Request::route()->named('news_page'))
                 <span class="sep"> / </span>
                 <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a title="Все новости" itemprop="item" href="{{route('news_list')}}">
-                        <span itemprop="name">Все новости</span>
+                    <a title="{{ __('Все новости') }}" itemprop="item" href="{{route('news_list')}}">
+                        <span itemprop="name">{{ __('Все новости') }}</span>
                         <meta itemprop="position" content="1">
                     </a>
                 </span>
@@ -47,6 +47,26 @@
                 <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">
                     <span title="{{ $page }}" itemprop="item">
                         <span itemprop="name">{{ $page }}</span>
+                        <meta itemprop="position" content="2">
+                    </span>
+                </span>
+            @endif
+
+            @if (Request::route()->named('municipal_page'))
+                <span class="sep"> / </span>
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a title="{{ __('Муниципальный стандарт') }}" itemprop="item" href="{{route('municipal')}}">
+                        <span itemprop="name">{{ __('Муниципальный стандарт') }}</span>
+                        <meta itemprop="position" content="1">
+                    </a>
+                </span>
+
+
+                <span class="sep"> / </span>
+
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">
+                    <span title="{{ $ms }}" itemprop="item">
+                        <span itemprop="name">{{ $ms }}</span>
                         <meta itemprop="position" content="2">
                     </span>
                 </span>
