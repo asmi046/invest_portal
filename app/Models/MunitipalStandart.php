@@ -32,7 +32,7 @@ class MunitipalStandart extends Model
     ];
 
     protected $casts = [
-        "passport_files" => 'array',
+        "passport_files" => 'object',
     ];
 
 }

@@ -35,8 +35,8 @@
                 @if (isset($parent))
                 <span class="sep"> / </span>
                     <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <a title="{{$parent->title}}" itemprop="item" href="{{route('page', $parent->slug)}}">
-                            <span itemprop="name">{{$parent->title}}</span>
+                        <a title="{{_tr($parent->title, $parent->title_en)}}" itemprop="item" href="{{route('page', $parent->slug)}}">
+                            <span itemprop="name">{{_tr($parent->title, $parent->title_en)}}</span>
                             <meta itemprop="position" content="1">
                         </a>
                     </span>

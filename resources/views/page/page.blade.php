@@ -11,11 +11,11 @@
 
 
 @section('main')
-    <x-header-inner :banner="$page->banner" :title="$title"></x-header-inner>
+    <x-header-inner :banner="$page->banner" :title="_tr($page->title, isset($page->title_en)?$page->title_en:null)"></x-header-inner>
     <div class="section-with-submenu">
         <div class="inner">
             <div class="section-with-submenu__content">
-                <x-breadcrumbs.main :page="$title" :parent="$parent"></x-breadcrumbs.main>
+                <x-breadcrumbs.main :page="_tr($page->title, isset($page->title_en)?$page->title_en:null)" :parent="$parent"></x-breadcrumbs.main>
 
                 <x-page.content
                     :page="$page"

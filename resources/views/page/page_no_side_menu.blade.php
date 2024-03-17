@@ -10,15 +10,15 @@
 
 
 @section('main')
-    <x-header-inner :banner="$page->banner" :title="$title"></x-header-inner>
+    <x-header-inner :banner="$page->banner" :title="_tr($page->title, isset($page->title_en)?$page->title_en:null)"></x-header-inner>
 
     <div class="news-page-section">
         <div class="inner">
-            <x-breadcrumbs.main :page="$title" :parent="$parent"></x-breadcrumbs.main>
+            <x-breadcrumbs.main :page="_tr($page->title, isset($page->title_en)?$page->title_en:null)" :parent="$parent"></x-breadcrumbs.main>
 
             <x-page.content
-                    :page="$page"
-                ></x-page.content>
+                :page="$page"
+            ></x-page.content>
 
         </div>
     </div>

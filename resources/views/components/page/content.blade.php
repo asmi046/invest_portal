@@ -1,8 +1,12 @@
 
+@php
+    $img = _tr($page->img, $page->img_en);
+@endphp
 
-@if($page->img)
-    <a href="{{ $page->img }}" class="lg-gallery page-photo">
-        <img src="{{$page->img}}" alt="">
+
+@if($img)
+    <a href="{{ $img }}" class="lg-gallery page-photo">
+        <img src="{{$img}}" alt="{{_tr($page->title, $page->title_en)}}">
     </a>
 @endif
 
@@ -10,9 +14,9 @@
     @foreach ($page->files as $item)
         <x-widget-file
         :lnk="Storage::url('page_files/'.$item['file'])"
-        :title="$item['title']"
+        :title="_tr($item['title'], isset($item['title_en'])?$item['title_en']:null)"
         ></x-widget-file>
     @endforeach
 @endif
 
-{!! $page->description !!}
+{!! _tr($page->description, $page->description_en) !!}

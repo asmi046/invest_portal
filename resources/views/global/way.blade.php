@@ -15,15 +15,17 @@
 
     <div class="section-with-submenu">
         <div class="inner">
-
             <div class="section-with-submenu__content">
-                <x-breadcrumbs.main :title="$title"></x-breadcrumbs.main>
+                @if ($info)
+                    <x-breadcrumbs.main :title="_tr($info->title, isset($info->title_en)?$info->title_en:null)"></x-breadcrumbs.main>
 
-                @isset($info)
-                    {!! $info->description !!}
-                @endisset
+                    <x-page.content
+                        :page="$info"
+                    ></x-page.content>
+                @endif
+
             </div>
-            <x-page.submenu title="Подробнее:" :puncts="$puncts"></x-page.submenu>
+            <x-page.submenu :title="__('Подробнее').':'" :puncts="$puncts"></x-page.submenu>
         </div>
     </div>
 @endsection

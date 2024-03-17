@@ -29,8 +29,8 @@
                 <h2>{{__('Паспорт муниципального образования')}}</h2>
                 @foreach ($page->passport_files as $item)
                     <x-widget-file
-                        :lnk="Storage::url('munitipal_standarts/'.$item['file'])"
-                        :title="_tr($item['title'], $item['title_en'])"
+                        :lnk="Storage::url('munitipal_standarts/'.$item->file)"
+                        :title="_tr($item->title, isset($item->title_en)?$item->title_en:null)"
                     ></x-widget-file>
                 @endforeach
             @endif

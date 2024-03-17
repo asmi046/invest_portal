@@ -163,6 +163,12 @@ class PageSeeder extends Seeder
                 'seo_description' => $key
             ];
 
+            if (isset($item['title_en']))
+                $adding_item['title_en'] = $item['title_en'];
+
+            if (isset($item['text_en']))
+                $adding_item['description_en'] = file_get_contents(public_path('old_data//pages//'.$item['text_en']));
+
             if (isset($item['files']) && !empty($item['files'])) {
                 foreach ($item['files'] as $fitem) {
                     Storage::disk('public')->put("page_files/".$fitem['file'], file_get_contents(public_path('old_data/pages/files/'.$fitem['file'])), 'public');
@@ -178,6 +184,11 @@ class PageSeeder extends Seeder
             if (!empty($item['img'])) {
                 Storage::disk('public')->put("page_images/".$item['img'], file_get_contents(public_path('old_data/pages/img/'.$item['img'])), 'public');
                 $adding_item['img'] = Storage::url("page_images/".$item['img']);
+            }
+
+            if (isset($item['img_en']) && !empty($item['img_en'])) {
+                Storage::disk('public')->put("page_images/".$item['img_en'], file_get_contents(public_path('old_data/pages/img/'.$item['img_en'])), 'public');
+                $adding_item['img_en'] = Storage::url("page_images/".$item['img_en']);
             }
 
 
@@ -216,6 +227,13 @@ class PageSeeder extends Seeder
                         'seo_description' => $sp_key
                     ];
 
+                    if (isset($subitem['title_en']))
+                        $inserted_sub_item['title_en'] = $subitem['title_en'];
+
+                    if (isset($subitem['text_en']))
+                        $inserted_sub_item['description_en'] = file_get_contents(public_path('old_data//pages//'.$subitem['text_en']));
+
+
                     if (isset($subitem['files']) && !empty($subitem['files'])) {
                         foreach ($subitem['files'] as $fsitem) {
                             Storage::disk('public')->put("page_files/".$fsitem['file'], file_get_contents(public_path('old_data/pages/files/'.$fsitem['file'])), 'public');
@@ -231,6 +249,11 @@ class PageSeeder extends Seeder
                     if (!empty($subitem['img'])) {
                         Storage::disk('public')->put("page_images/".$subitem['img'], file_get_contents(public_path('old_data/pages/img/'.$subitem['img'])), 'public');
                         $inserted_sub_item['img'] = Storage::url("page_images/".$subitem['img']);
+                    }
+
+                    if (isset($subitem['img_en']) && !empty($subitem['img_en'])) {
+                        Storage::disk('public')->put("page_images/".$subitem['img_en'], file_get_contents(public_path('old_data/pages/img/'.$subitem['img_en'])), 'public');
+                        $inserted_sub_item['img_en'] = Storage::url("page_images/".$subitem['img_en']);
                     }
 
                     $ip_id = DB::table("pages")->insertGetId(
