@@ -67,11 +67,39 @@ class PageSeederEn extends Seeder
                 ]
             ],
 
-            'Развитие экспорта' => [
-                "menu_marker" => "Развитие экспорта",
-                "text" => "ENG_presentattion.html",
+            'Export development' => [
+                "menu_marker" => "Export development",
+                "text" => "ENG_export_development.html",
                 "img" => "",
                 "banner" => "",
+                "subpage" => [
+                    "Проекты ГЧП Курской области" => [
+                        "text" => "RUS_project_gph_KO.html",
+                        "img" => "",
+                        "banner" => ""
+                    ],
+                    "Информация о проводимых конкурсах ГЧП" => [
+                        "text" => "RUS_inform_conkurs_gph.html",
+                        "img" => "",
+                        "banner" => ""
+                    ],
+                    "Практика реализация механизма ГЧП" => [
+                        "text" => "RUS_practic_realis_gph.html",
+                        "img" => "",
+                        "banner" => ""
+                    ],
+                    "Перечень мер поддержки ГЧП" => [
+                        "text" => "RUS_partnership__list_support_gph.html",
+                        "img" => "",
+                        "banner" => ""
+                    ],
+                    "Ответственные по направлению ГЧП" => [
+                        "text" => "RUS_partnership__responsible_gph.html",
+                        "img" => "",
+                        "banner" => ""
+                    ],
+
+                ]
             ],
 
             'Стандарт развития конкуренции' => [
