@@ -76,30 +76,61 @@ class PageSeeder extends Seeder
                 "img" => "",
                 "banner" => "",
                 "subpage" => [
-                    "Экспортный Совет" => [
-                        "text" => "RUS_project_gph_KO.html",
+                    "Экспортная стратегия" => [
+                        "text" => "RUS_export_development__strategy.html",
                         "img" => "",
-                        "banner" => ""
+                        "banner" => "",
+                        "files" => [
+                            [
+                                'title' => "Приложение 5 Закона Курской области от 14.12.2020 № 100 — ЗКО «О социально-экономического развития Курской области на период до 2030 года»",
+                                'title_en' => "Appendix 5 of the Law of the Kursk Region No. 100 dated December 14, 2020 – ZKO “On the socio-economic development of the Kursk Region for the period until 2030”",
+                                'description' => "",
+                                'description_en' => "",
+                                'file' => "Eksportnaya-strategiya.pdf"
+                            ],
+                            [
+                                'title' => "Закон Курской области от 14.12.2020 № 100 — ЗКО «О стратегии социально-экономического развития Курской области на период до 2030»",
+                                'title_en' => "Law of the Kursk region dated December 14, 2020 No. 100 – ZKO “On the strategy for the socio-economic development of the Kursk region for the period until 2030”",
+                                'description' => "",
+                                'description_en' => "",
+                                'file' => "100-ZKO-O-strategii-socialno-ekonomicheskogo-razvitiya-KO-do-2030.pdf"
+                            ],
+                            
                     ],
-                    "Информация о проводимых конкурсах ГЧП" => [
-                        "text" => "RUS_inform_conkurs_gph.html",
+                ],
+                    "Региональная экспортная программа" => [
+                        "text" => "RUS_export_development__region_export_programm.html",
                         "img" => "",
-                        "banner" => ""
+                        "banner" => "",
+                        //"files" => [],
                     ],
-                    "Практика реализация механизма ГЧП" => [
-                        "text" => "RUS_practic_realis_gph.html",
+
+                    "Мероприятия и итоги исполнения" => [
+                        "text" => "RUS_export_development__activities_results_implement.html",
                         "img" => "",
-                        "banner" => ""
+                        "banner" => "",
+                        //"files" => [],
                     ],
-                    "Перечень мер поддержки ГЧП" => [
-                        "text" => "RUS_partnership__list_support_gph.html",
+
+                    "Реестр экспортеров" => [
+                        "text" => "RUS_export_development__register_exporters.html",
                         "img" => "",
-                        "banner" => ""
+                        "banner" => "",
+                        //"files" => [],
                     ],
-                    "Ответственные по направлению ГЧП" => [
-                        "text" => "RUS_partnership__responsible_gph.html",
+
+                    "Конкурс «Лучший экспортер»" => [
+                        "text" => "RUS_export_development__best_exporter.html",
                         "img" => "",
-                        "banner" => ""
+                        "banner" => "",
+                        //"files" => [],
+                    ],
+
+                    "Контакты зарубежных торговых представительств" => [
+                        "text" => "RUS_export_development__contacts_trade_missions.html",
+                        "img" => "",
+                        "banner" => "",
+                        //"files" => [],
                     ],
 
                 ]
@@ -193,6 +224,7 @@ class PageSeeder extends Seeder
                         'description_en' => "",
                         'file' => "338-pa-1.pdf"
                     ],
+                    
                 ]
             ],
 
