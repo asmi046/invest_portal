@@ -118,6 +118,8 @@ class PageSeeder extends Seeder
                 ],
             ],
 
+
+
             'Совет по улучшению инвестиционного климата, взаимодействию с инвесторами, поддержке и развитию экспорта при Губернаторе Курской области' => [
                 "menu_marker" => "Совет по улучшению инвест климата",
                 "text" => "RUS_presentattion.html",
@@ -148,6 +150,26 @@ class PageSeeder extends Seeder
                 "banner" => "industry.webp",
             ],
 
+            'Индустриальные парки' => [
+                "menu_marker" => "Индустриальные парки",
+                'title_en' => "Industrial parks",
+                "text" => "RUS_industreal_areas.html",
+                "text_en" => "ENG_industreal_areas.html",
+                "img" => "",
+                "banner" => "industry.webp",
+                "files" => [
+                    [
+                        'title' => "Постановление Администрации Курской области от 27.05.2014 № 338-па «Об утверждении Положения об условиях и порядке создания индустриальных (промышленных) парков»",
+                        'title_en' => "Resolution of the Administration of the Kursk Region dated 05/27/2014 No. 338-pa 'On approval of the Regulations on the conditions and procedure for the creation of industrial (industrial) parks'",
+                        'description' => "",
+                        'description_en' => "",
+                        'file' => "338-pa-1.pdf"
+                    ],
+                ]
+            ],
+
+
+
             //----------------------
 
             'Регламент «одного окна» для инвестора' => [
@@ -176,13 +198,6 @@ class PageSeeder extends Seeder
 
             'Особая экономическая зона промышленно-производственного типа «Третий полюс»' => [
                 "menu_marker" => "ОЭЗ «Третий Полюс»",
-                "text" => "RUS_presentattion.html",
-                "img" => "",
-                "banner" => "",
-            ],
-
-            'Индустриальные парки' => [
-                "menu_marker" => "Индустриальные парки",
                 "text" => "RUS_presentattion.html",
                 "img" => "",
                 "banner" => "",
