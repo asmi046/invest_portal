@@ -15,7 +15,6 @@
 
 
 @section('main')
-    <x-header-inner :banner="$page->banner" :title="$page->title"></x-header-inner>
     <div class="news-page-section">
         <div class="inner">
 

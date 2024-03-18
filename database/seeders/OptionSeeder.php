@@ -63,6 +63,22 @@ class OptionSeeder extends Seeder
                 //-------------------------
 
                 [
+                    "name" => "gcp_sogl_count",
+                    "type" => "plan",
+                    'title' => 'Заключено соглашений ГЧП',
+                    "value" => "30",
+                ],
+
+                [
+                    "name" => "gcp_sogl_pay",
+                    "type" => "plan",
+                    'title' => 'Общий объем инвестиций по заключенным соглашениям ГЧП',
+                    "value" => "21 236",
+                ],
+
+                //-------------------------
+
+                [
                     "name" => "invest_map_lnk",
                     "type" => "plan",
                     'title' => 'Ссылка на инвестиционную карту',

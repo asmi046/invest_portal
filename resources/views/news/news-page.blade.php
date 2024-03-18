@@ -12,7 +12,6 @@
 
 
 @section('main')
-    <x-header-inner :title="$title"></x-header-inner>
 
     <section class="news-page-section">
         <div class="inner">

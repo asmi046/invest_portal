@@ -1,19 +1,20 @@
 @extends('layouts.all')
 
 @php
-    $title = "Заголовок";
-    $description = "Дескрипшен";
-    $pageTitle = "Государственно-частное партнерство в Курской области"
-
+    extract(get_page_meta(
+        "Пример",
+        isset($page)? $page : null
+    ));
 @endphp
 
 @section('title', $title)
 @section('description', $description)
+@section('banner', $page_banner)
+@section('page_title', $page_title)
 
 
 
 @section('main')
-    <x-header-inner  :title="$title"></x-header-inner>
     <div class="inner">
         <ul class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">

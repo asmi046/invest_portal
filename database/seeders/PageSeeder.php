@@ -34,9 +34,12 @@ class PageSeeder extends Seeder
 
             'Государственно-частное партнерство в Курской области' => [
                 "menu_marker" => "О ГЧП в регионе",
+                "title_en" => "Public-private partnership in the Kursk region",
                 "text" => "RUS_public_private_partnership.html",
+                "text_en" => "ENG_public_private_partnership.html",
                 "img" => "",
                 "banner" => "",
+                'template' => 'page.page_gcp',
                 "subpage" => [
                     "Проекты ГЧП Курской области" => [
                         "text" => "RUS_project_gph_KO.html",
@@ -210,6 +213,9 @@ class PageSeeder extends Seeder
                 'seo_description' => $key
             ];
 
+            if (isset($item['template']))
+                $adding_item['template'] = $item['template'];
+
             if (isset($item['title_en']))
                 $adding_item['title_en'] = $item['title_en'];
 
@@ -269,10 +275,14 @@ class PageSeeder extends Seeder
                         'title'=> $sp_key,
                         'slug' => Str::slug($sp_key),
                         'parent' => $p_id,
+
                         'description' => file_get_contents(public_path('old_data//pages//'.$subitem['text'])),
                         'seo_title' => $sp_key,
                         'seo_description' => $sp_key
                     ];
+
+                    if (isset($subitem['template']))
+                        $inserted_sub_item['template'] = $subitem['template'];
 
                     if (isset($subitem['title_en']))
                         $inserted_sub_item['title_en'] = $subitem['title_en'];
