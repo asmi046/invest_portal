@@ -14,6 +14,37 @@ class MenuSeeder extends Seeder
      */
     public function run(): void
     {
+        $eng_word = [
+            "Аналитика Курской области"  => "Analytics of the Kursk region",
+            "Социально-экономическое развитие" => "Socio-economic development",
+            "О ГЧП в регионе" => "About PPP in the region",
+            "Развитие экспорта" => "Export development",
+            "Стандарт развития конкуренции" => "Competition development standard",
+            "Совет по улучшению инвест климата" => "Investment Climate Improvement Council",
+            "План создания объектов инфраструктуры" => "The plan for the creation of infrastructure facilities",
+            "Витрина инвестиционных проектов" => "Showcase of investment projects",
+            "Муниципальный инвестиционный стандарт Курской области" => "Municipal Investment Standard of the Kursk region",
+            "Путь инвестора"  => "The Investor's Path",
+            "Регламент «одного окна» для инвестора (подать заявку)" => "One-stop shop rules for investors (submit an application)",
+            "Подобрать земельный участок" => "Choose a plot of land",
+            "Меры господдержки" => "State support measures",
+            "Инвестиционные площадки"  => "Investment platforms",
+            "ОЭЗ «Третий Полюс»" => "SEZ 'Third Pole'",
+            "Индустриальные парки" => "Industrial parks",
+            "Реестр земельных участков" => "Register of land plots",
+            "Инвестиционная карта" => "Investment Card",
+            "Навигатор мер поддержки"  => "Navigator of support measures",
+            "Законодательство" => "Legislation",
+            "Экспертам АСИ" => "ASI experts",
+            "Инвестиционный стандрат Курской области 2.0" => "Investment standard of the Kursk region 2.0",
+            "Социально-экономическая стратегия развития Курской области" => "Socio-economic development strategy of the Kursk region",
+            "Линия прямых обращений" => "The line of direct appeals",
+            "Регламент «одного окна» для инвестора" => "The rules of the 'one window' for the investor",
+            "Реестр инвестиционных проектов" => "Register of investment projects",
+            "План создания объектов инфраструктуры" => "The plan for the creation of infrastructure facilities",
+
+        ];
+
         $menu_data = [
             "Аналитика Курской области" => [
                 "main_lnk" => "/analitics",
@@ -76,6 +107,7 @@ class MenuSeeder extends Seeder
                 'order' => $i,
                 'parent' => 0,
                 'title' => $key,
+                'title_en' => $eng_word[$key],
             ];
 
             $p_id = DB::table("menus")->insertGetId($element);
@@ -93,6 +125,7 @@ class MenuSeeder extends Seeder
                     'order' => $j,
                     'parent' => $p_id,
                     'title' => $key,
+                    'title_en' => $eng_word[$key],
                 ];
 
                 DB::table("menus")->insert($sub_element);
@@ -109,6 +142,7 @@ class MenuSeeder extends Seeder
                 'order' => $i,
                 'parent' => 0,
                 'title' => $key,
+                'title_en' => $eng_word[$key],
             ];
 
             $p_id = DB::table("menus")->insertGetId($element);
@@ -130,6 +164,7 @@ class MenuSeeder extends Seeder
                     'order' => $j,
                     'parent' => 0,
                     'title' => $key,
+                    'title_en' => $eng_word[$key],
                 ];
 
                 DB::table("menus")->insert($sub_element);
@@ -152,6 +187,7 @@ class MenuSeeder extends Seeder
                     'order' => $j,
                     'parent' => 0,
                     'title' => $key,
+                    'title_en' => $eng_word[$key],
                 ];
 
                 DB::table("menus")->insert($sub_element);
@@ -174,6 +210,7 @@ class MenuSeeder extends Seeder
                     'order' => $j,
                     'parent' => 0,
                     'title' => $key,
+                    'title_en' => $eng_word[$key],
                 ];
 
                 DB::table("menus")->insert($sub_element);
@@ -196,6 +233,7 @@ class MenuSeeder extends Seeder
                     'order' => $j,
                     'parent' => 0,
                     'title' => $key,
+                    'title_en' => $eng_word[$key],
                 ];
 
                 DB::table("menus")->insert($sub_element);
@@ -218,6 +256,7 @@ class MenuSeeder extends Seeder
                     'order' => $j,
                     'parent' => 0,
                     'title' => $key,
+                    'title_en' => $eng_word[$key],
                 ];
 
                 DB::table("menus")->insert($sub_element);

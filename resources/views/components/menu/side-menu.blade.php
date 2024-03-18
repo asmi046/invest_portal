@@ -5,14 +5,14 @@
 
             <li class="main-menu__parent-item">
                 <div class="main-menu__first-level">
-                    <a href="{{ $item['item']['lnk'] }}">{{ $item['item']['title'] }}</a>
+                    <a href="{{ $item['item']['lnk'] }}">{{ _tr($item['item']['title'], $item['item']['title_en']) }}</a>
                     <button class="btn-show-submenu"></button>
                 </div>
                 @if (!empty($item['submeny']))
                     <ul>
                         @foreach ($item['submeny'] as $sub_item)
                             <li>
-                                <a href="{{ $sub_item->lnk }}">{{ $sub_item->title }}</a>
+                                <a href="{{ $sub_item->lnk }}">{{ _tr($sub_item->title, $sub_item->title_en) }}</a>
                             </li>
                         @endforeach
 
