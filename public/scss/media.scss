@@ -20,6 +20,9 @@
     }
 }
 @media screen and (max-width: 1100px){
+    .m_standart_wrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
     .bragging-block {
         padding: 2rem 2rem 2rem 3rem;
         .bragging-block__text {
@@ -143,6 +146,29 @@
     .gallery--three {
         grid-template-columns: repeat(2, 1fr);
     }
+    .section-with-submenu__content{
+        .columns-box{
+            &--three-col{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+    .area-card{
+        flex-direction: column;
+        gap: 1rem;
+        background-color: var(--light);
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+        .area-card__img-box{
+            width: 100%;
+        }
+        .area-card__info{
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    }
 }
 @media screen and (max-width: 870px){
 
@@ -182,6 +208,25 @@
     }
     .advantages-grid {
         gap: 2rem;
+    }
+}
+@media screen and (max-width: 810px){
+    .m_standart_wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .ms_card {
+        .ms_card__name {
+            font-size: 1.6rem;
+        }
+    }
+    .person{
+        gap: 30px;
+        .person__photo{
+            max-width: 250px;
+        }
+        .person__name{
+            font-size: 2.5rem;
+        }
     }
 }
 @media screen and (max-width: 720px){
@@ -238,9 +283,10 @@
         font-size: 9px;
     }
     .columns-box{
-        &--two-col{
+        &--two-col, &--three-col{
             grid-template-columns: 1fr;
         }
+
     }
 }
 @media screen and (max-width: 600px){
@@ -251,6 +297,22 @@
     .news-grid {
         grid-template-columns: 1fr;
     }
+    .m_standart_wrapper {
+        grid-gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .ms_card {
+        padding: 10px;
+        gap: 1rem;
+        .ms_card__name {
+            font-size: 1.6rem;
+        }
+    }
+    .area-card {
+        .area-card__caption {
+            font-size: 2.8rem;
+        }
+    }
 }
 @media screen and (max-width: 550px){
     .column-box{
@@ -259,7 +321,16 @@
             grid-template-columns: 1fr;
         }
     }
-
+    .person{
+        gap: 2rem;
+        flex-direction: column;
+        .person__photo{
+            max-width: 250px;
+        }
+        .person__name{
+            font-size: 2.5rem;
+        }
+    }
 }
 @media screen and (max-width: 500px){
     .useful-resources-grid {
@@ -304,5 +375,19 @@
         .advantages__caption {
             font-size: 2rem;
         }
+    }
+    .area-card {
+        .area-card__info {
+            padding: 10px;
+        }
+    }
+}
+@media screen and (max-width: 350px){
+    .m_standart_wrapper {
+        grid-template-columns: 1fr;
+    }
+    .ms_card{
+        max-width: 250px;
+        margin: 0 auto;
     }
 }

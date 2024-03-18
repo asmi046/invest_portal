@@ -17,6 +17,7 @@
 @section('main')
     <div class="news-page-section">
         <div class="inner">
+
             <x-breadcrumbs.main :ms="_tr($page->title, $page->title_en)"></x-breadcrumbs.main>
 
             {!! _tr($page->description, $page->description_en) !!}
@@ -34,15 +35,10 @@
 
 
             <h2>{{__('Глава района')}}</h2>
-            <div class="glava_info">
-                <div class="foto_wrap">
-                    <img src="{{ Storage::url("munitipal_standarts/".$page->glava_photo) }}" alt="{{$page->glava}}">
-                </div>
-
-
-
-                <div class="contacts">
-                    <h3>{{ _tr($page->glava, $page->glava_en) }}</h3>
+            <div class="person">
+                <img class="person__photo" src="{{ Storage::url("munitipal_standarts/".$page->glava_photo) }}" alt="{{$page->glava}}">
+                <div class="person__info-box">
+                    <p class="person__name">{{ _tr($page->glava, $page->glava_en) }}</p>
                     <p><strong>{{__('Адрес')}}:</strong> {{_tr($page->address,$page->address_en)}}</p>
                     <p><strong>{{__('Телефон')}}:</strong> {{$page->phone}}</p>
                     <p><strong>{{__('Сайт')}}:</strong> {{$page->site}}</p>

@@ -207,6 +207,139 @@
                         </div>
                     </div>
                 </div>
+                <h2>Ниже представлены примеры размещения изображений с подключенным плагином для просмотра изображений lightGallery</h2>
+                <p>
+                    Что бы отключить плагин, то нужно убрать класс <b>lightgallery</b> и аттрибут <b>data-src</b>
+                </p>
+                <div class="columns-box columns-box--two-col">
+                    <figure >
+                        <span data-src="{{asset('img/poster-1.jpg')}}">
+                            <img src="{{asset('img/poster-1.jpg')}}" alt="Описание" />
+                        </span>
+                        <figcaption>Описание</figcaption>
+                    </figure>
+                    <div class="lightgallery" data-src="{{asset('img/poster-1.jpg')}}">
+                        <img src="{{asset('img/poster-1.jpg')}}" alt="">
+                    </div>
+                </div>
+                <div class="columns-box columns-box--two-col lightgallery">
+                    <figure >
+                        <span data-src="{{asset('img/poster-1.jpg')}}">
+                            <img src="{{asset('img/poster-1.jpg')}}" alt="Описание" />
+                        </span>
+                        <figcaption>Описание</figcaption>
+                    </figure>
+                    <div  data-src="{{asset('img/poster-1.jpg')}}">
+                        <img src="{{asset('img/poster-1.jpg')}}" alt="">
+                    </div>
+                </div>
+                <div class="doc-link">
+                    <span class="doc-link__caption">
+                        Название документа для скачивания или еще чего нибудь
+                    </span>
+                    <a target="_blank" href="#" class="doc-link__download">Скачать</a>
+                </div>
+                <div class="doc-link">
+                    <span class="doc-link__caption">
+                        Название документа для скачивания или еще чего нибудь
+                    </span>
+                    <a target="_blank" href="#" class="doc-link__download">Скачать</a>
+                </div>
+                <div class="columns-box columns-box--three-col">
+                    <div class="lightgallery" data-src="{{asset('img/poster-1.jpg')}}">
+                        <img src="{{asset('img/poster-1.jpg')}}" alt="">
+                    </div>
+                    <div class="lightgallery" data-src="{{asset('img/poster-1.jpg')}}">
+                        <img src="{{asset('img/poster-1.jpg')}}" alt="">
+                    </div>
+                    <div class="lightgallery" data-src="{{asset('img/poster-1.jpg')}}">
+                        <img src="{{asset('img/poster-1.jpg')}}" alt="">
+                    </div>
+                    <div class="lightgallery" data-src="{{asset('img/poster-1.jpg')}}">
+                        <img src="{{asset('img/poster-1.jpg')}}" alt="">
+                    </div>
+                    <div class="lightgallery" data-src="{{asset('img/poster-1.jpg')}}">
+                        <img src="{{asset('img/poster-1.jpg')}}" alt="">
+                    </div>
+                    <div class="lightgallery" data-src="{{asset('img/poster-1.jpg')}}">
+                        <img src="{{asset('img/poster-1.jpg')}}" alt="">
+                    </div>
+                </div>
+                <details>
+                    <summary>Нажмите здесь, чтобы показать или скрыть подробности <span class="summary__cross"></span></summary>
+                    <div class="details__body">
+                        <p>Подробности о чём-то</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>Нажмите здесь, чтобы показать или скрыть подробности <span class="summary__cross"></span></summary>
+                    <div class="details__body">
+                        <p>Подробности о чём-то</p>
+                    </div>
+                </details>
+                <div class="ip-tab">
+                    <div class="ip-tab-controller">
+                        <button class="ip-tab-controller__btn active">Все меры поддержки</button>
+                        <button class="ip-tab-controller__btn">Поддержка инвестора</button>
+                    </div>
+                    <div class="ip-tab__display active">
+                        <div class="columns-box columns-box--two-col">
+                            <a href="#" class="icon-link-box">
+                                <span class="icon-link-box__caption">
+                                    Льгота по налогу на имущество организаций
+                                </span>
+                                <span class="icon-link-box__icon money-icon"></span>
+                            </a>
+                            <a href="#" class="icon-link-box">
+                                <span class="icon-link-box__caption">
+                                    Льгота по налогу на имущество организаций
+                                </span>
+                                <span class="icon-link-box__icon money-icon"></span>
+                            </a>
+                            <a href="#" class="icon-link-box">
+                                <span class="icon-link-box__caption">
+                                    Льгота по налогу на имущество организаций
+                                </span>
+                                <span class="icon-link-box__icon money-icon"></span>
+                            </a>
+                            <a href="#" class="icon-link-box">
+                                <span class="icon-link-box__caption">
+                                    Льгота по налогу на имущество организаций
+                                </span>
+                                <span class="icon-link-box__icon money-icon"></span>
+                            </a>
+                            <a href="#" class="icon-link-box">
+                                <span class="icon-link-box__caption">
+                                    Льгота по налогу на имущество организаций
+                                </span>
+                                <span class="icon-link-box__icon money-icon"></span>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="ip-tab__display">
+                        <div class="columns-box columns-box--two-col">
+                            <a href="#" class="icon-link-box">
+                                <span class="icon-link-box__caption">
+                                    Льгота по налогу на имущество организаций
+                                </span>
+                                <span class="icon-link-box__icon money-icon"></span>
+                            </a>
+                            <a href="#" class="icon-link-box">
+                                <span class="icon-link-box__caption">
+                                    Льгота по налогу на имущество организаций
+                                </span>
+                                <span class="icon-link-box__icon money-icon"></span>
+                            </a>
+                            <a href="#" class="icon-link-box">
+                                <span class="icon-link-box__caption">
+                                    Льгота по налогу на имущество организаций
+                                </span>
+                                <span class="icon-link-box__icon money-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="section-with-submenu__submenu">
                 <span class="submenu__caption">Разделы</span>

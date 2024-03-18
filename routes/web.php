@@ -48,6 +48,7 @@ Route::get('/news', [NewsController::class, "index"])->name('news_list');
 
 // --------------Обединяющие-разделы--------------
 
+
 Route::get('/analitics', [GlobalPageController::class, "analitics"])->name('global_analitics');
 Route::get('/investor_way', [GlobalPageController::class, "investor_way"])->name('global_investor_way');
 Route::get('/invest_areas', [GlobalPageController::class, "invest_areas"])->name('global_invest_areas');

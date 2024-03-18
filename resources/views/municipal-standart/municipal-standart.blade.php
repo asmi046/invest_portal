@@ -16,6 +16,7 @@
 @section('main')
     <div class="news-page-section">
         <div class="inner">
+
             <x-breadcrumbs.main :title="$page_title"></x-breadcrumbs.main>
 
             <x-page.content
@@ -25,7 +26,7 @@
 
             @foreach ($m_standart as $key => $value)
                 <h4>{{ __($key) }}</h4>
-                <div class="m_standart_wrapper columns-box columns-box--two-col">
+                <div class="m_standart_wrapper">
                     @foreach ($value as $item)
                         <x-municipal-standart.card
                             :item="$item"

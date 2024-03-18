@@ -139,12 +139,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 
      // подключаю lightGallery - плагин для просмотра изображений
-    let LightGalleryList = document.querySelectorAll('.lg-gallery');
+    let LightGalleryList = document.querySelectorAll('.lg-gallery, [data-src]');
     if(LightGalleryList.length > 0){
         LightGalleryList.forEach(gallery => {
             lightGallery(gallery);
         });
     }
+
 
     let spoilerBtn = document.querySelectorAll('.spoiler__btn ');
 
@@ -178,6 +179,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
         loop: true,
         spaceBetween: 0,
         effect: "fade",
+        autoplay: {
+            delay: 5000,
+        },
         navigation: {
             nextEl: ".header-sl-box .swiper-button-next",
             prevEl: ".header-sl-box .swiper-button-prev",
