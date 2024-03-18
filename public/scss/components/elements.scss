@@ -820,6 +820,8 @@ figure{
     display: flex;
     gap: 40px;
 
+    background-color: white;
+
     &:not(:last-child){
         margin-bottom: 4rem;
     }

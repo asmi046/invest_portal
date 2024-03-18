@@ -1,6 +1,6 @@
 <?php
 $support_measures = [
-    [   
+    [
     'title' => "Льгота по налогу на имущество организаций",
     //'title_en' => "",
     'type' => "Меры поддержки инвестора",
@@ -15,13 +15,13 @@ $support_measures = [
     'seo_title' =>"Льгота по налогу на имущество организаций для юридических лиц, реализующих инвестиционные проекты в режиме наибольшего благоприятствования",
     'seo_description' => "Льготы по налогу на имущество организаций в Курской области предоставляются в соответствии с законодательством Российской Федерации и региональными",
     ],
-    [   
+    [
         'title' => "Предоставление пониженных ставок по налогу на прибыль организации",
         //'title_en' => "",
         'type' => "Меры поддержки инвестора",
         'img' => "nkspwim0nvq-605263a4.webp",
-        'innet_img' => "nalog-na-pribyl.webp",
-        //'innet_img_en' => "",
+        'inner_img' => "nalog-na-pribyl.webp",
+        //'inner_img_en' => "",
         'short_description' => "short_description.html",
         //'short_description_en' =>"",
         'description' => "description.html",
@@ -29,13 +29,13 @@ $support_measures = [
         'seo_title' =>"Предоставление пониженных ставок по налогу на прибыль организации",
         'seo_description' => "В Курской области, как и в большинстве регионов России, действуют пониженные ставки по налогу на прибыль организаций. Это означает, что вместо стандартной",
     ],
-    [   
+    [
         'title' => "Предоставление льготы по налогу на имущество",
         //'title_en' => "",
         'type' => "Меры поддержки общие",
         'img' => "mi7xunlrujg-1d6e8a63.webp",
-        'innet_img' => "nalog-na-im-vo.webp",
-        //'innet_img_en' => "",
+        'inner_img' => "nalog-na-im-vo.webp",
+        //'inner_img_en' => "",
         'short_description' => "short_description.html",
         //'short_description_en' =>"",
         'description' => "description.html",
@@ -43,13 +43,13 @@ $support_measures = [
         'seo_title' =>"Предоставление льготы по налогу на имущество",
         'seo_description' => "Предоставление льготы по налогу на имущество",
     ],
-    [   
+    [
         'title' => "Предоставление субсидий на возмещение процентов по кредитам",
         //'title_en' => "",
         'type' => "Меры поддержки общие",
         'img' => "sheto9r5ln0-611bbde3.webp",
-        'innet_img' => "subsidii-na-vozmeshhenie-kreditov.webp",
-        //'innet_img_en' => "",
+        'inner_img' => "subsidii-na-vozmeshhenie-kreditov.webp",
+        //'inner_img_en' => "",
         'short_description' => "short_description.html",
         //'short_description_en' =>"",
         'description' => "description.html",
@@ -57,13 +57,13 @@ $support_measures = [
         'seo_title' =>"Предоставление субсидий на возмещение процентов по кредитам",
         'seo_description' => "В Курской области для инвесторов предусмотрены различные меры поддержки, включая предоставление субсидий на возмещение процентов по кредитам. Субсидии",
     ],
-    [   
+    [
         'title' => "Предоставление земельных участков на льготных условиях",
         //'title_en' => "",
         'type' => "Меры поддержки общие",
         'img' => "park-yubilejnyj-pyaterochka-a9a59151.webp",
-        'innet_img' => "zemelnye-uchastki-350f6392.webp",
-        //'innet_img_en' => "",
+        'inner_img' => "zemelnye-uchastki-350f6392.webp",
+        //'inner_img_en' => "",
         'short_description' => "short_description.html",
         //'short_description_en' =>"",
         'description' => "description.html",
@@ -71,13 +71,13 @@ $support_measures = [
         'seo_title' =>"Предоставление земельных участков на льготных условиях",
         'seo_description' => "В соответствии с положениями ст. 39.6 Земельного кодекса РФ был принят закон Курской области от 22 июня 2015 года № 58-ЗКО «Об установлении критериев, которым",
     ],
-    [   
+    [
         'title' => "Инвестиционный налоговый вычет",
         //'title_en' => "",
         'type' => "Меры поддержки общие",
         'img' => "jpvxudpuoyw-84b71b7a.webp",
-        'innet_img' => "investiczionnyj-nalogovyj-vychet.webp",
-        //'innet_img_en' => "",
+        'inner_img' => "investiczionnyj-nalogovyj-vychet.webp",
+        //'inner_img_en' => "",
         'short_description' => "short_description.html",
         //'short_description_en' =>"",
         'description' => "description.html",
@@ -85,13 +85,13 @@ $support_measures = [
         'seo_title' =>"Инвестиционный налоговый вычет",
         'seo_description' => "Инвестиционный налоговый вычет",
     ],
-    [   
+    [
         'title' => "Инвестиционный фонд Курской области",
         //'title_en' => "",
         'type' => "Меры поддержки общие",
         'img' => "lry7nbswuuk-3fe55a0a.webp",
-        'innet_img' => "investiczionnyj-fond-kursk.webp",
-        //'innet_img_en' => "",
+        'inner_img' => "investiczionnyj-fond-kursk.webp",
+        //'inner_img_en' => "",
         'short_description' => "short_description.html",
         //'short_description_en' =>"",
         'description' => "description.html",

@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
         $this->call(
             [
                 SovetSeeder::class,
+                SupportSeeder::class,
                 MunitipalStandartSeeder::class,
                 InvestProjectSeeder::class,
                 OptionSeeder::class,
