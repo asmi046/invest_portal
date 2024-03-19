@@ -33,7 +33,26 @@ class OptionsProvider extends ServiceProvider
     {
 
 
-        View::composer('*', function ($view) {
+        View::composer(['components.menu.main-menu', 'components.menu.side-menu'], function ($view) {
+
+            $menus = \Cache::rememberForever('all_menues', function () {
+
+                $menusAction = new MenuStructAction();
+                $menus = $menusAction->handle();
+
+                return $menus;
+            });
+
+            View::share('all_menu', $menus);
+
+        });
+
+        View::composer([
+            'components.main-page.gubernator',
+            'components.header.controls',
+            'page.page_gcp',
+            'footer'
+        ], function ($view) {
 
             $opt = \Cache::rememberForever('all_opt', function () {
 
@@ -48,15 +67,8 @@ class OptionsProvider extends ServiceProvider
                 return $opt;
             });
 
-            $menus = \Cache::rememberForever('all_menues', function () {
 
-                $menusAction = new MenuStructAction();
-                $menus = $menusAction->handle();
 
-                return $menus;
-            });
-
-            View::share('all_menu', $menus);
             View::share('optionsa', $opt);
         });
     }
