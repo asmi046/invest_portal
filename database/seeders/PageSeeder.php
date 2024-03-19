@@ -95,7 +95,7 @@ class PageSeeder extends Seeder
                                 'description_en' => "",
                                 'file' => "100-ZKO-O-strategii-socialno-ekonomicheskogo-razvitiya-KO-do-2030.pdf"
                             ],
-                            
+
                     ],
                 ],
                     "Региональная экспортная программа" => [
@@ -224,7 +224,7 @@ class PageSeeder extends Seeder
                         'description_en' => "",
                         'file' => "338-pa-1.pdf"
                     ],
-                    
+
                 ]
             ],
 
@@ -248,7 +248,9 @@ class PageSeeder extends Seeder
 
             'Меры господдержки' => [
                 "menu_marker" => "Меры господдержки",
-                "text" => "RUS_presentattion.html",
+                'title_en' => "",
+                "text" => "RUS_meri_gp.html",
+                "text_en" => "ENG_meri_gp.html",
                 "img" => "",
                 "banner" => "",
             ],

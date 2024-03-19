@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Support;
+use App\Models\Page\Page;
 use Illuminate\Http\Request;
 
 class SupportController extends Controller
 {
     public function index() {
         $all_support = Support::all();
+        $page = Page::where('title', 'Меры господдержки')->first();
 
         $support_st = [];
 
@@ -18,6 +20,7 @@ class SupportController extends Controller
 
         return view('support.all-support', [
             'all_support' => $support_st,
+            'page' => $page,
         ]);
     }
 

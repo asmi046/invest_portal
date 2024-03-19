@@ -62,8 +62,9 @@
                 <details>
                     <summary>
                         {{$key}} {{__('год')}}
+                        <span class="summary__cross"></span>
                     </summary>
-                    <div class="response">
+                    <div class="details__body">
                         @foreach ($item as $subitem)
                             <x-widget-file
                                 :lnk="$subitem['lnk']"
@@ -81,8 +82,9 @@
                 <details>
                     <summary>
                         {{$key}} {{__('год')}}
+                        <span class="summary__cross"></span>
                     </summary>
-                    <div class="response">
+                    <div class="details__body">
                         @foreach ($item as $subitem)
                             <x-widget-file
                                 :lnk="$subitem['lnk']"
