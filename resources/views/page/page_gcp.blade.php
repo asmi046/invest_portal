@@ -19,26 +19,8 @@
                 <x-breadcrumbs.main :page="_tr($page->title, isset($page->title_en)?$page->title_en:null)" :parent="$parent"></x-breadcrumbs.main>
 
                 <div class="column-box column-box--two-col mt3 mb3">
-                    <div class="bragging-block">
-                        <span class="bragging-block__text">
-                            {{__('Заключено соглашений')}}
-                        </span>
-
-                        <div class="bragging-block__footer">
-                            {{ $optionsa['gcp_sogl_count'] }}
-                            <span class="bragging-block__icon bragging-block__icon--check-file"></span>
-                        </div>
-                    </div>
-                    <div class="bragging-block">
-                        <span class="bragging-block__text">
-                            {{__('Общий объем инвестиций по заключенным соглашениям (млн. р.)')}}
-                        </span>
-
-                        <div class="bragging-block__footer">
-                            {{ $optionsa['gcp_sogl_pay'] }}
-                            <span class="bragging-block__icon bragging-block__icon--rub"></span>
-                        </div>
-                    </div>
+                    <x-inform-card title="Заключено соглашений" :value="$optionsa['gcp_sogl_count']" icon="check-file"></x-inform-card>
+                    <x-inform-card title="Общий объем инвестиций по заключенным соглашениям (млн. р.)" :value="$optionsa['gcp_sogl_pay']" icon="rub"></x-inform-card>
                 </div>
                 <a href="{{ $optionsa['kabinet_lnk'] }}" class="btn ">{{__('Заявка на услуги ГЧП')}}</a>
 

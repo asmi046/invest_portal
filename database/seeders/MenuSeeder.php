@@ -263,5 +263,47 @@ class MenuSeeder extends Seeder
                 $j++;
             }
         }
+
+        $contacts_menue = [
+            [
+                'menu_name' => "Меню контактов",
+                'lnk' => "/page/liniia-priamyx-obrashhenii",
+                'order' => 1,
+                'parent' => 0,
+                'title' => "Линия прямых обращений",
+                'title_en' => "The line of direct appeals",
+            ],
+            [
+                'menu_name' => "Меню контактов",
+                'lnk' => "/page/kontakty-dlia-investora",
+                'order' => 2,
+                'parent' => 0,
+                'title' => "Контакты для инвестора",
+                'title_en' => "Investor Contacts",
+            ],
+        ];
+
+        DB::table("menus")->insert($contacts_menue);
+
+        $polis_menue = [
+            [
+                'menu_name' => "Меню Третий полюс",
+                'lnk' => "/page/nalogovye-lgoty-dlia-rezidentov-osoboi-ekonomiceskoi-zony-promyslenno-proizvodstvennogo-tipa-tretii-polius",
+                'order' => 1,
+                'parent' => 0,
+                'title' => "Налоговые льготы",
+                'title_en' => "Tax benefits",
+            ],
+            [
+                'menu_name' => "Меню Третий полюс",
+                'lnk' => "https://kursk.in/third_pole",
+                'order' => 2,
+                'parent' => 0,
+                'title' => "Управляющая компания",
+                'title_en' => "Management company",
+            ],
+        ];
+
+        DB::table("menus")->insert($polis_menue);
     }
 }

@@ -155,7 +155,37 @@ class ContactSeeder extends Seeder
                 ],
             ];
 
+            $main_contacts = [
+                [
+                    'selector' => 'Основные контакты',
+                    'text_id' => 'korp_razv',
+                    'organ' => 'ООО Корпорация развития Курской Области',
+                    'organ_en' => 'Kursk Region Development Corporation LLC',
+                    'adres' => '305000 Курская область, г. Курск, ул. Димитрова, д. 59',
+                    'adres_en' => '305000 Kursk region, Kursk, Dimitrova str., 59',
+                    'phone' => '+7 (4712) 70-70-47',
+                    'img' => 'korp_razv_logo.webp',
+                    'email' => 'info@kursk.in',
+                ],
+                [
+                    'selector' => 'Основные контакты',
+                    'text_id' => 'min_ec',
+                    'organ' => 'Министерство экономического развития Курской области',
+                    'organ_en' => 'Ministry of Economic Development of the Kursk region',
+                    'adres' => '305007 Курская область, г. Курск, ул. Моковская, д. 11а',
+                    'adres_en' => '305007 Kursk region, Kursk, Mokovskaya str., 11a',
+                    'phone' => '+7 (4712) 33-07-50',
+                    'phone_dob' => '106',
+                    'img' => 'min_ex.webp',
+                    'email' => 'komitet46ec@yandex.ru',
+                    'vk_lnk' => 'https://vk.com/komeconom46',
+                    'tg_lnk' => 'https://t.me/econom46',
+                    'ok_lnk' => 'https://ok.ru/group/63739634778364',
+                ],
+            ];
+
             $all_item = array_merge(
+                $main_contacts,
                 $all_item,
                 $gcp
             );

@@ -92,7 +92,7 @@ class PageSeederEn extends Seeder
                                 'description_en' => "",
                                 'file' => "100-ZKO-O-strategii-socialno-ekonomicheskogo-razvitiya-KO-do-2030.pdf"
                             ],
-                            
+
                     ],
                     ],
                     "Regional export program" => [
@@ -189,13 +189,6 @@ class PageSeederEn extends Seeder
 
             // -----------------------------------------------
 
-
-            'Особая экономическая зона промышленно-производственного типа «Третий полюс»' => [
-                "menu_marker" => "ОЭЗ «Третий Полюс»",
-                "text" => "ENG_presentattion.html",
-                "img" => "",
-                "banner" => "",
-            ],
 
             'Индустриальные парки' => [
                 "menu_marker" => "Индустриальные парки",

@@ -13,14 +13,7 @@
             </div>
             <div class="footer-list-box footer-list-box-site--section">
                 <span class="footer-list-box__caption">{{__('Меню')}}</span>
-                <ul class="footer-list">
-                    <li><a href="#">О Курской области</a></li>
-                    <li><a href="#">Путь инвестора</a></li>
-                    <li><a href="#">Инвестиционные площадки</a></li>
-                    <li><a href="#">Инвестиционная карта</a></li>
-                    <li><a href="#">Навигатор мер поддержки</a></li>
-                    <li><a href="#">Экспертам АСИ</a></li>
-                </ul>
+                <x-menu.footer-main></x-menu.footer-main>
 
             </div>
             <div class="footer-list-box footer-list-box--contacts">
@@ -39,9 +32,7 @@
             <div class="footer-list-box footer-list-box--social">
                 <span class="footer-list-box__caption">{{__('Навигация')}}</span>
                 <ul class="footer-list">
-                    <li><a href="#">Контактная информация</a></li>
-                    <li><a href="#">Линия прямых обращений</a></li>
-                    <li><a href="#">Телефоны горячей линии</a></li>
+                    <x-menu.footer-contacts></x-menu.footer-contacts>
                     <li><a target="_blank" href="{{ phone_format($optionsa['gubernator_message']) }}" class="btn btn--white-hollow">Написать губернатору</a></li>
                 </ul>
             </div>

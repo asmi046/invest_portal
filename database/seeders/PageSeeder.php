@@ -284,24 +284,20 @@ class PageSeeder extends Seeder
             // -----------------------------------------------
 
 
-            'Особая экономическая зона промышленно-производственного типа «Третий полюс»' => [
-                "menu_marker" => "ОЭЗ «Третий Полюс»",
-                "text" => "RUS_presentattion.html",
-                "img" => "",
-                "banner" => "",
-            ],
-
-
         ];
 
         include 'PageArrays/HeadPage.php';
         include 'PageArrays/sots-ekonom.php';
         include 'PageArrays/support.php';
+        include 'PageArrays/ContactsPage.php';
+        include 'PageArrays/Polis3.php';
 
         $page_data = array_merge(
             $head_page,
+            $contacts_page,
             $sots_ec,
             $support_pages,
+            $polis_3,
             $page_data
         );
 

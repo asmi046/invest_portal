@@ -79,6 +79,33 @@ class OptionSeeder extends Seeder
                 //-------------------------
 
                 [
+                    "name" => "polis_3_work_mest",
+                    "type" => "plan",
+                    'title' => 'Рабочих мест',
+                    "value" => "598",
+                ],
+                [
+                    "name" => "polis_3_invest",
+                    "type" => "plan",
+                    'title' => 'Объем инвестиций резидентов (млн. р.)',
+                    "value" => "39 974,7",
+                ],
+                [
+                    "name" => "polis_3_ploshad",
+                    "type" => "plan",
+                    'title' => 'Общая площадь (га.)',
+                    "value" => "237,05",
+                ],
+                [
+                    "name" => "polis_3_srok",
+                    "type" => "plan",
+                    'title' => 'Срок существования ОЭЗ (лет)',
+                    "value" => "49 лет",
+                ],
+
+                //-------------------------
+
+                [
                     "name" => "invest_map_lnk",
                     "type" => "plan",
                     'title' => 'Ссылка на инвестиционную карту',
