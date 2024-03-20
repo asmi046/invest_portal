@@ -112,6 +112,26 @@
                 </span>
             @endif
 
+            @if (Request::route()->named('support_page'))
+                <span class="sep"> / </span>
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a title="{{ __('Все меры поддержки') }}" itemprop="item" href="{{route('invest_project')}}">
+                        <span itemprop="name">{{ __('Все меры поддержки') }}</span>
+                        <meta itemprop="position" content="1">
+                    </a>
+                </span>
+
+
+                <span class="sep"> / </span>
+
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">
+                    <span title="{{ $support }}" itemprop="item">
+                        <span itemprop="name">{{ $support }}</span>
+                        <meta itemprop="position" content="2">
+                    </span>
+                </span>
+            @endif
+
             @if (isset($title))
                 <span class="sep"> / </span>
                     <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">

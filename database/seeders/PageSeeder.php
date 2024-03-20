@@ -188,9 +188,35 @@ class PageSeeder extends Seeder
 
             'План создания объектов инфраструктуры' => [
                 "menu_marker" => "План создания объектов инфраструктуры",
-                "text" => "RUS_presentattion.html",
+                "title_en" => "The plan for the creation of infrastructure facilities",
+                "text" => "RUS_infra_plan.html",
+                "text_en" => "ENG_infra_plan.html",
                 "img" => "",
+                "template" => "page.page_infra_plan",
                 "banner" => "",
+                "files" => [
+                    [
+                        'title' => "План создания инвестиционных объектов на 2023-2025 годы",
+                        'title_en' => "The plan for the creation of investment facilities for 2023-2025",
+                        'description' => "",
+                        'description_en' => "",
+                        'file' => "Plan-obektov-23025-2-13.pdf"
+                    ],
+                    [
+                        'title' => "Распоряжение Правительства Курской области от 05.04.2023 № 287-рп «Об утверждении Плана создания инвестиционных объектов и объектов инфраструктуры Курской области на 2023-2025 годы»",
+                        'title_en' => "Decree of the Government of the Kursk Region dated 04/05/2023 No. 287-rp 'On approval of the Plan for the creation of Investment facilities and infrastructure facilities of the Kursk Region for 2023-2025'",
+                        'description' => "",
+                        'description_en' => "",
+                        'file' => "Plan-obektov-23025.pdf"
+                    ],
+                    [
+                        'title' => "Порядок формирования и ежегодного обновления Плана создания инвестиционных объектов и объектов инфраструктуры в Курской области",
+                        'title_en' => "The procedure for the formation and annual updating of the Plan for the creation of investment facilities and infrastructure facilities in the Kursk region",
+                        'description' => "",
+                        'description_en' => "",
+                        'file' => "837-pa.docx"
+                    ],
+                ]
             ],
 
             'Инвестиционные предложения' => [
