@@ -166,13 +166,6 @@ class PageSeederEn extends Seeder
 
             //----------------------
 
-            'Регламент «одного окна» для инвестора' => [
-                "menu_marker" => "Регламент «одного окна» для инвестора (подать заявку)",
-                "text" => "ENG_presentattion.html",
-                "img" => "",
-                "banner" => "",
-            ],
-
             'Земельные участки и промплощадки' => [
                 "menu_marker" => "Подобрать земельный участок",
                 "text" => "ENG_presentattion.html",

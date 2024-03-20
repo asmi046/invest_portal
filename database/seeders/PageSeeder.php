@@ -258,13 +258,6 @@ class PageSeeder extends Seeder
 
             //----------------------
 
-            'Регламент «одного окна» для инвестора' => [
-                "menu_marker" => "Регламент «одного окна» для инвестора (подать заявку)",
-                "text" => "RUS_presentattion.html",
-                "img" => "",
-                "banner" => "",
-            ],
-
             'Земельные участки и промплощадки' => [
                 "menu_marker" => "Подобрать земельный участок",
                 "text" => "RUS_presentattion.html",
@@ -291,6 +284,7 @@ class PageSeeder extends Seeder
         include 'PageArrays/support.php';
         include 'PageArrays/ContactsPage.php';
         include 'PageArrays/Polis3.php';
+        include 'PageArrays/OneWindow.php';
 
         $page_data = array_merge(
             $head_page,
@@ -298,6 +292,7 @@ class PageSeeder extends Seeder
             $sots_ec,
             $support_pages,
             $polis_3,
+            $one_window,
             $page_data
         );
 

@@ -305,5 +305,35 @@ class MenuSeeder extends Seeder
         ];
 
         DB::table("menus")->insert($polis_menue);
+
+        $one_menue = [
+            [
+                'menu_name' => "Регламент одного окна",
+                'lnk' => "https://docs.yandex.ru/docs/view?url=ya-disk-public%3A%2F%2FOpZ2cC1Ryrrfcn3Uz0IroRo5C01K4AGLDGGDEkOgFrJKqqJhq5bctxSAv%2BeZGsEuq%2FJ6bpmRyOJonT3VoXnDag%3D%3D%3A%2F1%20%D0%B8%D0%BD%D0%B2.pdf&name=1%20%D0%B8%D0%BD%D0%B2.pdf",
+                'order' => 1,
+                'parent' => 0,
+                'title' => "Инфографика регламента «Одно окно» (RUS)",
+                'title_en' => 'Infographics of the "One Window" regulations (RUS)',
+            ],
+            [
+                'menu_name' => "Регламент одного окна",
+                'lnk' => "#",
+                'order' => 2,
+                'parent' => 0,
+                'title' => "Инфографика регламента «Одно окно» (ENG)",
+                'title_en' => 'Infographics of the "One Window" regulations (ENG)',
+            ],
+            [
+                'menu_name' => "Регламент одного окна",
+                'lnk' => "https://investlk.rkursk.ru/",
+                'order' => 3,
+                'parent' => 0,
+                'title' => "Онлайн сопровождение проекта",
+                'title_en' => 'Online project support',
+            ],
+        ];
+
+        DB::table("menus")->insert($one_menue);
+
     }
 }

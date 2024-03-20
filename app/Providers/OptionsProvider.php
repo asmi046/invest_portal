@@ -10,6 +10,7 @@ use App\Models\Category;
 use App\Models\Menu\Menu;
 
 use App\Models\Celebration;
+use App\Models\OneWinReglament;
 use App\Actions\MenuStructAction;
 use App\Models\InfrastricturPlane;
 use Illuminate\Support\ServiceProvider;
@@ -34,6 +35,15 @@ class OptionsProvider extends ServiceProvider
     public function boot()
     {
 
+
+        View::composer(['components.one-win.schem'], function ($view) {
+
+            $reglamen_schem = \Cache::rememberForever('reglamen_schem', function () {
+                return OneWinReglament::all();
+            });
+
+            View::share('one_win_reglament', $reglamen_schem);
+        });
 
         View::composer(['components.contacts.investor-contacts'], function ($view) {
 
@@ -69,6 +79,7 @@ class OptionsProvider extends ServiceProvider
             'components.menu.side-menu',
             'components.menu.footer-contacts',
             'page.page_polis_3',
+            'page.page_one_window',
         ], function ($view) {
 
             $menus = \Cache::rememberForever('all_menues', function () {
