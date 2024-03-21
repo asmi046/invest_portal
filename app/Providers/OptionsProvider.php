@@ -60,6 +60,16 @@ class OptionsProvider extends ServiceProvider
             View::share('korp_razv_contacts', $korp_razv_contacts);
         });
 
+        View::composer(['page.page_invest_komitet'], function ($view) {
+
+            $invest_comitet_contacts = \Cache::rememberForever('invest_comitet_contacts', function () {
+                return Contact::where('selector', "Инвестиционный комитет Курской области")->get();
+            });
+
+            // dd($invest_comitet_contacts);
+            View::share('invest_comitet_contacts', $invest_comitet_contacts);
+        });
+
         View::composer(['components.infra-planes'], function ($view) {
 
             $infra_planes = \Cache::rememberForever('infra_planes', function () {
@@ -80,6 +90,7 @@ class OptionsProvider extends ServiceProvider
             'components.menu.footer-contacts',
             'page.page_polis_3',
             'page.page_one_window',
+            'page.page_invest_standart_2',
         ], function ($view) {
 
             $menus = \Cache::rememberForever('all_menues', function () {

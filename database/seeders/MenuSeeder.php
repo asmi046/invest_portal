@@ -335,5 +335,61 @@ class MenuSeeder extends Seeder
 
         DB::table("menus")->insert($one_menue);
 
+        $standart_2 = [
+            [
+                'menu_name' => "Инвестиционный стандарт 2.0",
+                'lnk' => "https://map.kurskoblinvest.ru/",
+                'order' => 1,
+                'parent' => 0,
+                'title' => "Инвестиционная карта Курской области",
+                'title_en' => 'Investment map of the Kursk region',
+            ],
+
+            [
+                'menu_name' => "Инвестиционный стандарт 2.0",
+                'lnk' => "https://clck.ru/39aGNb",
+                'order' => 2,
+                'parent' => 0,
+                'title' => "Регламент Инвестиционной карта Курской области",
+                'title_en' => 'Regulations of the Investment map of the Kursk region',
+            ],
+
+            [
+                'menu_name' => "Инвестиционный стандарт 2.0",
+                'lnk' => "/page/investicionnyi-komitet-kurskoi-oblasti",
+                'order' => 3,
+                'parent' => 0,
+                'title' => "Инвестиционный комитет Курской области",
+                'title_en' => 'Investment Committee of the Kursk region',
+            ],
+            [
+                'menu_name' => "Инвестиционный стандарт 2.0",
+                'lnk' => "/page/investicionnaia-deklaraciia-kurskoi-oblasti",
+                'order' => 4,
+                'parent' => 0,
+                'title' => "Инвестиционная декларация Курской области",
+                'title_en' => 'Investment declaration of the Kursk region',
+            ],
+            [
+                'menu_name' => "Инвестиционный стандарт 2.0",
+                'lnk' => "/page/svod-investicionnyx-pravil",
+                'order' => 5,
+                'parent' => 0,
+                'title' => "Свод инвестиционных правил Курской области",
+                'title_en' => 'The Code of investment rules of the Kursk region',
+            ],
+            [
+                'menu_name' => "Инвестиционный стандарт 2.0",
+                'lnk' => "http://kursk.in/",
+                'order' => 6,
+                'parent' => 0,
+                'title' => "Корпорация развития Курской области",
+                'title_en' => 'Kursk Region Development Corporation',
+            ],
+
+        ];
+
+        DB::table("menus")->insert($standart_2);
+
     }
 }

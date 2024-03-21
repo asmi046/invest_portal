@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('title_en', 500)->comment('Анкор ссылки (en)');
             $table->integer('order')->default(0)->comment('Порядок вывода');
             $table->integer('parent')->default(0)->comment('Радительский пункт');
-            $table->string('lnk', 500)->default("#")->comment('Ссылка');
+            $table->string('lnk', 1500)->default("#")->comment('Ссылка');
         });
     }
 

@@ -285,6 +285,7 @@ class PageSeeder extends Seeder
         include 'PageArrays/ContactsPage.php';
         include 'PageArrays/Polis3.php';
         include 'PageArrays/OneWindow.php';
+        include 'PageArrays/standart_2.php';
 
         $page_data = array_merge(
             $head_page,
@@ -293,6 +294,7 @@ class PageSeeder extends Seeder
             $support_pages,
             $polis_3,
             $one_window,
+            $standart_2,
             $page_data
         );
 
