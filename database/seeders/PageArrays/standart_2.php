@@ -50,6 +50,59 @@ $standart_2 = [
                 'description_en' => "",
                 'file' => "izmeneniya-v-investiczionnom-komitete-kurskoj-oblasti.pdf"
             ],
+        ],
+        "subpage" => [
+            "Протоколы заседаний Инвестиционного комитета Курской области" => [
+                "menu_marker" => "Протоколы заседаний Инвестиционного комитета Курской области",
+                'title_en' => 'Minutes of meetings of the Investment Committee of the Kursk region',
+                "text" => "RUS_inves_commitet_protocols.html",
+                "text_en" => "ENG_inves_commitet_protocols.html",
+                "banner" => "sunset.webp",
+                "files" => [
+                    [
+                        'title' => "Протокол заседания инвестиционного комитета №1 от 20.01.2023",
+                        'title_en' => 'Minutes of the meeting of the Investment Committee No. 1 dated 20.01.2023',
+                        'description' => "",
+                        'description_en' => "",
+                        'file' => "protokol-1-ot-20.01.2023.pdf"
+                    ],
+                    [
+                        'title' => "Протокол заседания инвестиционного комитета №2 от 27.03.2023",
+                        'title_en' => 'Minutes of the meeting of the Investment Committee No. 2 dated 27.03.2023',
+                        'description' => "",
+                        'description_en' => "",
+                        'file' => "protokol-2-ot-27.03.2023.pdf"
+                    ],
+                    [
+                        'title' => "Протокол заседания инвестиционного комитета №3 от 24.05.2023",
+                        'title_en' => 'Minutes of the meeting of the Investment Committee No. 3 dated 24.05.2023',
+                        'description' => "",
+                        'description_en' => "",
+                        'file' => "protokol-3-ot-24.05.2023.pdf"
+                    ],
+                    [
+                        'title' => "Протокол заседания инвестиционного комитета №4 от 30.10.2023",
+                        'title_en' => 'Minutes of the meeting of the Investment Committee No. 4 dated 30.10.2023',
+                        'description' => "",
+                        'description_en' => "",
+                        'file' => "protokol-4-ot-31.10.2023.pdf"
+                    ],
+                    [
+                        'title' => "Протокол заседания инвестиционного комитета №5 от 22.12.2023",
+                        'title_en' => 'Minutes of the meeting of the Investment Committee No. 5 dated 22.12.2023',
+                        'description' => "",
+                        'description_en' => "",
+                        'file' => "protokol-5-ot-22.12.2023.pdf"
+                    ],
+                    [
+                        'title' => "Протокол заседания инвестиционного комитета №6 от 28.12.2023",
+                        'title_en' => 'Minutes of the meeting of the Investment Committee No. 6 dated 28.12.2023',
+                        'description' => "",
+                        'description_en' => "",
+                        'file' => "protokol-6-ot-28.12.2023.pdf"
+                    ],
+                ]
+            ]
         ]
     ],
 

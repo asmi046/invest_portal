@@ -16,18 +16,21 @@
 @section('main')
     <div class="news-page-section">
         <div class="inner">
-            <x-breadcrumbs.main :page="_tr($page->title, isset($page->title_en)?$page->title_en:null)" :parent="$parent"></x-breadcrumbs.main>
+            <div class="section-with-submenu__content">
+                <x-breadcrumbs.main :page="_tr($page->title, isset($page->title_en)?$page->title_en:null)" :parent="$parent"></x-breadcrumbs.main>
 
-            <x-page.content
-                :page="$page"
-            ></x-page.content>
+                <x-page.content
+                    :page="$page"
+                ></x-page.content>
 
-            <div class="photo_card_wrapper">
-                @foreach ($invest_comitet_contacts as $item)
-                    <x-contacts.photo-card :item="$item"></x-contacts.photo-card>
-                @endforeach
+                <div class="photo_card_wrapper">
+                    @foreach ($invest_comitet_contacts as $item)
+                        <x-contacts.photo-card :item="$item"></x-contacts.photo-card>
+                    @endforeach
+                </div>
             </div>
 
+            <x-page.submenu :puncts="$puncts"></x-page.submenu>
         </div>
     </div>
 @endsection
