@@ -1,12 +1,15 @@
-<div class="industrial-areas__card">
-    <div class="img_wrapper">
+<div class="industrial-area">
+    <div class="industrial-area__img-box" data-src="{{ Storage::url('invest_areas/'.$item->img) }}">
         <img src="{{ Storage::url('invest_areas/'.$item->img) }}" alt="{{ _tr($item->title, $item->title_en) }}">
     </div>
-    <div class="info">
-        <h2>{{ _tr($item->title, $item->title_en) }}</h2>
-        <p>{{__("Управляющая компания")}}: {{ _tr($item->uk_name, $item->uk_name_en) }}</p>
-        <p> {{__("Количество действующих резидентов")}} - {{ $item->rezident_count}}</p>
-        <p> {{__("Свободная площадь")}} - {{ $item->free_area}}</p>
-        <a href="{{ $item->btn_lnk }}">{{__("Подробнее")}}</a>
+
+    <div class="industrial-area__info-box">
+        <span class="industrial-area__caption">{{ _tr($item->title, $item->title_en) }}</span>
+        <ul class="indastrial-area__parameters">
+            <li><b>{{__("Управляющая компания")}}:</b> {{ _tr($item->uk_name, $item->uk_name_en) }}</li>
+            <li><b>{{__("Количество действующих резидентов")}}:</b> {{ $item->rezident_count}}</li>
+            <li><b>{{__("Свободная площадь")}}:</b> {{ $item->free_area}}</li>
+        </ul>
+        <a href="{{ $item->btn_lnk }}" class="btn">{{__("Подробнее")}}</a>
     </div>
 </div>

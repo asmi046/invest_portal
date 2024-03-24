@@ -1,0 +1,79 @@
+.photo_card_wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+}
+.official-person{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    background-color: var(--light);
+    font-size: 1.6rem;
+    .official-person__img-box{
+        width: 50%;
+        img{
+            margin: 0;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+    .official-person__info{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    .official-person__name{
+        margin-bottom: 20px;
+        line-height: 1.2;
+        font-size: 2.8rem;
+        font-weight: 500;
+    }
+    .official-person__position{
+        margin-bottom: 20px;
+
+    }
+    .official-person__tel,
+    .official-person__email{
+        // font-size: 1.6rem;
+    }
+    .official-person__tel{
+        margin-top: auto;
+    }
+    .official-person__email{
+        margin-top: 0.5rem;
+    }
+}
+
+
+// =============================
+@media screen and (max-width: 1100px){
+    .photo_card_wrapper{
+        grid-gap: 20px;
+    }
+    .official-person {
+        font-size: 1.4rem;
+        .official-person__name {
+            font-size: 2.2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 850px){
+    .photo_card_wrapper{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 400px){
+    .official-person{
+        flex-direction: column;
+        .official-person__info{
+            width: 100%;
+            order: 2;
+        }
+        .official-person__img-box{
+            width: 100%;
+            order: 1;
+        }
+    }
+}

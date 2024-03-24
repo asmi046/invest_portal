@@ -1,0 +1,28 @@
+.measure-support{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+    .measure-support__img-box{
+        img{
+            display: block;
+            margin: 0;
+        }
+    }
+    // .measure-support__description{
+
+    // }
+}
+
+
+// ======================================
+@media screen and (max-width: 900px){
+    .measure-support{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 4rem;
+        margin-bottom: 2rem;
+        margin-top: 4rem;
+    }
+}

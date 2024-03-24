@@ -1,0 +1,97 @@
+.industrial-areas-box{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.industrial-area{
+    display: flex;
+    background-color: var(--light);
+    box-shadow: 0 0.88px 3px 0 rgba(0, 0, 0, 0.15);
+    .industrial-area__img-box{
+        width: 50%;
+        img{
+            height: 100%;
+            margin: 0;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+    .industrial-area__info-box{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 3rem;
+        box-sizing: border-box;
+    }
+    p{
+        margin: 0;
+        margin-top: 1rem;
+    }
+    .indastrial-area__parameters{
+        margin: 0;
+        margin-bottom: 3rem;
+        list-style-type: none;
+        padding: 0;
+    }
+    .industrial-area__caption{
+        margin-bottom: 2rem;
+        font-size: 2.8rem;
+        color: var(--active);
+        font-weight: 500;
+    }
+    .btn{
+        margin-top: auto;
+    }
+
+}
+
+
+// =========================================
+@media screen and (max-width: 900px){
+    .industrial-area {
+        .industrial-area__caption{
+            margin-bottom: 1rem;
+        }
+        .industrial-area__info-box {
+            padding: 2rem;
+        }
+        .industrial-area__caption {
+            font-size: 2.2rem;
+        }
+        .indastrial-area__parameters {
+            margin-bottom: 2rem;
+            li{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+@media screen and (max-width: 650px){
+    .industrial-area {
+        flex-direction: column;
+
+        .industrial-area__img-box{
+            position: relative;
+            width: 100%;
+            padding-top: 60%;
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .industrial-area__info-box{
+            width: 100%;
+            align-items: flex-end;
+        }
+        .industrial-area__caption {
+            width: 100%;
+        }
+        .indastrial-area__parameters {
+            width: 100%;
+        }
+    }
+}

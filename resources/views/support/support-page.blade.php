@@ -18,18 +18,15 @@
         <div class="inner">
             <x-breadcrumbs.main :support="$page_title"></x-breadcrumbs.main>
 
-            <div class="support_top">
-                <div class="support_top__img-wrapper">
+            <div class="measure-support">
+                <div class="measure-support__img-box"  data-src="{{asset('img/poster-1.jpg')}}">
                     <img src="{{ Storage::url("support_m/".$page->inner_img)}}" alt="{{$page_title}}">
                 </div>
-                <div class="support_top__short-description">
+                <div class="measure-support__description">
                     {!! $page->short_description !!}
                 </div>
             </div>
-
-            <div class="support_descripton">
-                {!! $page->description !!}
-            </div>
+            {!! $page->description !!}
 
         </div>
     </div>

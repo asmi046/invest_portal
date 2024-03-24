@@ -264,13 +264,14 @@
     .news__news-img{
         display: block;
         width: 100%;
+        margin: 0;
         height: 28rem;
         object-fit: cover;
         object-position: center center;
     }
     .news__content{
         flex-grow: 1;
-        padding: 30px;
+        padding: 20px 30px;
         box-sizing: border-box;
     }
     .news__date{
@@ -819,10 +820,9 @@ figure{
 .area-card{
     display: flex;
     gap: 40px;
-
     background-color: white;
-
     &:not(:last-child){
+        margin-top: 4rem;
         margin-bottom: 4rem;
     }
     .area-card__img-box{
@@ -926,6 +926,7 @@ details{
         color: var(--black);
     }
     .icon-link-box__icon{
+        flex-shrink: 0;
         background-color: var(--active);
         width: 5rem;
         height: 5rem;

@@ -23,7 +23,7 @@
                     :page="$page"
                 ></x-page.content>
 
-                <div class="industrial-areas">
+                <div class="industrial-areas-box">
                     @foreach ($all_areas as $item)
                         <x-industrial-areas.card :item="$item"></x-industrial-areas.card>
                     @endforeach

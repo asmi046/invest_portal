@@ -278,6 +278,19 @@ document.addEventListener('DOMContentLoaded', ()=>{
              })
          }
 
+        // автовысота textarea
+        var nlTextarea = document.querySelectorAll('.form-elem__textarea-autoheigth');
+        if(nlTextarea.length > 0){
+            nlTextarea.forEach(tx=>{
+                tx.setAttribute('style', 'height:'+ (tx.scrollHeight) +'px;overflow-y:hidden;');
+                tx.addEventListener("input", OnInput, false);
+            });
+        }
+
+        function OnInput() {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+        }
 
 });
 

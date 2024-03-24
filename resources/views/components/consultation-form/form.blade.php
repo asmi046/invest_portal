@@ -8,7 +8,6 @@
                 <div class="control">
                     <input name="name" class="input" type="text" placeholder="">
                 </div>
-
                 @error('name')
                     <p class="error">{{$message}}</p>
                 @enderror

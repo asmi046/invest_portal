@@ -35,7 +35,7 @@
             </li>
         </ul>
     </div>
-    <div class="section-with-submenu">
+    <section class="section-with-submenu">
         <div class="inner">
             <div class="section-with-submenu__content">
 
@@ -340,6 +340,45 @@
                         </div>
                     </div>
                 </div>
+                <h2>Пример формы</h2>
+                <form class="form">
+                    <label class="form-elem">
+                        <span class="form-elem__caption">
+                            Название проекта
+                        </span>
+                        <input type="text" name="name1" class="form-elem__field" required="required" placeholder="Введите название проекта">
+                        @error('email')
+                            <span class="form-elem__error-message">{{ $message }}</span>
+                        @enderror
+                    </label>
+                    <label class="form-elem">
+                        <span class="form-elem__caption">
+                            Территория реализации проекта
+                        </span>
+                        <textarea class="form-elem__textarea form-elem__textarea-autoheigth" name="name7"></textarea>
+                        {{-- <span class="form-elem__error-message">текст ошибки</span> --}}
+                    </label>
+                    <button type="submit" class="btn">Отправить</button>
+                </form>
+                <br>
+                <h2>Сотрудники ресурсоснабжающих организаций, ответственные за взаимодействие с инвесторами</h2>
+                <div class="contact-card">
+                    <span class="contact-card__caption">
+                        Пример заголовка в карточке контактов (если будет нужен)
+                    </span>
+                    <ul>
+                        <li><b>Ответственное лицо: </b>Агафонов Владимир Александрович — генеральный директор</li>
+                        <li><b>Организация: </b> ООО «Газпром межрегионгаз Курск» АО «Газпром газораспределение Курск»</li>
+                        <li><b>Контактные данные: </b>8 (4712) 73-52-00, 8 (4712) 39-99-47</li>
+                    </ul>
+                </div>
+                <div class="contact-card">
+                    <ul>
+                        <li><b>Ответственное лицо: </b>Агафонов Владимир Александрович — генеральный директор</li>
+                        <li><b>Организация: </b> ООО «Газпром межрегионгаз Курск» АО «Газпром газораспределение Курск»</li>
+                        <li><b>Контактные данные: </b>8 (4712) 73-52-00, 8 (4712) 39-99-47</li>
+                    </ul>
+                </div>
             </div>
             <div class="section-with-submenu__submenu">
                 <span class="submenu__caption">Разделы</span>
@@ -360,6 +399,45 @@
                         <a href="#">Ответственные по направлению ГЧП</a>
                     </li>
                 </ul>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="inner">
+        <h2>Налоговые льготы для резидентов особой экономической зоны промышленно-производственного типа «Третий полюс»</h2>
+        <div class="tax-benefits-box">
+            <div class="tax-benefits">
+                <div class="tax-benefits__icon list-icon"></div>
+                <span class="tax-benefits__icon__text">налог на прибыль</span>
+                <span class="tax-benefits__icon__procent">2%</span>
+                <span class="tax-benefits__icon__text">до 5 лет</span>
+            </div>
+            <div class="tax-benefits">
+                <div class="tax-benefits__icon payment-icon"></div>
+                <span class="tax-benefits__icon__text">налог на прибыль</span>
+                <span class="tax-benefits__icon__procent">6%</span>
+                <span class="tax-benefits__icon__text">от 6 до 10 лет</span>
+            </div>
+            <div class="tax-benefits">
+                <div class="tax-benefits__icon procent-icon"></div>
+                <span class="tax-benefits__icon__text">налог на прибыль</span>
+                <span class="tax-benefits__icon__procent">15,5%</span>
+                <span class="tax-benefits__icon__text">после 10 лет</span>
+            </div>
+            <div class="tax-benefits">
+                <div class="tax-benefits__icon map-icon"></div>
+                <span class="tax-benefits__icon__text">налог на землю</span>
+                <span class="tax-benefits__icon__procent">0%</span>
+                <span class="tax-benefits__icon__text">5 лет</span>
+            </div>
+            <div class="tax-benefits">
+                <div class="tax-benefits__icon transport-icon"></div>
+                <span class="tax-benefits__icon__text">налог на транспорт</span>
+                <span class="tax-benefits__icon__procent">0%</span>
+                <span class="tax-benefits__icon__text">10 лет</span>
             </div>
         </div>
     </div>
