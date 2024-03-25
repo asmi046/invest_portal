@@ -30,6 +30,7 @@ return new class extends Migration
             $table->string('vk_lnk')->nullable()->comment('Ссылка на VK');
             $table->string('tg_lnk')->nullable()->comment('Ссылка на Telegram');
             $table->string('ok_lnk')->nullable()->comment('Ссылка на Однокласники');
+            $table->string('web')->nullable()->comment('Адрес сайта');
             $table->string('img')->nullable()->comment('Фото или лого');
         });
     }
