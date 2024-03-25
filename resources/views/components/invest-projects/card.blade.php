@@ -3,11 +3,11 @@
     <div class="news__content">
         <h3 class="news__caption">
             <a href="{{route("invest_project_page", $item['slug'])}}">
-                {{ $item['title'] }}
+                {{ _tr($item['title'],$item['title_en']) }}
             </a>
         </h3>
     </div>
     <div class="news__footer">
-        <a href="{{route("invest_project_page", $item['slug'])}}" class="hashtag">Подробнее...</a>
+        <a href="{{route("invest_project_page", $item['slug'])}}" class="hashtag">{{__('Подробнее')}}...</a>
     </div>
 </article>

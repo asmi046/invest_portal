@@ -18,7 +18,7 @@
     <div class="news-page-section">
         <div class="inner">
 
-            <x-breadcrumbs.main :title="$title"></x-breadcrumbs.main>
+            <x-breadcrumbs.main :title="$page_title"></x-breadcrumbs.main>
 
             <x-page.content
                     :page="$page"

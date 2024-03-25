@@ -276,6 +276,7 @@ class PageSeeder extends Seeder
             ],
 
             'Инвестиционные предложения' => [
+                "title_en" => "Investment proposals",
                 "menu_marker" => "Витрина инвестиционных проектов",
                 "text" => "RUS_invest_projects.html",
                 "img" => "",

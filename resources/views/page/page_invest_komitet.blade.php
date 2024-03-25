@@ -14,7 +14,7 @@
 
 
 @section('main')
-    <div class="news-page-section">
+    <div class="section-with-submenu">
         <div class="inner">
             <div class="section-with-submenu__content">
                 <x-breadcrumbs.main :page="_tr($page->title, isset($page->title_en)?$page->title_en:null)" :parent="$parent"></x-breadcrumbs.main>

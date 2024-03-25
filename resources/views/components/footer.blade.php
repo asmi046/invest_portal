@@ -49,13 +49,13 @@
 </footer>
 
 <div class="fly-btn-box">
-    <div class="fly-btn-wr">
+    <a href="/page/liniia-priamyx-obrashhenii" class="fly-btn-wr">
         <button class="fly-btn"><span class="fly-btn__icon message-icon"></span>{{__('Линия прямых обращений')}}</button>
         <span class="fly-btn-caption">{!!__('Линия прямых <br> обращений')!!}</span>
-    </div>
-    <div class="fly-btn-wr">
+    </a>
+    <a href="{{ $optionsa['kabinet_lnk'] }}" class="fly-btn-wr">
         <button class="fly-btn"><span class="fly-btn__icon lk-icon"></span>{{ __('Личный кабинет инвестора') }}</button>
         <span class="fly-btn-caption">{!! __('Личный кабинет <br> инвестора') !!}
         </span>
-    </div>
+    </a>
 </div>

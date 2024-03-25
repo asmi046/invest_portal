@@ -87,7 +87,7 @@ class MenuSeeder extends Seeder
                 "Инвестиционный стандрат Курской области 2.0" => "#",
                 "Социально-экономическая стратегия развития Курской области" => "/page/socialno-ekonomiceskoe-razvitie",
                 "Меры господдержки" => "/supports",
-                "Линия прямых обращений" => "#",
+                "Линия прямых обращений" => "/page/liniia-priamyx-obrashhenii",
                 "Регламент «одного окна» для инвестора" => "/page/reglament-odnogo-okna-dlia-investora-podat-zaiavku",
                 "Реестр инвестиционных проектов" => "/invest-projects",
                 "План создания объектов инфраструктуры" => "#",

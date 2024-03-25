@@ -28,37 +28,37 @@ class InvestProjectSeeder extends Seeder
                 "files" => [
                     [
                         "title" => "Информация по проекту",
-                        "title_en" => "Информация по проекту",
+                        "title_en" => "Project Information",
                         "file" => "zerno_1.webp"
                     ],
                     [
                         "title" => "Информация по проекту",
-                        "title_en" => "Информация по проекту",
+                        "title_en" => "Project Information",
                         "file" => "zerno_2.webp"
                     ],
                     [
                         "title" => "Информация по проекту",
-                        "title_en" => "Информация по проекту",
+                        "title_en" => "Project Information",
                         "file" => "zerno_3.webp"
                     ],
                     [
                         "title" => "Информация по проекту",
-                        "title_en" => "Информация по проекту",
+                        "title_en" => "Project Information",
                         "file" => "zerno_4.webp"
                     ],
                     [
                         "title" => "Информация по проекту",
-                        "title_en" => "Информация по проекту",
+                        "title_en" => "Project Information",
                         "file" => "zerno_5.webp"
                     ],
                     [
                         "title" => "Информация по проекту",
-                        "title_en" => "Информация по проекту",
+                        "title_en" => "Project Information",
                         "file" => "zerno_6.webp"
                     ],
                     [
                         "title" => "Информация по проекту",
-                        "title_en" => "Информация по проекту",
+                        "title_en" => "Project Information",
                         "file" => "zerno_7.webp"
                     ],
 
@@ -76,7 +76,7 @@ class InvestProjectSeeder extends Seeder
                 "files" => [
                     [
                         "title" => "Информация по проекту",
-                        "title_en" => "Информация по проекту",
+                        "title_en" => "Project Information",
                         "file" => "zerno-inner.webp"
                     ],
                 ]
@@ -89,6 +89,9 @@ class InvestProjectSeeder extends Seeder
 
             if (isset($adding_item['description']) && !empty($adding_item['description']))
                 $adding_item['description'] = file_get_contents(public_path('old_data//invest-project//'.$item['description']));
+
+            if (isset($adding_item['description_en']) && !empty($adding_item['description_en']))
+                $adding_item['description_en'] = file_get_contents(public_path('old_data//invest-project//'.$item['description_en']));
 
             if (isset($item['img']) && !empty($item['img'])) {
                 Storage::disk('public')->put("invest-project/".$item['img'], file_get_contents(public_path('old_data//invest-project//'.$item['img'])), 'public');

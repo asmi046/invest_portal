@@ -6,7 +6,9 @@
         <span class="official-person__email"><a href="mailto:{{$item->email}}">{{$item->email}}</a></span>
     </div>
     <div class="official-person__img-box">
-        <img src="{{ Storage::url('contacts/'.$item->img)}}" alt="">
+        @if ($item->img)
+            <img src="{{ Storage::url('contacts/'.$item->img)}}" alt="">
+        @endif
     </div>
 </div>
 {{-- photo-card --}}
