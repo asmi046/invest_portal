@@ -11,7 +11,7 @@
 
 
 
-            @if (Request::route()->named('news_page'))
+            @if (Request::route() && Request::route()->named('news_page'))
                 <span class="sep"> / </span>
                 <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a title="{{ __('Все новости') }}" itemprop="item" href="{{route('news_list')}}">
@@ -31,7 +31,7 @@
                 </span>
             @endif
 
-            @if (Request::route()->named('page'))
+            @if (Request::route() && Request::route()->named('page'))
                 @if (isset($parent))
                 <span class="sep"> / </span>
                     <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -52,7 +52,7 @@
                 </span>
             @endif
 
-            @if (Request::route()->named('municipal_page'))
+            @if (Request::route() && Request::route()->named('municipal_page'))
                 <span class="sep"> / </span>
                 <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a title="{{ __('Муниципальный стандарт') }}" itemprop="item" href="{{route('municipal')}}">
@@ -72,7 +72,7 @@
                 </span>
             @endif
 
-            @if (Request::route()->named('sovet_page'))
+            @if (Request::route() && Request::route()->named('sovet_page'))
                 <span class="sep"> / </span>
                 <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a title="{{ __('Все Советы') }}" itemprop="item" href="{{route('sovet')}}">
@@ -92,7 +92,7 @@
                 </span>
             @endif
 
-            @if (Request::route()->named('invest_project_page'))
+            @if (Request::route() && Request::route()->named('invest_project_page'))
                 <span class="sep"> / </span>
                 <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a title="{{ __('Все проекты') }}" itemprop="item" href="{{route('invest_project')}}">
@@ -112,7 +112,7 @@
                 </span>
             @endif
 
-            @if (Request::route()->named('support_page'))
+            @if (Request::route() && Request::route()->named('support_page'))
                 <span class="sep"> / </span>
                 <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a title="{{ __('Все меры поддержки') }}" itemprop="item" href="{{route('invest_project')}}">

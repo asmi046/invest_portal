@@ -36,7 +36,7 @@
     <x-vizpanel.main></x-vizpanel.main>
     <x-menu.side-menu></x-menu.side-menu>
 
-    @if (Request::route()->named('home'))
+    @if (Request::route() && Request::route()->named('home'))
         <x-header></x-header>
     @else
         <x-header-inner>

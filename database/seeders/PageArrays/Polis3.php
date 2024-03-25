@@ -22,6 +22,7 @@ $polis_3 = [
                 'title_en' => 'Tax benefits for residents of the special economic zone of industrial production type "Third Pole"',
                 "text" => "RUS_polis_3_nalog.html",
                 "text_en" => "ENG_polis_3_nalog.html",
+                "template" => "page.page_polis_3_nl",
                 "banner" => "crop.webp",
             ]
         ]

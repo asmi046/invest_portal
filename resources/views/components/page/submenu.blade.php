@@ -9,9 +9,9 @@
         @foreach ($puncts as $item)
             <li>
                 @if ($item->lnk)
-                    <a href="{{ $item->lnk }}">{{ $item->title }}</a>
+                    <a href="{{ $item->lnk }}">{{ _tr($item->title, $item->title_en) }}</a>
                 @else
-                    <a href="{{ route('page', $item->slug) }}">{{ $item->title }}</a>
+                    <a href="{{ route('page', $item->slug) }}">{{ _tr($item->title, $item->title_en) }}</a>
                 @endif
 
             </li>

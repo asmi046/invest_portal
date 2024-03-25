@@ -29,7 +29,6 @@ class PageSeeder extends Seeder
     public function run(): void
     {
 
-
         $page_data = [
 
             'Государственно-частное партнерство в Курской области' => [
@@ -42,28 +41,48 @@ class PageSeeder extends Seeder
                 'template' => 'page.page_gcp',
                 "subpage" => [
                     "Проекты ГЧП Курской области" => [
+                        "title_en" => "PPP projects of the Kursk region",
                         "text" => "RUS_project_gph_KO.html",
+                        "text_en" => "ENG_project_gph_KO.html",
                         "img" => "",
                         "banner" => ""
                     ],
                     "Информация о проводимых конкурсах ГЧП" => [
+                        "title_en" => "Information about ongoing PPP tenders",
                         "text" => "RUS_inform_conkurs_gph.html",
+                        "text_en" => "ENG_inform_conkurs_gph.html",
                         "img" => "",
                         "banner" => ""
                     ],
                     "Практика реализация механизма ГЧП" => [
+                        "title_en" => "The practice of implementing the PPP mechanism",
                         "text" => "RUS_practic_realis_gph.html",
+                        "text_en" => "ENG_practic_realis_gph.html",
                         "img" => "",
-                        "banner" => ""
+                        "banner" => "",
+                        "files" => [
+                            [
+                                'title' => "Рекомендации по реализации проектов ГЧП — лучшие практики",
+                                'title_en' => "Recommendations for the implementation of PPP projects — best practices",
+                                'description' => "",
+                                'description_en' => "",
+                                'file' => "luchshie-praktiki.pdf"
+                            ],
+                        ]
                     ],
                     "Перечень мер поддержки ГЧП" => [
+                        "title_en" => "List of PPP support measures",
                         "text" => "RUS_partnership__list_support_gph.html",
+                        "text_en" => "ENG_partnership__list_support_gph.html",
                         "img" => "",
                         "banner" => ""
                     ],
                     "Ответственные по направлению ГЧП" => [
+                        "title_en" => "Responsible for the direction of PPP",
                         "text" => "RUS_partnership__responsible_gph.html",
+                        "text_en" => "ENG_partnership__responsible_gph.html",
                         "img" => "",
+                        "template" => "page.page_ghp_otv",
                         "banner" => ""
                     ],
 
@@ -71,13 +90,17 @@ class PageSeeder extends Seeder
             ],
 
             'Развитие экспорта' => [
+                'title_en' => "Export development",
                 "menu_marker" => "Развитие экспорта",
                 "text" => "RUS_export_development.html",
+                "text_en" => "ENG_export_development.html",
                 "img" => "",
                 "banner" => "",
                 "subpage" => [
                     "Экспортная стратегия" => [
+                        'title_en' => "Export strategy",
                         "text" => "RUS_export_development__strategy.html",
+                        "text_en" => "ENG_export_development__strategy.html",
                         "img" => "",
                         "banner" => "",
                         "files" => [
@@ -99,35 +122,68 @@ class PageSeeder extends Seeder
                     ],
                 ],
                     "Региональная экспортная программа" => [
+                        'title_en' => "Regional expert program",
                         "text" => "RUS_export_development__region_export_programm.html",
+                        "text_en" => "ENG_export_development__region_export_programm.html",
                         "img" => "",
                         "banner" => "",
                         //"files" => [],
                     ],
 
                     "Мероприятия и итоги исполнения" => [
+                        'title_en' => "Events and performance results",
                         "text" => "RUS_export_development__activities_results_implement.html",
+                        "text_en" => "ENG_export_development__activities_results_implement.html",
                         "img" => "",
                         "banner" => "",
                         //"files" => [],
                     ],
 
                     "Реестр экспортеров" => [
+                        'title_en' => "Register of exporters",
                         "text" => "RUS_export_development__register_exporters.html",
+                        "text_en" => "ENG_export_development__register_exporters.html",
                         "img" => "",
                         "banner" => "",
                         //"files" => [],
                     ],
 
                     "Конкурс «Лучший экспортер»" => [
+                        'title_en' => 'The "Best Exporter" competition',
                         "text" => "RUS_export_development__best_exporter.html",
+                        "text_en" => "ENG_export_development__best_exporter.html",
                         "img" => "",
                         "banner" => "",
-                        //"files" => [],
+                        "files" => [
+                            [
+                                'title' => "Форма заявки и перечень прилагаемых документов",
+                                'title_en' => "Application form and list of attached documents",
+                                'description' => "",
+                                'description_en' => "",
+                                'file' => "Forma-zayavki-i-dokumenty.rar"
+                            ],
+                            [
+                                'title' => "Положении о конкурсе",
+                                'title_en' => "Competition Regulations",
+                                'description' => "",
+                                'description_en' => "",
+                                'file' => "Polozhenie-1.zip"
+                            ],
+                            [
+                                'title' => "Ознакомиться с Конкурсной документацией",
+                                'title_en' => "To get acquainted with the Tender documentation",
+                                'description' => "",
+                                'description_en' => "",
+                                'file' => "Konkursnaya-dokumentaciya-Eksporter-goda.pdf"
+                            ],
+
+                        ],
                     ],
 
                     "Контакты зарубежных торговых представительств" => [
+                        "title_en" => "Contacts of foreign trade missions",
                         "text" => "RUS_export_development__contacts_trade_missions.html",
+                        "text_en" => "ENG_export_development__contacts_trade_missions.html",
                         "img" => "",
                         "banner" => "",
                         //"files" => [],

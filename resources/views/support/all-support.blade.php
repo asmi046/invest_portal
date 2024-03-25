@@ -40,12 +40,11 @@
                         <div class="columns-box columns-box--two-col">
 
                             @foreach ($item as $subitem)
-                                <a href="{{ route('support_page', $subitem->slug) }}" class="icon-link-box">
-                                    <span class="icon-link-box__caption">
-                                        {{ $subitem->title }}
-                                    </span>
-                                    <span class="icon-link-box__icon money-icon"></span>
-                                </a>
+                                <x-icon-link-box :lnk="route('support_page', $subitem->slug)"
+                                    :title="$subitem->title"
+                                    :icon="($key !== 'Меры поддержки инвестора')?'paper-icon':'market-icon'"
+                                    ></x-icon-link-box>
+
                             @endforeach
                         </div>
                     </div>
@@ -54,12 +53,6 @@
             </div>
         </div>
 
-
-            {{-- @foreach ($all_sovet as $item)
-                <a href="{{ route('support_page', $item->slug) }}">{{
-                    _tr($item->title, isset($item->title_en)?$item->title_en:null)
-                }}</a>
-            @endforeach --}}
         </div>
     </div>
 @endsection

@@ -88,7 +88,7 @@ class MenuSeeder extends Seeder
                 "Социально-экономическая стратегия развития Курской области" => "/page/socialno-ekonomiceskoe-razvitie",
                 "Меры господдержки" => "/supports",
                 "Линия прямых обращений" => "#",
-                "Регламент «одного окна» для инвестора" => "#",
+                "Регламент «одного окна» для инвестора" => "/page/reglament-odnogo-okna-dlia-investora-podat-zaiavku",
                 "Реестр инвестиционных проектов" => "/invest-projects",
                 "План создания объектов инфраструктуры" => "#",
             ]

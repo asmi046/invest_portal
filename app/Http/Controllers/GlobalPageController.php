@@ -37,7 +37,7 @@ class GlobalPageController extends Controller
 
     public function asi() {
         $puncts = Menu::where('menu_name', "Экспертам АСИ")->get();
-        $page_text = Page::where('title', 'Экспертам АСИ')->first();
+        $page_text = Page::where('title', 'Информация для экспертов АСИ')->first();
         return view('global.asi', ['puncts' => $puncts, 'info' => $page_text]);
     }
 

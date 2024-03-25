@@ -64,4 +64,13 @@
             "img" => "",
             "banner" => "",
         ],
+
+        'Информация для экспертов АСИ' => [
+            "menu_marker" => "Экспертам АСИ",
+            'title_en' => "Information for ASI experts",
+            "text" => "RUS_expertam_asi.html",
+            "text_en" => "ENG_expertam_asi.html",
+            "img" => "",
+            "banner" => "asi.webp",
+        ],
     ];

@@ -60,6 +60,15 @@ class OptionsProvider extends ServiceProvider
             View::share('korp_razv_contacts', $korp_razv_contacts);
         });
 
+        View::composer(['components.contacts.ghp-contacts'], function ($view) {
+
+            $ghp_contacts = \Cache::rememberForever('ghp_contacts', function () {
+                return Contact::where('selector', "Ответственные по направлению ГЧП")->get();
+            });
+
+            View::share('ghp_contacts', $ghp_contacts);
+        });
+
         View::composer(['page.page_invest_komitet'], function ($view) {
 
             $invest_comitet_contacts = \Cache::rememberForever('invest_comitet_contacts', function () {
@@ -112,6 +121,7 @@ class OptionsProvider extends ServiceProvider
             'page.page_gcp',
             'components.main-page.map-section',
             'page.page_polis_3',
+            'index',
             'footer'
         ], function ($view) {
 
