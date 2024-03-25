@@ -1,0 +1,36 @@
+.not-found-page{
+    .inner{
+        text-align: center;
+    }
+    .not-found-page__title{
+        margin: 0;
+        font-size: 200px;
+        line-height: 1;
+    }
+    .not-found-page__description{
+        color: var(--active);
+        font-size: 2.5rem;
+    }
+}
+
+
+
+
+// ==============================================
+@media screen and (max-width: 600px){
+    .not-found-page {
+        .not-found-page__title {
+            font-size: 130px;
+        }
+    }
+}
+@media screen and (max-width: 400px){
+    .not-found-page {
+        .not-found-page__title {
+            font-size: 100px;
+        }
+        .not-found-page__description {
+            font-size: 2rem;
+        }
+    }
+}

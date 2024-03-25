@@ -940,3 +940,70 @@ details{
     }
 }
 
+.fly-btn-box{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 100;
+}
+.fly-btn-wr{
+    position: relative;
+
+}
+.fly-btn{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--active);
+    font-size: 0;
+    transition: var(--great-transition);
+    cursor: pointer;
+    z-index: 1;
+    .fly-btn__icon{
+        background-color: var(--light);
+        width: 70%;
+        height: 70%;
+    }
+    &:hover{
+        background-color: var(--active-hover);
+    }
+}
+.fly-btn-caption{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 40px;
+    width: 0;
+    height: 100%;
+    background-color: var(--active);
+    flex-grow: 1;
+    text-align: right;
+    color: var(--light);
+    font-size: 14px;
+    line-height: 1.2;
+    box-sizing: border-box;
+    border-radius: 50px 0 0 50px;
+    white-space: nowrap;
+    transition: var(--great-transition);
+    opacity: 0;
+}
+.fly-btn{
+    &:hover ~ .fly-btn-caption{
+        width: 170px;
+        opacity: 1;
+    }
+}
+

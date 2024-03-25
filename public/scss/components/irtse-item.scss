@@ -1,0 +1,41 @@
+.irtse-item-box{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.irtse-item{
+    padding: 40px;
+    background-color: var(--light);
+    box-sizing: border-box;
+    box-shadow: 0 8px 40px 0 rgba(147, 162, 185, 0.16);
+    .irtse-item__img{
+        margin: 0 auto;
+        margin-bottom: 3rem;
+        max-width: 300px;
+        height: auto;
+        width: 100%;
+        max-height: 100px;
+        object-fit: contain;
+        object-position: center center;
+    }
+    ul{
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+    }
+}
+
+
+
+// ===========================================
+@media screen and (max-width: 800px){
+    .irtse-item-box{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 400px){
+    .irtse-item {
+        padding: 20px;
+    }
+}
+

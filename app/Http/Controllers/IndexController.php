@@ -21,6 +21,10 @@ class IndexController extends Controller
         return view('exemple');
     }
 
+    public function page_404(){
+        return view('page_404');
+    }
+
     public function test() {
         $menusAction = new MenuStructAction();
         $menus = $menusAction->handle();

@@ -36,9 +36,7 @@
                     <li><a target="_blank" href="{{ phone_format($optionsa['gubernator_message']) }}" class="btn btn--white-hollow">Написать губернатору</a></li>
                 </ul>
             </div>
-
         </div>
-
     </div>
     <div class="footer__bottom">
         <div class="inner">
@@ -49,3 +47,15 @@
         </div>
     </div>
 </footer>
+
+<div class="fly-btn-box">
+    <div class="fly-btn-wr">
+        <button class="fly-btn"><span class="fly-btn__icon message-icon"></span>Линия прямых обращений</button>
+        <span class="fly-btn-caption">Линия прямых <br> обращений</span>
+    </div>
+    <div class="fly-btn-wr">
+        <button class="fly-btn"><span class="fly-btn__icon lk-icon"></span>Личный кабинет инвестора</button>
+        <span class="fly-btn-caption">Личный кабинет <br> инвестора
+        </span>
+    </div>
+</div>

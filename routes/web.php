@@ -38,6 +38,7 @@ Route::get('/presentation-of-the-region', [IndexController::class, "presentation
 Route::get('/industrial-sites', [IndexController::class, "industrial_sites"])->name('industrial_sites');
 
 Route::get('/exemple', [IndexController::class, "exemple"])->name('exemple');
+Route::get('/page-404', [IndexController::class, "page_404"])->name('page_404');
 Route::get('/test', [IndexController::class, "test"])->name('test');
 //------------------------------
 
