@@ -18,6 +18,7 @@ class AreaSeeder extends Seeder
         $data_area = [
             [
                 'name' => 'Земельный участок № 1',
+                'name_en' => 'Land plot No. 1',
                 'dir' => 'areas_1',
                 'cadastral' => '46:01:100601',
                 'lnk' => 'https://kartagov.com/karta/kvartal/46-01-100601',
@@ -25,6 +26,7 @@ class AreaSeeder extends Seeder
             ],
             [
                 'name' => 'Земельный участок № 2',
+                'name_en' => 'Land plot No. 2',
                 'dir' => 'areas_2',
                 'cadastral' => '46:01:110501',
                 'lnk' => 'https://kartagov.com/karta/kvartal/46-01-110501',
@@ -32,6 +34,7 @@ class AreaSeeder extends Seeder
             ],
             [
                 'name' => 'Земельный участок № 3',
+                'name_en' => 'Land plot No. 3',
                 'dir' => 'areas_3',
                 'cadastral' => '46:04:020607',
                 'lnk' => 'https://kartagov.com/karta/kvartal/46-04-020607',
@@ -39,6 +42,7 @@ class AreaSeeder extends Seeder
             ],
             [
                 'name' => 'Земельный участок № 4',
+                'name_en' => 'Land plot No. 4',
                 'dir' => 'areas_4',
                 'cadastral' => '46:04:151201',
                 'lnk' => 'https://kartagov.com/karta/kvartal/46-04-151201',
@@ -46,6 +50,7 @@ class AreaSeeder extends Seeder
             ],
             [
                 'name' => 'Земельный участок № 5',
+                'name_en' => 'Land plot No. 5',
                 'dir' => 'areas_5',
                 'cadastral' => '46:04:050305',
                 'lnk' => 'https://kartagov.com/karta/kvartal/46-04-050305',
@@ -53,6 +58,7 @@ class AreaSeeder extends Seeder
             ],
             [
                 'name' => 'Земельный участок № 6',
+                'name_en' => 'Land plot No. 6',
                 'dir' => 'areas_6',
                 'cadastral' => '46:04:120301',
                 'lnk' => 'https://kartagov.com/karta/kvartal/46-04-120301',
@@ -60,6 +66,7 @@ class AreaSeeder extends Seeder
             ],
             [
                 'name' => 'Земельный участок № 7',
+                'name_en' => 'Land plot No. 7',
                 'dir' => 'areas_7',
                 'cadastral' => '46:04:130405',
                 'lnk' => 'https://kartagov.com/karta/kvartal/46-04-130405',
@@ -67,6 +74,7 @@ class AreaSeeder extends Seeder
             ],
             [
                 'name' => 'Земельный участок № 8',
+                'name_en' => 'Land plot No. 8',
                 'dir' => 'areas_8',
                 'cadastral' => '46:04:090302',
                 'lnk' => 'https://kartagov.com/karta/kvartal/46-04-090302',
@@ -74,6 +82,7 @@ class AreaSeeder extends Seeder
             ],
             [
                 'name' => 'Земельный участок № 9',
+                'name_en' => 'Land plot No. 9',
                 'dir' => 'areas_9',
                 'cadastral' => '46:05:090802:1',
                 'lnk' => 'https://kartagov.com/karta/46-05-090802-1',
@@ -81,6 +90,7 @@ class AreaSeeder extends Seeder
             ],
             [
                 'name' => 'Земельный участок № 10',
+                'name_en' => 'Land plot No. 10',
                 'dir' => 'areas_10',
                 'cadastral' => '46:05:000000:842',
                 'lnk' => 'https://kartagov.com/karta/46-05-000000-842',
@@ -88,6 +98,7 @@ class AreaSeeder extends Seeder
             ],
             [
                 'name' => 'Земельный участок № 11',
+                'name_en' => 'Land plot No. 11',
                 'dir' => 'areas_11',
                 'cadastral' => '46:05:000000:550',
                 'lnk' => 'https://kartagov.com/karta/46-05-000000-842',
@@ -95,6 +106,7 @@ class AreaSeeder extends Seeder
             ],
             [
                 'name' => 'Земельный участок № 12',
+                'name_en' => 'Land plot No. 12',
                 'dir' => 'areas_12',
                 'cadastral' => '46:30:000007',
                 'lnk' => 'https://kartagov.com/karta/kvartal/46-30-000007',
@@ -102,6 +114,7 @@ class AreaSeeder extends Seeder
             ],
             [
                 'name' => 'Земельный участок № 13',
+                'name_en' => 'Land plot No. 13',
                 'dir' => 'areas_13',
                 'cadastral' => '46:30:000007',
                 'lnk' => 'https://kartagov.com/karta/kvartal/46-30-000007',
@@ -109,6 +122,7 @@ class AreaSeeder extends Seeder
             ],
             [
                 'name' => 'Земельный участок № 14',
+                'name_en' => 'Land plot No. 14',
                 'dir' => 'areas_14',
                 'cadastral' => '46:30:000004:553',
                 'lnk' => 'https://kartagov.com/karta/46-30-000004-553',
@@ -116,6 +130,7 @@ class AreaSeeder extends Seeder
             ],
             [
                 'name' => 'Земельный участок № 15',
+                'name_en' => 'Land plot No. 15',
                 'dir' => 'areas_15',
                 'cadastral' => '46:30:000004:553',
                 'lnk' => 'https://kartagov.com/karta/46-30-000028-3341',
@@ -123,6 +138,7 @@ class AreaSeeder extends Seeder
             ],
             [
                 'name' => 'Земельный участок № 16',
+                'name_en' => 'Land plot No. 16',
                 'dir' => 'areas_16',
                 'cadastral' => '46:06:000000:141',
                 'lnk' => 'https://kartagov.com/karta/46-06-000000-141',
@@ -130,6 +146,7 @@ class AreaSeeder extends Seeder
             ],
             [
                 'name' => 'Земельный участок № 17',
+                'name_en' => 'Land plot No. 17',
                 'dir' => 'areas_17',
                 'cadastral' => '46:06:011701',
                 'lnk' => 'https://kartagov.com/karta/kvartal/46-06-011701',
@@ -137,6 +154,7 @@ class AreaSeeder extends Seeder
             ],
             [
                 'name' => 'Земельный участок № 18',
+                'name_en' => 'Land plot No. 18',
                 'dir' => 'areas_18',
                 'cadastral' => 'Нет',
                 'lnk' => 'https://kartagov.com/karta/46-30-000050-1711',
@@ -144,6 +162,7 @@ class AreaSeeder extends Seeder
             ],
             [
                 'name' => 'Земельный участок № 19',
+                'name_en' => 'Land plot No. 19',
                 'dir' => 'areas_19',
                 'cadastral' => 'Нет',
                 'lnk' => '',
@@ -151,6 +170,7 @@ class AreaSeeder extends Seeder
             ],
             [
                 'name' => 'Земельный участок № 20',
+                'name_en' => 'Land plot No. 20',
                 'dir' => 'areas_20',
                 'cadastral' => '46:07:140703',
                 'lnk' => 'https://kartagov.com/karta/kvartal/46-07-140703',
@@ -160,7 +180,9 @@ class AreaSeeder extends Seeder
         foreach ($data_area as $item){
             $insert_item = [
                 'name' => $item['name'],
+                'name_en' => $item['name_en'],
                 'description' => file_get_contents(public_path('old_data//areas//'.$item['dir'].'//text.html')),
+                'description_en' => file_get_contents(public_path('old_data//areas//'.$item['dir'].'//text_en.html')),
                 'cadastral' => $item['cadastral'],
                 'lnk' => $item['lnk'],
             ];

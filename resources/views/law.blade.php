@@ -18,7 +18,7 @@
     <div class="news-page-section">
         <div class="inner">
 
-            <x-breadcrumbs.main :title="$title"></x-breadcrumbs.main>
+            <x-breadcrumbs.main :title="$page_title"></x-breadcrumbs.main>
 
             <x-page.content
                     :page="$page"
@@ -26,12 +26,12 @@
 
 
             @foreach ($docs as $key => $value)
-                <h4>{{ $key }}</h4>
+                <h4>{{ __($key) }}</h4>
                 <div class="columns-box columns-box--two-col">
                     @foreach ($value as $item)
                         <x-widget-file
                         :lnk="Storage::url($item->file)"
-                        :title="$item->title"
+                        :title="_tr($item->title,$item->title_en)"
                         ></x-widget-file>
                     @endforeach
                 </div>

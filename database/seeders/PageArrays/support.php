@@ -1,8 +1,10 @@
 <?php
     $support_pages = [
         'Законодательство' => [
+            "title_en" => "Legislation",
             "menu_marker" => "Законодательство",
             "text" => "RUS_presentattion.html",
+            "text_en" => "RUS_presentattion.html",
             "img" => "",
             "banner" => "law.webp",
         ],

@@ -22,7 +22,7 @@
                     :page="$page"
                 ></x-page.content>
 
-                <h2>Основные показатели к 2031 году</h2>
+                <h2>{{ __('Основные показатели к 2031 году') }}</h2>
                 <div class="column-box column-box--two-col mt3 mb3">
                     <x-inform-card title="Рабочих мест" :value="$optionsa['polis_3_work_mest']" icon="check-file"></x-inform-card>
                     <x-inform-card title="Объем инвестиций резидентов (млн. р.)" :value="$optionsa['polis_3_invest']" icon="rub"></x-inform-card>

@@ -50,12 +50,12 @@
 
 <div class="fly-btn-box">
     <div class="fly-btn-wr">
-        <button class="fly-btn"><span class="fly-btn__icon message-icon"></span>Линия прямых обращений</button>
-        <span class="fly-btn-caption">Линия прямых <br> обращений</span>
+        <button class="fly-btn"><span class="fly-btn__icon message-icon"></span>{{__('Линия прямых обращений')}}</button>
+        <span class="fly-btn-caption">{!!__('Линия прямых <br> обращений')!!}</span>
     </div>
     <div class="fly-btn-wr">
-        <button class="fly-btn"><span class="fly-btn__icon lk-icon"></span>Личный кабинет инвестора</button>
-        <span class="fly-btn-caption">Личный кабинет <br> инвестора
+        <button class="fly-btn"><span class="fly-btn__icon lk-icon"></span>{{ __('Личный кабинет инвестора') }}</button>
+        <span class="fly-btn-caption">{!! __('Личный кабинет <br> инвестора') !!}
         </span>
     </div>
 </div>

@@ -10,6 +10,6 @@
             <li><b>{{__("Количество действующих резидентов")}}:</b> {{ $item->rezident_count}}</li>
             <li><b>{{__("Свободная площадь")}}:</b> {{ $item->free_area}}</li>
         </ul>
-        <a href="{{ $item->btn_lnk }}" class="btn">{{__("Подробнее")}}</a>
+        <a target="_blank" href="{{ $item->btn_lnk }}" class="btn">{{__("Подробнее")}}</a>
     </div>
 </div>
