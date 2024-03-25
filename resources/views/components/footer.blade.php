@@ -33,7 +33,7 @@
                 <span class="footer-list-box__caption">{{__('Навигация')}}</span>
                 <ul class="footer-list">
                     <x-menu.footer-contacts></x-menu.footer-contacts>
-                    <li><a target="_blank" href="{{ phone_format($optionsa['gubernator_message']) }}" class="btn btn--white-hollow">Написать губернатору</a></li>
+                    <li><a target="_blank" href="{{ phone_format($optionsa['gubernator_message']) }}" class="btn btn--white-hollow">{{ __('Написать губернатору') }}</a></li>
                 </ul>
             </div>
 

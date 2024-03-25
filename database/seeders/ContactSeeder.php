@@ -155,6 +155,46 @@ class ContactSeeder extends Seeder
                 ],
             ];
 
+
+            $export_contacts = [
+                [
+                    'selector' => 'Поддержка экспортеров',
+                    'organ' => 'Российский экспортный центр',
+                    'organ_en' => 'Russian Expert Center',
+                    'phone' => '+7 (495) 937-4747',
+                    'email' => 'info@exportcenter.ru',
+                    'adres' => '123610, Россия, г. Москва, Краснопресненская набережная, дом 12, подъезд 9',
+                    'adres_en' => '123610, Russia, Moscow, Krasnopresnenskaya embankment, building 12, entrance 9',
+                    'img' => 'r_ex_c.webp'
+                ],
+                [
+                    'selector' => 'Поддержка экспортеров',
+                    'organ' => 'Мой бизнес - продвижение на экспорт Курской Области',
+                    'organ_en' => 'My business is the export promotion of the Kursk Region',
+                    'phone' => '+7 (4712) 70-33-77',
+                    'email' => 'info@cpp46.ru',
+                    'adres' => '305000, г. Курск, ул. Горького, д. 34',
+                    'adres_en' => '34 Gorky Street, Kursk, 305000',
+                    'img' => 'mb_ex_ko.webp'
+                ],
+                [
+                    'selector' => 'Поддержка экспортеров',
+                    'organ' => 'Для просмотра аналитического портала «Экспорт регионов России», необходима регистрация на сайте АО «РЭЦ»',
+                    'organ_en' => 'To view the analytical portal "Export of Russian regions", registration is required on the website of JSC REC',
+                    'phone' => '8-800-550-0188',
+                    'web' => 'https://www.exportcenter.ru/',
+                    'img' => 'export_regions.webp'
+                ],
+                [
+                    'selector' => 'Поддержка экспортеров',
+                    'organ' => '«Мой экспорт»  – онлайн доступ к государственным и бизнес сервисам, сопровождающим выход компаний на экспорт, в режиме «Одно окно»',
+                    'organ_en' => '"My Export" – online access to government and business services that accompany companies export, in the "One window" mode',
+                    'phone' => '8-800-550-0188',
+                    'web' => 'https://myexport.exportcenter.ru/exporter/?utm_medium=banner&utm_campaign=regions',
+                    'img' => 'm_export.webp'
+                ],
+            ];
+
             $main_contacts = [
                 [
                     'selector' => 'Основные контакты',
@@ -182,11 +222,13 @@ class ContactSeeder extends Seeder
                     'tg_lnk' => 'https://t.me/econom46',
                     'ok_lnk' => 'https://ok.ru/group/63739634778364',
                 ],
+
             ];
 
             $all_item = array_merge(
                 $main_contacts,
                 $all_item,
+                $export_contacts,
                 $gcp
             );
 
