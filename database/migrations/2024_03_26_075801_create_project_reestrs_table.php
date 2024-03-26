@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('slug')->comment('Слаг');
 
             $table->string('img')->nullable()->comment('Картинка проекта');
+            $table->string('presentation')->nullable()->comment('Файл презентации');
 
             $table->string('state')->comment('Статус проекта');
 
