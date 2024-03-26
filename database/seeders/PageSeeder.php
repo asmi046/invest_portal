@@ -96,6 +96,7 @@ class PageSeeder extends Seeder
                 "text_en" => "ENG_export_development.html",
                 "img" => "",
                 "banner" => "",
+                "template" => "page.page_export_part",
                 "subpage" => [
                     "Экспортная стратегия" => [
                         'title_en' => "Export strategy",
@@ -103,6 +104,7 @@ class PageSeeder extends Seeder
                         "text_en" => "ENG_export_development__strategy.html",
                         "img" => "",
                         "banner" => "",
+                        "template" => "page.page_export_part_inner",
                         "files" => [
                             [
                                 'title' => "Приложение 5 Закона Курской области от 14.12.2020 № 100 — ЗКО «О социально-экономического развития Курской области на период до 2030 года»",
@@ -127,6 +129,7 @@ class PageSeeder extends Seeder
                         "text_en" => "ENG_export_development__region_export_programm.html",
                         "img" => "",
                         "banner" => "",
+                        "template" => "page.page_export_part_inner",
                         //"files" => [],
                     ],
 
@@ -136,6 +139,7 @@ class PageSeeder extends Seeder
                         "text_en" => "ENG_export_development__activities_results_implement.html",
                         "img" => "",
                         "banner" => "",
+                        "template" => "page.page_export_part_inner",
                         //"files" => [],
                     ],
 
@@ -145,6 +149,7 @@ class PageSeeder extends Seeder
                         "text_en" => "ENG_export_development__register_exporters.html",
                         "img" => "",
                         "banner" => "",
+                        "template" => "page.page_export_part_inner",
                         //"files" => [],
                     ],
 
@@ -154,6 +159,7 @@ class PageSeeder extends Seeder
                         "text_en" => "ENG_export_development__best_exporter.html",
                         "img" => "",
                         "banner" => "",
+                        "template" => "page.page_export_part_inner",
                         "files" => [
                             [
                                 'title' => "Форма заявки и перечень прилагаемых документов",
@@ -186,6 +192,7 @@ class PageSeeder extends Seeder
                         "text_en" => "ENG_export_development__contacts_trade_missions.html",
                         "img" => "",
                         "banner" => "",
+                        "template" => "page.page_export_part_inner",
                         //"files" => [],
                     ],
 
