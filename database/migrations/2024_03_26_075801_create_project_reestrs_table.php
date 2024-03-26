@@ -20,16 +20,17 @@ return new class extends Migration
             $table->string('presentation')->nullable()->comment('Файл презентации');
 
             $table->string('state')->comment('Статус проекта');
+            $table->string('location')->nullable()->comment('Месторасположение');
 
-            $table->string('title')->comment('Название совета');
-            $table->string('title_en')->nullable()->comment('Название совета (en)');
+            $table->string('title')->comment('Название проекта');
+            $table->string('title_en')->nullable()->comment('Название прокта (en)');
 
-            $table->string('investor')->comment('Название совета');
-            $table->string('investor_en')->nullable()->comment('Название совета (en)');
+            $table->string('investor')->comment('Название инвестора');
+            $table->string('investor_en')->nullable()->comment('Название инвестора (en)');
 
             $table->string('period')->nullable()->comment('Период реализации проекта');
             $table->string('price')->comment('Стоимость');
-            $table->integer('mest')->nullable()->comment('Рабочих мест');
+            $table->integer('work_places')->nullable()->comment('Рабочих мест');
 
             $table->text('description')->nullable()->comment('Описание проекта');
             $table->text('description_en')->nullable()->comment('Описание проекта (en)');
