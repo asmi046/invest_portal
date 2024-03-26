@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('location')->nullable()->comment('Месторасположение');
 
             $table->string('title')->comment('Название проекта');
-            $table->string('title_en')->nullable()->comment('Название прокта (en)');
+            $table->string('title_en')->nullable()->comment('Название проекта (en)');
 
             $table->string('investor')->comment('Название инвестора');
             $table->string('investor_en')->nullable()->comment('Название инвестора (en)');
