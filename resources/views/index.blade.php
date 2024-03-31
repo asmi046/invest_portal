@@ -11,7 +11,12 @@
 @section('main')
     <x-main-page.gubernator></x-main-page.gubernator>
 
-    <x-region-parametrs.region-parametr-section></x-region-parametrs.region-parametr-section>
+    <section class="indecators-section section-space">
+        <div class="inner">
+            <x-region-parametrs.region-parametr-section></x-region-parametrs.region-parametr-section>
+        </div>
+    </section>
+
 
     <section class="advantages-section section-space">
         <div class="inner">

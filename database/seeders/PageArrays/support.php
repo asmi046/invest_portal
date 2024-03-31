@@ -1,5 +1,14 @@
 <?php
     $support_pages = [
+        'Электронные сервисы для Инвестора' => [
+            "title_en" => "Electronic services for Investors",
+            "menu_marker" => "Электронные сервисы для Инвестора",
+            "text" => "RUS_services_for_investor.html",
+            "text_en" => "ENG_services_for_investor.html",
+            "img" => "",
+            "banner" => "grass.webp",
+        ],
+
         'Законодательство' => [
             "title_en" => "Legislation",
             "menu_marker" => "Законодательство",

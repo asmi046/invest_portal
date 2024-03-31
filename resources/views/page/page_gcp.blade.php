@@ -18,11 +18,7 @@
             <div class="section-with-submenu__content">
                 <x-breadcrumbs.main :page="_tr($page->title, isset($page->title_en)?$page->title_en:null)" :parent="$parent"></x-breadcrumbs.main>
 
-                <div class="column-box column-box--two-col mt3 mb3">
-                    <x-inform-card title="Заключено соглашений" :value="$optionsa['gcp_sogl_count']" icon="check-file"></x-inform-card>
-                    <x-inform-card title="Общий объем инвестиций по заключенным соглашениям (млн. р.)" :value="$optionsa['gcp_sogl_pay']" icon="rub"></x-inform-card>
-                </div>
-                <a href="{{ $optionsa['kabinet_lnk'] }}" class="btn ">{{__('Заявка на услуги ГЧП')}}</a>
+                <x-ghp-vidget :showbtn="false"></x-ghp-vidget>
 
                 <x-page.content
                     :page="$page"

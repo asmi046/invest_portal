@@ -23,6 +23,7 @@
                     ></x-page.content>
                 @endif
 
+                <x-region-parametrs.region-parametr-section></x-region-parametrs.region-parametr-section>
             </div>
             <x-page.submenu :title="__('Подробнее').':'" :puncts="$puncts"></x-page.submenu>
         </div>

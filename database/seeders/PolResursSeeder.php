@@ -27,7 +27,7 @@ class PolResursSeeder extends Seeder
             [
                 'lnk' => "https://asi.ru/",
                 'title' => "Агентство стратегических инициатив",
-                'img' => "asi.svg",
+                'img' => "АСИ.svg",
             ],
 
             [
@@ -51,19 +51,19 @@ class PolResursSeeder extends Seeder
             [
                 'lnk' => "https://selectcr.ru/",
                 'title' => "Центральный федеральный округ",
-                'img' => "centr_ros.png",
+                'img' => "cr.svg",
             ],
 
             [
                 'lnk' => "https://xn--80aapampemcchfmo7a3c9ehj.xn--p1ai/",
                 'title' => "Национальные проекты России",
-                'img' => "nats_project.webp",
+                'img' => "npr.png",
             ],
 
             [
                 'lnk' => "https://xn--l1agf.xn--p1ai/",
                 'title' => "Корпорация МСП",
-                'img' => "msp.webp",
+                'img' => "МСП.png",
             ],
         ];
 

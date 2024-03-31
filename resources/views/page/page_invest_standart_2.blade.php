@@ -23,7 +23,7 @@
                 ></x-page.content>
 
             </div>
-            <x-page.submenu-template :puncts="$all_menu['Инвестиционный стандарт 2.0']"></x-page.submenu-template>
+            <x-page.submenu-template title="Элементы" :puncts="$all_menu['Инвестиционный стандарт 2.0']"></x-page.submenu-template>
         </div>
     </div>
 @endsection

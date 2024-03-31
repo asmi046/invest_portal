@@ -15,6 +15,7 @@ class MenuSeeder extends Seeder
     public function run(): void
     {
         $eng_word = [
+            "Электронные сервисы для Инвестора"  => "Electronic services for Investors",
             "Аналитика Курской области"  => "Analytics of the Kursk region",
             "Социально-экономическое развитие" => "Socio-economic development",
             "О ГЧП в регионе" => "About PPP in the region",
@@ -49,6 +50,7 @@ class MenuSeeder extends Seeder
             "Аналитика Курской области" => [
                 "main_lnk" => "/analitics",
                 "Социально-экономическое развитие" => "#",
+                "Инвестиционный стандрат Курской области 2.0" => "#",
                 "О ГЧП в регионе" => "#",
                 "Развитие экспорта" => "#",
                 "Стандарт развития конкуренции" => "#",
@@ -79,6 +81,7 @@ class MenuSeeder extends Seeder
             "Навигатор мер поддержки" => [
                 "main_lnk" => "/invest_support",
                 "Законодательство" => "/law",
+                "Электронные сервисы для Инвестора" => "#",
                 "Меры господдержки" => "/supports",
             ],
 
@@ -92,6 +95,8 @@ class MenuSeeder extends Seeder
                 "Реестр инвестиционных проектов" => "/invest-projects",
                 "План создания объектов инфраструктуры" => "#",
             ]
+
+
 
         ];
 
