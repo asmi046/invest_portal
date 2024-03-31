@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(
             [
+                BannerSeeder::class,
                 RegionParametrSeeder::class,
                 OneWinReglamentSeeder::class,
                 InfrastricturPlaneSeeder::class,
