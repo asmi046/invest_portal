@@ -313,6 +313,42 @@ class PageSeeder extends Seeder
                         'description' => "",
                         'description_en' => "",
                         'file' => "338-pa-1.pdf"
+                    ]
+                ]
+            ],
+
+            'Реестр инвестиционных проектов' => [
+                "menu_marker" => "Реестр инвестиционных проектов",
+                'title_en' => "Register of investment projects",
+                "text" => "empty.html",
+                "text_en" => "empty.html",
+                "img" => "",
+                "banner" => "industry.webp",
+                "files" => [
+
+
+                    [
+                        'title' => "Реестр реализованных инвестиционных проектов в Курской области",
+                        'title_en' => "Register of completed investment projects in the Kursk region",
+                        'description' => "",
+                        'description_en' => "",
+                        'file' => "realizovannye.docx"
+                    ],
+
+                    [
+                        'title' => "Реестр реализуемых инвестиционных проектов в Курской области",
+                        'title_en' => "Register of ongoing investment projects in the Kursk region",
+                        'description' => "",
+                        'description_en' => "",
+                        'file' => "realizuemye.docx"
+                    ],
+
+                    [
+                        'title' => "Реестр планируемых к реализации инвестиционных проектов в Курской области",
+                        'title_en' => "The register of investment projects planned for implementation in the Kursk region",
+                        'description' => "",
+                        'description_en' => "",
+                        'file' => "planiruemye.docx"
                     ],
 
                 ]

@@ -13,6 +13,7 @@ use App\Http\Controllers\MunicipalController;
 use App\Http\Controllers\Page\PageController;
 use App\Http\Controllers\GlobalPageController;
 use App\Http\Controllers\InvestProjectController;
+use App\Http\Controllers\ProjectReestrController;
 use App\Http\Controllers\IndustrialAreasController;
 
 /*
@@ -66,6 +67,9 @@ Route::get('/municipal-standart/{slug}', [MunicipalController::class, "page"])->
 
 Route::get('/invest-projects', [InvestProjectController::class, "index"])->name('invest_project');
 Route::get('/invest-projects/{slug}', [InvestProjectController::class, "page"])->name('invest_project_page');
+
+Route::get('/reestr-projects', [ProjectReestrController::class, "index"])->name('reestr_project');
+Route::get('/reestr-projects/{slug}', [ProjectReestrController::class, "page"])->name('reestr_project_page');
 
 Route::get('/sovets', [SovetController::class, "index"])->name('sovet');
 Route::get('/sovets/{slug}', [SovetController::class, "page"])->name('sovet_page');

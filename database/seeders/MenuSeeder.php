@@ -92,7 +92,7 @@ class MenuSeeder extends Seeder
                 "Меры господдержки" => "/supports",
                 "Линия прямых обращений" => "/page/liniia-priamyx-obrashhenii",
                 "Регламент «одного окна» для инвестора" => "/page/reglament-odnogo-okna-dlia-investora-podat-zaiavku",
-                "Реестр инвестиционных проектов" => "/invest-projects",
+                "Реестр инвестиционных проектов" => "/reestr-projects",
                 "План создания объектов инфраструктуры" => "#",
             ]
 

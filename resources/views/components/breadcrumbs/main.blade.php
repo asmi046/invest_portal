@@ -132,6 +132,26 @@
                 </span>
             @endif
 
+            @if (Request::route() && Request::route()->named('reestr_project_page'))
+                <span class="sep"> / </span>
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a title="{{ __('Реестр инвестиционных проектов') }}" itemprop="item" href="{{route('reestr_project')}}">
+                        <span itemprop="name">{{ __('Реестр инвестиционных проектов') }}</span>
+                        <meta itemprop="position" content="1">
+                    </a>
+                </span>
+
+
+                <span class="sep"> / </span>
+
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">
+                    <span title="{{ $reestr }}" itemprop="item">
+                        <span itemprop="name">{{ $reestr }}</span>
+                        <meta itemprop="position" content="2">
+                    </span>
+                </span>
+            @endif
+
             @if (isset($title))
                 <span class="sep"> / </span>
                     <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">

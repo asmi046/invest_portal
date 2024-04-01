@@ -29,6 +29,8 @@ return new class extends Migration
             $table->string('investor_en')->nullable()->comment('Название инвестора (en)');
 
             $table->string('period')->nullable()->comment('Период реализации проекта');
+            $table->string('period_en')->nullable()->comment('Период реализации проекта');
+
             $table->string('price')->comment('Стоимость');
             $table->integer('work_places')->nullable()->comment('Рабочих мест');
 
