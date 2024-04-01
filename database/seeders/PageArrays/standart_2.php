@@ -102,6 +102,15 @@ $standart_2 = [
                         'file' => "protokol-6-ot-28.12.2023.pdf"
                     ],
                 ]
+            ],
+
+            "Обращение в инвестиционный комитет" => [
+                    "menu_marker" => "Обращение в инвестиционный комитет",
+                    'title_en' => 'Appeal to the Investment Committee',
+                    "text" => "empty.html",
+                    "text_en" => "empty.html",
+                    "banner" => "contacts.webp",
+                    "template" => "page.page_obr_invest"
             ]
         ]
     ],
