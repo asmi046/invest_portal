@@ -272,6 +272,46 @@ class AreaSeeder extends Seeder
                 'lnk' => 'https://kartagov.com/karta/kvartal/46-12-100102',
                 'img' => '2023-05-15_15-43-59-f6c6aed0.webp'
             ],
+            [
+                'name' => 'Земельный участок № 33',
+                'name_en' => 'Land plot No. 33',
+                'dir' => 'areas_33',
+                'cadastral' => '46:13:140604',
+                'lnk' => 'https://kartagov.com/karta/kvartal/46-13-140604',
+                'img' => '2023-05-15_15-52-44-37ee2417.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 34',
+                'name_en' => 'Land plot No. 34',
+                'dir' => 'areas_34',
+                'cadastral' => '46:13:050000',
+                'lnk' => 'https://kartagov.com/karta/46-20-270208-329',
+                'img' => '2023-05-15_16-20-56-94a18ad1.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 35',
+                'name_en' => 'Land plot No. 35',
+                'dir' => 'areas_35',
+                'cadastral' => '46:13:120707',
+                'lnk' => 'https://kartagov.com/karta/kvartal/46-13-120707',
+                'img' => '2023-05-15_16-24-04-991d10f0.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 36',
+                'name_en' => 'Land plot No. 36',
+                'dir' => 'areas_36',
+                'cadastral' => '46:20:201303:3',
+                'lnk' => 'https://kartagov.com/karta/46-20-201303-3',
+                'img' => '2023-05-15_16-37-31-799f00c5.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 37',
+                'name_en' => 'Land plot No. 37',
+                'dir' => 'areas_37',
+                'cadastral' => '46:21:051411:104',
+                'lnk' => 'https://kartagov.com/karta/46-21-051411-104',
+                'img' => '2023-05-15_16-40-26-c2bdb34f.webp'
+            ],
         ];
         foreach ($data_area as $item){
             $insert_item = [
