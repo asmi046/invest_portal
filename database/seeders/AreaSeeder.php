@@ -176,6 +176,14 @@ class AreaSeeder extends Seeder
                 'lnk' => 'https://kartagov.com/karta/kvartal/46-07-140703',
                 'img' => '2023-05-15_12-09-34-f58b5cf0.webp'
             ],
+            [
+                'name' => 'Земельный участок № 21',
+                'name_en' => 'Land plot No. 21',
+                'dir' => 'areas_21',
+                'cadastral' => '46:07:170101',
+                'lnk' => 'https://kartagov.com/karta/kvartal/46-07-170101',
+                'img' => '2023-05-15_12-12-58-d0d329da.webp'
+            ],
         ];
         foreach ($data_area as $item){
             $insert_item = [
