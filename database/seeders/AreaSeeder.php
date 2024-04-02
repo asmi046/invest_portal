@@ -184,6 +184,94 @@ class AreaSeeder extends Seeder
                 'lnk' => 'https://kartagov.com/karta/kvartal/46-07-170101',
                 'img' => '2023-05-15_12-12-58-d0d329da.webp'
             ],
+            [
+                'name' => 'Земельный участок № 22',
+                'name_en' => 'Land plot No. 22',
+                'dir' => 'areas_22',
+                'cadastral' => '46:07:010104:1740',
+                'lnk' => '',
+                'img' => '2023-05-15_12-18-45-738e434d.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 23',
+                'name_en' => 'Land plot No. 23',
+                'dir' => 'areas_23',
+                'cadastral' => '46:07:010102:1317',
+                'lnk' => 'https://kartagov.com/karta/46-07-010102-1317',
+                'img' => '2023-05-15_12-22-01-6520d697.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 24',
+                'name_en' => 'Land plot No. 24',
+                'dir' => 'areas_24',
+                'cadastral' => '46:09:010110:34',
+                'lnk' => 'https://kartagov.com/karta/46-09-010110-34',
+                'img' => '2023-05-15_15-04-25-381f5f70.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 25',
+                'name_en' => 'Land plot No. 25',
+                'dir' => 'areas_25',
+                'cadastral' => '46:09:010139:16',
+                'lnk' => 'https://kartagov.com/karta/46-09-010139-16',
+                'img' => '2023-05-15_15-07-32-00b66e26.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 26',
+                'name_en' => 'Land plot No. 26',
+                'dir' => 'areas_26',
+                'cadastral' => '46:09:090007:2 46:09:090007:3',
+                'lnk' => 'https://kartagov.com/karta/46-09-090007-2',
+                'img' => '2023-05-15_15-22-45-16117579.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 27',
+                'name_en' => 'Land plot No. 27',
+                'dir' => 'areas_27',
+                'cadastral' => 'нет',
+                'lnk' => '',
+                'img' => ''
+            ],
+            [
+                'name' => 'Земельный участок № 28',
+                'name_en' => 'Land plot No. 28',
+                'dir' => 'areas_28',
+                'cadastral' => '46:08:020101:6',
+                'lnk' => 'https://kartagov.com/karta/46-08-020101-6',
+                'img' => '2023-05-15_15-28-30-36b05e51.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 29',
+                'name_en' => 'Land plot No. 29',
+                'dir' => 'areas_29',
+                'cadastral' => '46:12:060110:7',
+                'lnk' => 'https://kartagov.com/karta/46-12-060110-7',
+                'img' => '2023-05-15_15-34-19-492cf20e.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 30',
+                'name_en' => 'Land plot No. 30',
+                'dir' => 'areas_30',
+                'cadastral' => '46:12:060110:38',
+                'lnk' => 'https://kartagov.com/karta/46-12-060110-38',
+                'img' => '2023-05-15_15-37-01-b8c0d244.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 31',
+                'name_en' => 'Land plot No. 31',
+                'dir' => 'areas_31',
+                'cadastral' => '46:12:060110:38',
+                'lnk' => 'https://kartagov.com/karta/46-12-060110-268',
+                'img' => '2023-05-15_15-39-17-fe7d0171.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 32',
+                'name_en' => 'Land plot No. 32',
+                'dir' => 'areas_32',
+                'cadastral' => '46:12:100102',
+                'lnk' => 'https://kartagov.com/karta/kvartal/46-12-100102',
+                'img' => '2023-05-15_15-43-59-f6c6aed0.webp'
+            ],
         ];
         foreach ($data_area as $item){
             $insert_item = [
