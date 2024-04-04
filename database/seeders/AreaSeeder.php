@@ -440,6 +440,142 @@ class AreaSeeder extends Seeder
                 'lnk' => '',
                 'img' => ''
             ],
+            [
+                'name' => 'Земельный участок № 54',
+                'name_en' => 'Land plot No. 54',
+                'dir' => 'areas_54',
+                'cadastral' => '46:22:090402:20',
+                'lnk' => '',
+                'img' => ''
+            ],
+            [
+                'name' => 'Земельный участок № 55',
+                'name_en' => 'Land plot No. 55',
+                'dir' => 'areas_55',
+                'cadastral' => '46:22:150503',
+                'lnk' => 'https://kartagov.com/karta/kvartal/46-22-150503',
+                'img' => '2023-05-16_10-31-28-b1512cfe.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 56',
+                'name_en' => 'Land plot No. 56',
+                'dir' => 'areas_56',
+                'cadastral' => '46:23:080304:99',
+                'lnk' => 'https://kartagov.com/karta/46-23-080304-99',
+                'img' => '2023-05-16_10-56-13-6b7b1481.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 57',
+                'name_en' => 'Land plot No. 57',
+                'dir' => 'areas_57',
+                'cadastral' => '46:23:080304:98',
+                'lnk' => 'https://kartagov.com/karta/46-23-080304-98',
+                'img' => '2023-05-16_10-59-42-3d68ae18.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 58',
+                'name_en' => 'Land plot No. 58',
+                'dir' => 'areas_58',
+                'cadastral' => '46:23:070602:90',
+                'lnk' => 'https://kartagov.com/karta/46-23-070602-90',
+                'img' => '2023-05-16_11-01-50-e1aecb08.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 59',
+                'name_en' => 'Land plot No. 59',
+                'dir' => 'areas_59',
+                'cadastral' => '46:23:010308:169',
+                'lnk' => 'https://kartagov.com/karta/46-23-010308-169',
+                'img' => '2023-05-16_11-04-06-85bf14f0.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 60',
+                'name_en' => 'Land plot No. 60',
+                'dir' => 'areas_60',
+                'cadastral' => '46:24:000000:50',
+                'lnk' => 'https://kartagov.com/karta/46-24-090501-126',
+                'img' => '2023-05-16_11-14-43-0ddb95b6.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 61',
+                'name_en' => 'Land plot No. 61',
+                'dir' => 'areas_61',
+                'cadastral' => '46:24:090501:126',
+                'lnk' => 'https://kartagov.com/karta/46-24-000000-50',
+                'img' => '2023-05-16_11-19-40-074e9cfe.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 62',
+                'name_en' => 'Land plot No. 62',
+                'dir' => 'areas_62',
+                'cadastral' => '46:25:060018:46',
+                'lnk' => 'https://kartagov.com/karta/46-25-060018-46',
+                'img' => '2023-05-16_11-24-37-30105e84.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 63',
+                'name_en' => 'Land plot No. 63',
+                'dir' => 'areas_63',
+                'cadastral' => '46:25:060019:1',
+                'lnk' => 'https://kartagov.com/karta/46-25-060019-1',
+                'img' => '2023-05-16_11-27-31-578665b2.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 64',
+                'name_en' => 'Land plot No. 64',
+                'dir' => 'areas_64',
+                'cadastral' => '46:26:210407:31',
+                'lnk' => 'https://kartagov.com/karta/46-26-210407-31',
+                'img' => '2023-05-16_11-30-59-292d6e66.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 65',
+                'name_en' => 'Land plot No. 65',
+                'dir' => 'areas_65',
+                'cadastral' => '46:26:200701',
+                'lnk' => 'https://kartagov.com/karta/kvartal/46-26-200701',
+                'img' => '2023-05-16_11-35-11-a6f9872d.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 66',
+                'name_en' => 'Land plot No. 66',
+                'dir' => 'areas_66',
+                'cadastral' => '46:26:010113:94',
+                'lnk' => 'https://kartagov.com/karta/46-26-010113-94',
+                'img' => '2023-05-16_11-37-42-eb175dde.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 67',
+                'name_en' => 'Land plot No. 67',
+                'dir' => 'areas_67',
+                'cadastral' => '46:27:010102',
+                'lnk' => 'https://kartagov.com/karta/kvartal/46-27-010102',
+                'img' => '2023-05-16_11-43-22-916dd665.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 68',
+                'name_en' => 'Land plot No. 68',
+                'dir' => 'areas_68',
+                'cadastral' => '46:27:010102',
+                'lnk' => 'https://kartagov.com/karta/kvartal/46-27-010102',
+                'img' => '2023-05-16_11-43-22-1-bdc47ef4.webp'
+            ],
+            [
+                'name' => 'Земельный участок № 69',
+                'name_en' => 'Land plot No. 69',
+                'dir' => 'areas_69',
+                'cadastral' => 'нет',
+                'lnk' => '',
+                'img' => ''
+            ],
+            [
+                'name' => 'Земельный участок № 70',
+                'name_en' => 'Land plot No. 70',
+                'dir' => 'areas_70',
+                'cadastral' => 'нет',
+                'lnk' => '',
+                'img' => ''
+            ],
         ];
         foreach ($data_area as $item){
             $insert_item = [
