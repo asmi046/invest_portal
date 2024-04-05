@@ -587,7 +587,81 @@ class ProjectReestrSeeder extends Seeder
                 //'seo_description' => ""
             ],
 
+            [
+                'state' => "Реализуемые",
+                'location' => "Мантуровский район",
+                'title' =>"Реконструкция молочно-товарной фермы на 1700 фуражных коров",
+                'title_en' =>'Reconstruction of a dairy farm for 1,700 feed cows',
+                'period' =>"2020-2024",
+                'period_en' =>"2020-2024",
+                'price' =>"153",
+                'investor' => 'ООО «Луч»',
+                'investor_en' => 'LLC "Luch"',
+                'work_places' => "100",
+                'description' => "ru_preparing_13.html",
+                'description_en' =>"en_preparing_13.html",
+                'img' =>["preparing_img_13_1.webp", "preparing_img_13_2.webp"],
+                //'presentation' => "",
+                //'seo_title' => "",
+                //'seo_description' => ""
+            ],
 
+            [
+                'state' => "Реализуемые",
+                'location' => "Город Щигры",
+                'title' =>"Строительство новых мощностей и реконструкция действующих, предназначенных для приемки, подработки, хранения и отгрузки зерна",
+                'title_en' =>'Construction of new facilities and reconstruction of existing ones intended for acceptance, part-time work, storage and shipment of grain',
+                'period' =>"2017-2024",
+                'period_en' =>"2017-2024",
+                'price' =>"3 500",
+                'investor' => 'АО «Щигровский КХП»',
+                'investor_en' => 'Shchigrovsky KHP JSC',
+                'work_places' => "74",
+                'description' => "ru_preparing_14.html",
+                'description_en' =>"en_preparing_14.html",
+                'img' =>["preparing_img_14.webp"],
+                //'presentation' => "",
+                //'seo_title' => "",
+                //'seo_description' => ""
+            ],
+
+            [
+                'state' => "Реализуемые",
+                'location' => "Город Курск",
+                'title' =>"Реконструкция склада бестарного хранения муки",
+                'title_en' =>'Reconstruction of the bulk flour storage warehouse',
+                'period' =>"2021-2025",
+                'period_en' =>"2021-2025",
+                'price' =>"80",
+                'investor' => 'ОАО «Курскхлеб»',
+                'investor_en' => 'JSC "Kurskkhleb"',
+                //'work_places' => "",
+                'description' => "ru_preparing_15.html",
+                'description_en' =>"en_preparing_15.html",
+                'img' =>["preparing_img_15.webp"],
+                //'presentation' => "",
+                //'seo_title' => "",
+                //'seo_description' => ""
+            ],
+
+            [
+                'state' => "Реализуемые",
+                'location' => "Деревня Ворошнево, Курская область",
+                'title' =>"Строительство селекционно-семеноводческого центра по производству различных видов семян сельскохозяйственных культур мощностью 43,5 тыс. тонн в год",
+                'title_en' =>'Construction of a seed breeding center for the production of various types of agricultural seeds with a capacity of 43.5 thousand tons per year',
+                'period' =>"2022-2024",
+                'period_en' =>"2022-2024",
+                'price' =>"3 500",
+                'investor' => 'ООО «Мираторг-Курск»',
+                'investor_en' => '"Miratorg-Kursk LLC"',
+                'work_places' => "27",
+                'description' => "ru_preparing_16.html",
+                'description_en' =>"en_preparing_16.html",
+                'img' =>["preparing_img_16.webp"],
+                //'presentation' => "",
+                //'seo_title' => "",
+                //'seo_description' => ""
+            ],
         ];
 
         foreach ($data_reesrt as $item) {
