@@ -1,0 +1,39 @@
+.project-present{
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+    .project-present__left-col{
+        width: 58%;
+    }
+    .project-present__right-col{
+        width: 40%;
+    }
+    img{
+        margin: 0;
+    }
+    ul{
+        display: flex;
+        gap: 1.5rem;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li{
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+
+// ========================================
+@media screen and (max-width: 999px){
+    .project-present{
+        flex-direction: column;
+        margin-bottom: 3rem;
+        .project-present__left-col,
+        .project-present__right-col{
+            width: 100%;
+        }
+    }
+}

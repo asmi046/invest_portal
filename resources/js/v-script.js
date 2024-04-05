@@ -1,6 +1,7 @@
 'use strict'
 import ViTab from './TabClass.js';
 import './lightgallery.min.js';
+import FileUploader from './File-uploader.js';
 // import Swiper JS
 import Swiper from 'swiper/bundle';
 // import styles bundle
@@ -292,5 +293,20 @@ document.addEventListener('DOMContentLoaded', ()=>{
             this.style.height = (this.scrollHeight) + 'px';
         }
 
+        let fueAddFile = document.querySelector('.fue-add-file');
+
+        if(fueAddFile){
+            document.fueAddFile = new FileUploader(
+                fueAddFile,
+                {
+                    accept: ['.pdf', '.jpg', '.png', '.doc', '.docx'], //допустимые файлы
+                    maxSize: 5242880, //5 МБ - максисальный размер файла
+                    maxLongNameFile: 7, //максисальная длинна имени файла, если больше, то при выводе данных файла на страницу, название будет обрезаться тремя точками.
+                    maxSizeErrorMessage: 'Максимальный размер загружаемого файла 15МБ',
+                    acceptErrorMessage: 'Недопустимое расширение файла'
+                }
+            );
+        }
+        // document.fueAddFile.getFileBank() - выдает массив с подгруженными файлами
 });
 

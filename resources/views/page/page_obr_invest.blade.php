@@ -17,7 +17,6 @@
     <div class="news-page-section">
         <div class="inner">
             <x-breadcrumbs.main :page="_tr($page->title, isset($page->title_en)?$page->title_en:null)" :parent="$parent"></x-breadcrumbs.main>
-
             <x-page.content
                 :page="$page"
             ></x-page.content>
@@ -66,7 +65,7 @@
                     @enderror
                 </label>
 
-                <label class="form-elem">
+                {{-- <label class="form-elem">
                     <span class="form-elem__caption">
                         {{__('Прикрепите файл')}}
                     </span>
@@ -75,7 +74,22 @@
                     @error('attachment')
                         <span class="form-elem__error-message">{{ $message }}</span>
                     @enderror
-                </label>
+                </label> --}}
+                <div class="form-elem">
+                    <span class="form-elem__caption">Прикрепите файл</span>
+                    <div class="file-uploader-element fue-add-file">
+                        <input type="file" name="pasport" class="file-uploader-element__input" multiple="multiple">
+                        <div class="file-uploader-element__control-box">
+                            <button class="file-uploader-element-btn">
+                                <span class="file-uploader-element-btn__upload">Загрузить файл</span>
+                                <span class="file-uploader-element-btn__add">Добавить еще</span>
+                            </button>
+                        </div>
+                        <div class="file-uploader-element__preview-box">
+                        </div>
+                    </div>
+                    <span class="form-elem__error-message"></span>
+                </div>
 
                 <button type="submit" class="btn">{{ __('Отправить') }}</button>
 

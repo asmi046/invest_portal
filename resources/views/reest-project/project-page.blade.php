@@ -14,28 +14,38 @@
 
 
 @section('main')
-    <div class="news-page-section">
+    <div class="project-page-section">
         <div class="inner">
             <x-breadcrumbs.main :reestr="_tr($page->title, $page->title_en)"></x-breadcrumbs.main>
 
-            @if ($page->location)
-                <p>{{ __('Место реализации') }}: {{ __($page->location) }}</p>
-            @endif
+            <div class="project-present">
+                <div class="project-present__left-col">
+                    @if ($page->img)
+                        <div class="lightgallery" data-src="{{asset('img/poster-1.jpg')}}">
+                            <img src="{{ Storage::url('project_reestr/'.$page->img) }}" alt="{{ $page->title }}">
+                        </div>
+                    @endif
+                </div>
+                <div class="project-present__right-col">
+                    <ul>
+                        @if ($page->location)
+                            <li>{{ __('Место реализации') }}: {{ __($page->location) }}</li>
+                        @endif
 
-            <p>{{ __('Период реализации проекта') }}: <strong>{{ _tr($page->period, $page->period_en) }}</strong></p>
-            <p>{{ __('Стоимость проекта') }} ({{ __('млн. ₽') }}): <strong>{{ $page->price }}</strong></p>
+                        <li>{{ __('Период реализации проекта') }}: <strong>{{ _tr($page->period, $page->period_en) }}</strong></li>
+                        <li>{{ __('Стоимость проекта') }} ({{ __('млн. ₽') }}): <strong>{{ $page->price }}</strong></li>
 
-            @if ($page->work_places)
-                <p>{{ __('Количество новых рабочих мест') }}: <strong>{{ $page->work_places }}</strong></p>
-            @endif
+                        @if ($page->work_places)
+                            <li>{{ __('Количество новых рабочих мест') }}: <strong>{{ $page->work_places }}</strong></li>
+                        @endif
 
-            <p>{{ __('Статус') }}: <strong>{{ $page->state }}</strong></p>
-            <p>{{ __('Инвестор') }}: <strong>{{ _tr($page->investor, $page->investor_en) }}</strong></p>
+                        <li>{{ __('Статус') }}: <strong>{{ $page->state }}</strong></li>
+                        <li>{{ __('Инвестор') }}: <strong>{{ _tr($page->investor, $page->investor_en) }}</strong></li>
+                    </ul>
 
-            @if ($page->img)
-                <img src="{{ Storage::url('project_reestr/'.$page->img) }}" alt="{{ $page->title }}">
-            @endif
 
+                </div>
+            </div>
             <h2>{{ __('Описание проекта')}}:</h2>
             {!! _tr($page->description, $page->description_en) !!}
 

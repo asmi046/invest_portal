@@ -1,4 +1,4 @@
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
     .government-support-section {
         .government-support-section__right-col {
             padding-top: 140px;
@@ -7,56 +7,69 @@
         }
     }
 }
-@media screen and (max-width: 1160px){
-    .indecators-grid{
+
+@media screen and (max-width: 1160px) {
+    .indecators-grid {
         gap: 2rem;
     }
 }
-@media screen and (max-width: 1130px){
-    .advantages-grid{
+
+@media screen and (max-width: 1130px) {
+    .advantages-grid {
         .advantages__caption {
             font-size: 2.5rem;
         }
     }
 }
-@media screen and (max-width: 1100px){
+
+@media screen and (max-width: 1100px) {
     .m_standart_wrapper {
         grid-template-columns: repeat(4, 1fr);
     }
+
     .bragging-block {
         padding: 2rem 2rem 2rem 3rem;
+
         .bragging-block__text {
             font-size: 2.4rem;
             line-height: 1.3;
         }
+
         .bragging-block__footer {
             font-size: 4rem;
         }
     }
+
     .news-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .news {
         .news__news-img {
             height: 25rem;
         }
     }
+
     .section-with-submenu {
         .inner {
             flex-direction: column;
         }
-        .section-with-submenu__submenu{
+
+        .section-with-submenu__submenu {
             order: -1;
-            .submenu{
+
+            .submenu {
                 width: 100%;
             }
         }
     }
 }
-@media screen and (max-width: 1024px){
+
+@media screen and (max-width: 1024px) {
     .indecators {
         padding: 3rem;
         padding-right: 6rem;
+
         .indecators__arrow {
             position: absolute;
             top: 3rem;
@@ -69,14 +82,17 @@
 
 
 }
-@media screen and (max-width: 999px){
+
+@media screen and (max-width: 999px) {
     .section-space {
         padding-top: 8rem;
     }
+
     .section-title {
         margin-top: 0;
         margin-bottom: 4rem;
     }
+
     #main {
         padding-top: 6rem;
         padding-bottom: 8rem;
@@ -85,16 +101,20 @@
     .gallery {
         grid-gap: 1rem;
     }
-    .advantages-grid{
+
+    .advantages-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
-    .advantages{
+
+    .advantages {
         padding-right: 95px;
+
         &::before {
             width: 155px;
             height: 155px;
         }
+
         .advantages__icon {
             top: 14px;
             right: 18px;
@@ -102,6 +122,7 @@
             height: 53px;
         }
     }
+
     .invest-map-link-section {
         .invest-map-link__left-col {
             position: relative;
@@ -109,144 +130,185 @@
             padding-bottom: 70px;
             padding-right: 7%;
             background-color: var(--active);
-            p{
+
+            p {
                 font-size: 1.8rem;
             }
+
             .btn {
                 margin-top: 4rem;
             }
         }
     }
-    .advantages-section, .news-section {
+
+    .advantages-section,
+    .news-section {
         padding-bottom: 7rem;
     }
+
     .government-support-section {
         .government-support-section__right-col {
             padding-top: 70px;
             padding-bottom: 70px;
             padding-left: 10%;
+
             .section-title {
                 margin-bottom: 3rem;
             }
+
             p {
                 font-size: 1.8rem;
             }
+
             .btn {
                 margin-top: 4rem;
             }
         }
     }
+
+    #main {
+        padding-top: 0;
+        padding-bottom: 8rem;
+    }
 }
-@media screen and (max-width: 950px){
-    .indecators-grid{
+
+@media screen and (max-width: 950px) {
+    .indecators-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-@media screen and (max-width: 900px){
+
+@media screen and (max-width: 900px) {
     .gallery--three {
         grid-template-columns: repeat(2, 1fr);
     }
-    .section-with-submenu__content{
-        .columns-box{
-            &--three-col{
+
+    .section-with-submenu__content {
+        .columns-box {
+            &--three-col {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
     }
-    .area-card{
+
+    .area-card {
         flex-direction: column;
         gap: 1rem;
         background-color: var(--light);
+
         &:not(:last-child) {
             margin-bottom: 2rem;
         }
-        .area-card__img-box{
+
+        .area-card__img-box {
             width: 100%;
         }
-        .area-card__info{
+
+        .area-card__info {
             width: 100%;
             padding: 20px;
             box-sizing: border-box;
         }
     }
 }
-@media screen and (max-width: 870px){
+
+@media screen and (max-width: 870px) {
 
     .advantages {
-        .advantages__description{
+        .advantages__description {
             margin-top: 1em;
         }
     }
+
     .useful-resources-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .news-grid {
         grid-gap: 2rem;
     }
+
     .news {
         .news__content {
             padding: 20px;
         }
+
         .news__news-img {
             height: 20rem;
         }
+
         .news__date {
             margin-bottom: 0.5rem;
             font-size: 1.4rem;
         }
+
         .news__caption {
             a {
                 font-size: 1.8rem;
             }
         }
+
         .hashtag {
             font-size: 1.6rem;
         }
+
         .news__footer {
             padding: 10px 20px;
         }
     }
+
     .advantages-grid {
         gap: 2rem;
     }
 }
-@media screen and (max-width: 810px){
+
+@media screen and (max-width: 810px) {
     .m_standart_wrapper {
         grid-template-columns: repeat(3, 1fr);
     }
+
     .ms_card {
         .ms_card__name {
             font-size: 1.6rem;
         }
     }
-    .person{
+
+    .person {
         gap: 30px;
-        .person__photo{
+
+        .person__photo {
             max-width: 250px;
         }
-        .person__name{
+
+        .person__name {
             font-size: 2.5rem;
         }
     }
 }
-@media screen and (max-width: 720px){
-    .indecators-grid{
+
+@media screen and (max-width: 720px) {
+    .indecators-grid {
         grid-template-columns: 1fr;
     }
+
     .invest-map-link-section {
         background-color: var(--active);
+
         .inner {
             grid-template-columns: 1fr;
         }
-        .invest-map-link__left-right{
+
+        .invest-map-link__left-right {
             display: none;
         }
+
         .invest-map-link__left-col {
             padding-top: 50px;
             padding-bottom: 50px;
             padding-right: 0;
         }
     }
+
     .invest-map-link-section {
         .invest-map-link__left-col {
             .section-title {
@@ -254,19 +316,23 @@
             }
         }
     }
+
     .government-support-section {
         .inner {
             grid-template-columns: 1fr;
         }
+
         .government-support-section__left-col {
             display: none;
         }
+
         .government-support-section__right-col {
             position: relative;
             padding-top: 50px;
             padding-bottom: 50px;
             padding-left: 0;
-            &::before{
+
+            &::before {
                 content: '';
                 position: absolute;
                 top: 0;
@@ -278,80 +344,101 @@
         }
     }
 }
-@media screen and (max-width: 700px){
-    :root{
+
+@media screen and (max-width: 700px) {
+    :root {
         font-size: 9px;
     }
-    .columns-box{
-        &--two-col, &--three-col{
+
+    .columns-box {
+
+        &--two-col,
+        &--three-col {
             grid-template-columns: 1fr;
         }
 
     }
 }
-@media screen and (max-width: 600px){
+
+@media screen and (max-width: 600px) {
     #main {
         padding-top: 4rem;
         padding-bottom: 6rem;
     }
+
     .news-grid {
         grid-template-columns: 1fr;
     }
+
     .m_standart_wrapper {
         grid-gap: 10px;
         grid-template-columns: repeat(2, 1fr);
     }
+
     .ms_card {
         padding: 10px;
         gap: 1rem;
+
         .ms_card__name {
             font-size: 1.6rem;
         }
     }
+
     .area-card {
         .area-card__caption {
             font-size: 2.8rem;
         }
     }
 }
-@media screen and (max-width: 550px){
-    .column-box{
+
+@media screen and (max-width: 550px) {
+    .column-box {
         grid-gap: 1rem;
+
         &--two-col {
             grid-template-columns: 1fr;
         }
     }
-    .person{
+
+    .person {
         gap: 2rem;
         flex-direction: column;
-        .person__photo{
+
+        .person__photo {
             max-width: 250px;
         }
-        .person__name{
+
+        .person__name {
             font-size: 2.5rem;
         }
     }
 }
-@media screen and (max-width: 500px){
+
+@media screen and (max-width: 500px) {
     .useful-resources-grid {
         grid-template-columns: 1fr;
         grid-gap: 1rem;
     }
-    .gallery{
+
+    .gallery {
         &--two {
             grid-template-columns: 1fr;
         }
+
         &--three {
             grid-template-columns: 1fr;
         }
     }
+
     .advantages {
         padding: 30px 30px;
         padding-right: 120px;
+
         &::before {
             width: 130px;
-                height: 132px;
+            height: 132px;
         }
+
         .advantages__icon {
             top: 9px;
             right: 11px;
@@ -360,33 +447,39 @@
         }
     }
 }
-@media screen and (max-width: 400px){
+
+@media screen and (max-width: 400px) {
     .ip-tab {
 
-        .ip-tab-controller{
+        .ip-tab-controller {
             flex-direction: column;
             align-items: flex-start;
             gap: 1rem;
         }
     }
+
     .advantages {
         padding: 30px 15px;
         padding-right: 50px;
+
         .advantages__caption {
             font-size: 2rem;
         }
     }
+
     .area-card {
         .area-card__info {
             padding: 10px;
         }
     }
 }
-@media screen and (max-width: 350px){
+
+@media screen and (max-width: 350px) {
     .m_standart_wrapper {
         grid-template-columns: 1fr;
     }
-    .ms_card{
+
+    .ms_card {
         max-width: 250px;
         margin: 0 auto;
     }
