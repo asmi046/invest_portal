@@ -662,6 +662,63 @@ class ProjectReestrSeeder extends Seeder
                 //'seo_title' => "",
                 //'seo_description' => ""
             ],
+            
+            [
+                'state' => "Реализуемые",
+                'location' => "Конышевский район",
+                'title' =>"Реконструкция и модернизация мясохладобойни в п. Конышевка Курской области",
+                'title_en' =>'Reconstruction and modernization of a meat and meat processing plant in Konyshevka village, Kursk region',
+                'period' =>"2023-2024",
+                'period_en' =>"2023-2024",
+                'price' =>"4 349",
+                'investor' => 'ООО «КУРСК АГРО ПРОДУКТ» (ГК «Агропромкомплектация»)',
+                'investor_en' => 'KURSK AGRO PRODUCT LLC (Agropromkomplektatsiya Group of Companies)',
+                'work_places' => "223",
+                'description' => "ru_preparing_17.html",
+                'description_en' =>"en_preparing_17.html",
+                'img' =>["preparing_img_17_1.webp", "preparing_img_17_2.webp"],
+                //'presentation' => "",
+                //'seo_title' => "",
+                //'seo_description' => ""
+            ],
+             
+            [
+                'state' => "Реализуемые",
+                'location' => "Обоянский район",
+                'title' =>"Строительство склада-холодильника на 5000 тысяч тонн",
+                'title_en' =>'Construction of a refrigerator warehouse for 5,000 thousand tons',
+                'period' =>"2021-2024",
+                'period_en' =>"2021-2024",
+                'price' =>"357",
+                'investor' => 'ООО «Зоринский сад»',
+                'investor_en' => 'LLC "Zorinsky garden"',
+                'work_places' => "50",
+                'description' => "ru_preparing_18.html",
+                'description_en' =>"en_preparing_18.html",
+                'img' =>["preparing_img_18_1.webp", "preparing_img_18_2.webp"],
+                //'presentation' => "",
+                //'seo_title' => "",
+                //'seo_description' => ""
+            ],
+
+            [
+                'state' => "Реализуемые",
+                'location' => "Советский район",
+                'title' =>"Строительство элеватора вместимостью 50 000 тысяч тонн",
+                'title_en' =>'Construction of an elevator with a capacity of 50,000 thousand tons',
+                'period' =>"2021-2024",
+                'period_en' =>"2021-2024",
+                'price' =>"158",
+                'investor' => 'АО «Агрокомплекс «Мансурово»',
+                'investor_en' => 'JSC "Agrocomplex "Mansurovo"',
+                'work_places' => "29",
+                'description' => "ru_preparing_19.html",
+                'description_en' =>"en_preparing_19.html",
+                'img' =>["preparing_img_19.webp"],
+                //'presentation' => "",
+                //'seo_title' => "",
+                //'seo_description' => ""
+            ],
         ];
 
         foreach ($data_reesrt as $item) {
