@@ -33,7 +33,6 @@ class DatabaseSeeder extends Seeder
                 PolResursSeeder::class,
                 InvestDocumentSeeder::class,
                 NewsSeeder::class,
-                SupportSeeder::class
             ]
         );
 
