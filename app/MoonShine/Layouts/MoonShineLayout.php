@@ -1,0 +1,116 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\MoonShine\Layouts;
+
+use MoonShine\Laravel\Layouts\AppLayout;
+use MoonShine\ColorManager\ColorManager;
+use MoonShine\Laravel\Components\Fragment;
+use MoonShine\Contracts\ColorManager\ColorManagerContract;
+use MoonShine\MenuManager\MenuItem;
+use App\MoonShine\Resources\OptionResource;
+use App\MoonShine\Resources\PageResource;
+use MoonShine\Laravel\Components\Layout\{Locales, Notifications, Profile, Search};
+use MoonShine\UI\Components\{Breadcrumbs,
+    Components,
+    Layout\Flash,
+    Layout\Div,
+    Layout\Body,
+    Layout\Burger,
+    Layout\Content,
+    Layout\Footer,
+    Layout\Head,
+    Layout\Favicon,
+    Layout\Assets,
+    Layout\Meta,
+    Layout\Header,
+    Layout\Html,
+    Layout\Layout,
+    Layout\Logo,
+    Layout\Menu,
+    Layout\Sidebar,
+    Layout\ThemeSwitcher,
+    Layout\TopBar,
+    Layout\Wrapper,
+    When};
+use App\MoonShine\Resources\IndustrealAreaResource;
+use App\MoonShine\Resources\BannerResource;
+use MoonShine\MenuManager\MenuGroup;
+
+final class MoonShineLayout extends AppLayout
+{
+    protected function assets(): array
+    {
+        return [
+            ...parent::assets(),
+        ];
+    }
+
+    protected function menu(): array
+    {
+        return [
+            MenuGroup::make('Главная страница', [
+                MenuItem::make('Индустриальные парки', IndustrealAreaResource::class),
+                MenuItem::make('Баннеры', BannerResource::class),
+            ]),
+
+            MenuItem::make(
+                "Опции", OptionResource::class
+            ),
+
+            MenuItem::make(
+                "Страницы", PageResource::class
+            ),
+
+            ...parent::menu(),
+
+            MenuItem::make(
+                static fn() => __('Сброс кеша'),
+                fn() => route('cache_clear'),
+            )->icon('arrow-path-rounded-square'),
+        ];
+    }
+
+    /**
+     * @param ColorManager $colorManager
+     */
+    protected function colors(ColorManagerContract $colorManager): void
+    {
+        parent::colors($colorManager);
+
+        // $colorManager->primary('#00000');
+    }
+
+    public function build(): Layout
+    {
+        return Layout::make([
+            Html::make([
+                $this->getHeadComponent(),
+                Body::make([
+                    Wrapper::make([
+                        // $this->getTopBarComponent(),
+                        $this->getSidebarComponent(),
+
+                        Div::make([
+                            Fragment::make([
+                                Flash::make(),
+
+                                $this->getHeaderComponent(),
+
+                                Content::make($this->getContentComponents()),
+
+                                // $this->getFooterComponent(),
+                            ])->class('layout-page')->name(self::CONTENT_FRAGMENT_NAME),
+                        ])->class('flex grow overflow-auto')->customAttributes(['id' => self::CONTENT_ID]),
+                    ]),
+                ]),
+            ])
+                ->customAttributes([
+                    'lang' => $this->getHeadLang(),
+                ])
+                ->withAlpineJs()
+                ->withThemes(),
+        ]);
+    }
+}

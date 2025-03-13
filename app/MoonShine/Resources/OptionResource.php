@@ -13,7 +13,7 @@ use MoonShine\Fields\Select;
 use MoonShine\Fields\TinyMce;
 use MoonShine\Fields\Textarea;
 use MoonShine\Decorations\Block;
-use MoonShine\Resources\ModelResource;
+use MoonShine\Laravel\Resources\ModelResource;
 use Illuminate\Database\Eloquent\Model;
 
 #[Icon('heroicons.outline.cog-8-tooth')]
@@ -66,10 +66,6 @@ class OptionResource extends ModelResource
         ];
     }
 
-    public function rules(Model $item): array
-    {
-        return [];
-    }
 
     protected function onBoot(): void
     {

@@ -138,8 +138,6 @@ class OptionsProvider extends ServiceProvider
                 return $opt;
             });
 
-
-
             View::share('optionsa', $opt);
         });
     }

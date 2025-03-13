@@ -10,8 +10,6 @@
                 </div>
             @endforeach
 
-
-
         </div>
     </div>
     <div class="header-sl-box__pagination">

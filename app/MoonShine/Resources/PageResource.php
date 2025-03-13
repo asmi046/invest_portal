@@ -4,16 +4,14 @@ declare(strict_types=1);
 
 namespace App\MoonShine\Resources;
 
-use MoonShine\Attributes\Icon;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Page\Page;
-use App\MoonShine\Pages\Page\PageIndexPage;
-use App\MoonShine\Pages\Page\PageFormPage;
-use App\MoonShine\Pages\Page\PageDetailPage;
 
-use MoonShine\Resources\ModelResource;
-
-#[Icon('heroicons.outline.code-bracket-square')]
+use MoonShine\Laravel\Resources\ModelResource;
+use MoonShine\UI\Components\Layout\Box;
+use MoonShine\UI\Fields\ID;
+use MoonShine\Contracts\UI\FieldContract;
+use MoonShine\Contracts\UI\ComponentContract;
 
 /**
  * @extends ModelResource<Page>
@@ -22,22 +20,47 @@ class PageResource extends ModelResource
 {
     protected string $model = Page::class;
 
-    protected string $title = 'Страницы';
+    protected string $title = 'Pages';
 
-    public function pages(): array
+    /**
+     * @return list<FieldContract>
+     */
+    protected function indexFields(): iterable
     {
         return [
-            PageIndexPage::make($this->title()),
-            PageFormPage::make(
-                $this->getItemID()
-                    ? __('moonshine::ui.edit')
-                    : __('moonshine::ui.add')
-            ),
-            PageDetailPage::make(__('moonshine::ui.show')),
+            ID::make()->sortable(),
         ];
     }
 
-    public function rules(Model $item): array
+    /**
+     * @return list<ComponentContract|FieldContract>
+     */
+    protected function formFields(): iterable
+    {
+        return [
+            Box::make([
+                ID::make(),
+            ])
+        ];
+    }
+
+    /**
+     * @return list<FieldContract>
+     */
+    protected function detailFields(): iterable
+    {
+        return [
+            ID::make(),
+        ];
+    }
+
+    /**
+     * @param Page $item
+     *
+     * @return array<string, string[]|string>
+     * @see https://laravel.com/docs/validation#available-validation-rules
+     */
+    protected function rules(mixed $item): array
     {
         return [];
     }

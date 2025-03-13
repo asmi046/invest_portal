@@ -4,59 +4,42 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use MoonShine\MoonShine;
-use MoonShine\Menu\MenuItem;
-use MoonShine\Menu\MenuGroup;
-use App\MoonShine\Resources\PageResource;
+use Illuminate\Support\ServiceProvider;
+use App\MoonShine\Pages\Page\PageIndexPage;
 use App\MoonShine\Resources\OptionResource;
-use App\MoonShine\Resources\UserTestResource;
 use App\MoonShine\Resources\MoonShineUserResource;
+use MoonShine\Laravel\DependencyInjection\MoonShine;
 use App\MoonShine\Resources\MoonShineUserRoleResource;
-use MoonShine\Providers\MoonShineApplicationServiceProvider;
+use MoonShine\Contracts\Core\DependencyInjection\CoreContract;
+use MoonShine\Laravel\DependencyInjection\MoonShineConfigurator;
+use MoonShine\Contracts\Core\DependencyInjection\ConfiguratorContract;
+use App\MoonShine\Resources\IndustrealAreaResource;
+use App\MoonShine\Resources\PageResource;
+use App\MoonShine\Resources\BannerResource;
 
-class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
+class MoonShineServiceProvider extends ServiceProvider
 {
-    protected function resources(): array
-    {
-        return [];
-    }
-
-    protected function pages(): array
-    {
-        return [];
-    }
-
-    protected function menu(): array
-    {
-        return [
-            MenuGroup::make(static fn() => __('moonshine::ui.resource.system'), [
-               MenuItem::make(
-                   static fn() => __('moonshine::ui.resource.admins_title'),
-                   new MoonShineUserResource()
-               ),
-               MenuItem::make(
-                   static fn() => __('moonshine::ui.resource.role_title'),
-                   new MoonShineUserRoleResource()
-               ),
-            ]),
-
-            MenuItem::make(
-                "Опции",
-                new OptionResource()
-            ),
-
-            MenuItem::make(
-                "Страницы",
-                new PageResource()
-            ),
-        ];
-    }
-
     /**
-     * @return array{css: string, colors: array, darkColors: array}
+     * @param  MoonShine  $core
+     * @param  MoonShineConfigurator  $config
+     *
      */
-    protected function theme(): array
+    public function boot(CoreContract $core, ConfiguratorContract $config): void
     {
-        return [];
+        // $config->authEnable();
+
+        $core
+            ->resources([
+                MoonShineUserResource::class,
+                MoonShineUserRoleResource::class,
+                OptionResource::class,
+                IndustrealAreaResource::class,
+                PageResource::class,
+                BannerResource::class,
+            ])
+            ->pages([
+                ...$config->getPages(),
+            ])
+        ;
     }
 }
