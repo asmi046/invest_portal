@@ -1,6 +1,6 @@
 <div class="industrial-area">
-    <div class="industrial-area__img-box" data-src="{{ Storage::url('invest_areas/'.$item->img) }}">
-        <img src="{{ Storage::url('invest_areas/'.$item->img) }}" alt="{{ _tr($item->title, $item->title_en) }}">
+    <div class="industrial-area__img-box" data-src="{{ Storage::url($item->img) }}">
+        <img src="{{ Storage::url($item->img) }}" alt="{{ _tr($item->title, $item->title_en) }}">
     </div>
 
     <div class="industrial-area__info-box">

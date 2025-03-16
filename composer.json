@@ -11,7 +11,8 @@
         "laravel/framework": "^11.0",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.8",
-        "moonshine/moonshine": "^3.0"
+        "moonshine/moonshine": "^3.0",
+        "moonshine/tinymce": "^1.0"
     },
     "require-dev": {
         "asmi046/site_skelet": "^1.0",

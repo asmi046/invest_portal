@@ -2,10 +2,11 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use DB;
 use Illuminate\Database\Seeder;
 
-use DB;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class OptionSeeder extends Seeder
 {
@@ -16,8 +17,31 @@ class OptionSeeder extends Seeder
      */
     public function run()
     {
+        Storage::disk('public')->put("options/governor.jpg", file_get_contents(public_path('old_data/governor.jpg')), 'public');
+
         DB::table("options")->insert(
             [
+                [
+                    "name" => "gubernator_dolg",
+                    "type" => "plan",
+                    'title' => 'Должность губернатора',
+                    "value" => "Губернатор Курской области",
+                ],
+
+                [
+                    "name" => "gubernator_dolg_en",
+                    "type" => "plan",
+                    'title' => 'Должность губернатора (en)',
+                    "value" => "Governor of the Kursk region",
+                ],
+
+                [
+                    "name" => "gubernator_foto",
+                    "type" => "photo",
+                    'title' => 'Фото губернатора',
+                    "value" => "options/governor.jpg",
+                ],
+
                 [
                     "name" => "gubernator_message",
                     "type" => "plan",

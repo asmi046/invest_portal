@@ -74,7 +74,7 @@ class PolResursSeeder extends Seeder
                 [
                     'lnk'=> $item['lnk'],
                     'title'=> $item['title'],
-                    'img' => Storage::url("pol_recurses/".$item['img']),
+                    'img' => "pol_recurses/".$item['img'],
                 ]
             );
         }

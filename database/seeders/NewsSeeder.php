@@ -148,7 +148,7 @@ class NewsSeeder extends Seeder
                     'title'=> $item['title'],
                     'slug' => Str::slug($item['title']),
                     'public_time' => date("Y-m-d H:i:s", strtotime($item['public_time'])),
-                    'img' => Storage::url("portal_news/".$item['img']),
+                    'img' => "portal_news/".$item['img'],
                     'description' => file_get_contents(public_path('old_data//news//'.$item['dir'].'//text.html')),
                     'seo_title' => $item["seo_title"],
                     'seo_description' => $item["seo_description"]

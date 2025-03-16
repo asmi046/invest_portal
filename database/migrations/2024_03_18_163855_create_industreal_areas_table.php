@@ -17,15 +17,15 @@ return new class extends Migration
 
             $table->string('title')->comment('Название парка');
             $table->string('title_en')->comment('Название парка (en)');
-            $table->string('img')->nullable()->comment('Изображение для карточки проекта');
+            $table->string('img')->comment('Изображение для карточки проекта');
 
             $table->string('uk_lnk', 800)->comment('Ссылка на управляющую компанию');
             $table->string('uk_name')->comment('Название управляющей компании');
             $table->string('uk_name_en')->comment('Название управляющей компании (en)');
             $table->string('btn_lnk', 800)->comment('Ссылка на кнопке ознакомиться');
 
-            $table->integer('rezident_count')->comment('Количество резидентов');
-            $table->string('free_area')->comment('Свободная площадь');
+            $table->integer('rezident_count')->nullable()->comment('Количество резидентов');
+            $table->string('free_area')->nullable()->comment('Свободная площадь');
         });
     }
 

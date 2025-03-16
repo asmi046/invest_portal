@@ -37,6 +37,9 @@ use MoonShine\UI\Components\{Breadcrumbs,
 use App\MoonShine\Resources\IndustrealAreaResource;
 use App\MoonShine\Resources\BannerResource;
 use MoonShine\MenuManager\MenuGroup;
+use App\MoonShine\Resources\RegionParametrResource;
+use App\MoonShine\Resources\NewsResource;
+use App\MoonShine\Resources\PolResursResource;
 
 final class MoonShineLayout extends AppLayout
 {
@@ -50,18 +53,17 @@ final class MoonShineLayout extends AppLayout
     protected function menu(): array
     {
         return [
-            MenuGroup::make('Главная страница', [
+            MenuGroup::make('Контент', [
                 MenuItem::make('Индустриальные парки', IndustrealAreaResource::class),
                 MenuItem::make('Баннеры', BannerResource::class),
+                MenuItem::make('Показатели региона', RegionParametrResource::class),
+                MenuItem::make('Полезные ресурсы', PolResursResource::class),
+                MenuItem::make("Опции", OptionResource::class),
             ]),
 
-            MenuItem::make(
-                "Опции", OptionResource::class
-            ),
+            MenuItem::make('Новости', NewsResource::class),
 
-            MenuItem::make(
-                "Страницы", PageResource::class
-            ),
+            MenuItem::make("Страницы", PageResource::class),
 
             ...parent::menu(),
 
@@ -69,6 +71,9 @@ final class MoonShineLayout extends AppLayout
                 static fn() => __('Сброс кеша'),
                 fn() => route('cache_clear'),
             )->icon('arrow-path-rounded-square'),
+
+
+
         ];
     }
 

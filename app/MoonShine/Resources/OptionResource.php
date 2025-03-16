@@ -4,71 +4,150 @@ declare(strict_types=1);
 
 namespace App\MoonShine\Resources;
 
-use MoonShine\Attributes\Icon;
 use App\Models\Option;
-use MoonShine\Fields\ID;
 
-use MoonShine\Fields\Text;
-use MoonShine\Fields\Select;
-use MoonShine\Fields\TinyMce;
-use MoonShine\Fields\Textarea;
-use MoonShine\Decorations\Block;
-use MoonShine\Laravel\Resources\ModelResource;
+use MoonShine\UI\Fields\ID;
+use MoonShine\UI\Fields\Text;
+use MoonShine\UI\Fields\Image;
+use Illuminate\Validation\Rule;
+use MoonShine\UI\Fields\Select;
+use MoonShine\UI\Fields\Textarea;
+use MoonShine\TinyMce\Fields\TinyMce;
 use Illuminate\Database\Eloquent\Model;
+use MoonShine\UI\Components\Layout\Box;
+use MoonShine\Contracts\UI\FieldContract;
+use MoonShine\Contracts\UI\ComponentContract;
+use MoonShine\Laravel\Resources\ModelResource;
+use MoonShine\Contracts\UI\ActionButtonContract;
 
-#[Icon('heroicons.outline.cog-8-tooth')]
+/**
+ * @extends ModelResource<Option>
+ */
 class OptionResource extends ModelResource
 {
     protected string $model = Option::class;
+
     protected string $title = 'Опции сайта';
-    public string $column = 'title';
+
+    protected string $column = 'title';
 
 
-    public function fields(): array
+    protected function modifyCreateButton(ActionButtonContract $button): ActionButtonContract
+    {
+        return $button->canSee(fn() =>false);
+    }
+
+    /**
+     * @return list<FieldContract>
+     */
+    protected function indexFields(): iterable
     {
         return [
-            Block::make([
-                ID::make()->sortable(),
-                Text::make("Название", "title"),
-
-                Select::make("Тип", "type")->options([
-                    'plan' => 'Простой текст',
-                    'rich' => 'Разметка'
-                ]),
-
-                Text::make("Ключ", "name"),
-                TinyMce::make("Значение", "value", fn($item) => mb_strimwidth($item->value, 0, 60, "..." ))
+            ID::make()->sortable(),
+            Text::make("Ключ", "name"),
+            Select::make("Тип", "type")->options([
+                'plan' => 'Текст',
+                'rich' => 'HTML',
+                'photo' => 'Фото',
             ]),
+            Text::make("Название", "title"),
+            Text::make("Значение", "value")->changeFill(
+                function ($article, $ctx) {
+                    return strip_tags(mb_strimwidth($article->value, 0, 80, "..."));
+                }
+            )
         ];
     }
 
-
-    public function formFields(): array
+    /**
+     * @return list<ComponentContract|FieldContract>
+     */
+    protected function formFields(): iterable
     {
+        $components = [
+            ID::make(),
+            Text::make("Ключ", "name")->readonly(),
+            Select::make("Тип", "type")->options([
+                'plan' => 'Текст',
+                'rich' => 'HTML',
+                'photo' => 'Фото',
+            ]),
+            Text::make("Название", "title")
+        ];
+
         $item = $this->getItem();
-        $element = Textarea::make("Значение", "value", fn($item) => mb_strimwidth($item->value, 0, 60, "..." ));
-        if ($item)
-        if ($item->type === "rich")
-            $element = TinyMce::make("Значение", "value", fn($item) => mb_strimwidth($item->value, 0, 60, "..." ));
+
+        if ($item) {
+            if ( $item->type === "plan")
+                $components[] = Textarea::make("Значение", "value");
+            elseif ($item->type === "rich")
+                $components[] = TinyMce::make("Значение", "value");
+            else
+                $components[] = Image::make("Значение", "value")->dir('options');
+
+        }
+
         return [
-            Block::make([
-                ID::make()->sortable(),
-                Text::make("Название", "title"),
+            Box::make($components)
+        ];
+    }
 
-                Select::make("Тип", "type")->options([
-                    'plan' => 'Простой текст',
-                    'rich' => 'Разметка'
-                ]),
-
-                Text::make("Ключ", "name"),
-                $element
+    /**
+     * @return list<FieldContract>
+     */
+    protected function detailFields(): iterable
+    {
+        $components = [
+            ID::make(),
+            Text::make("Ключ", "name")->readonly(),
+            Select::make("Тип", "type")->options([
+                'plan' => 'Текст',
+                'rich' => 'HTML',
+                'photo' => 'Фото',
             ]),
+            Text::make("Название", "title")
+        ];
+
+        $item = $this->getItem();
+
+        if ($item) {
+            if ( $item->type === "plan")
+                $components[] = Textarea::make("Значение", "value");
+            elseif ($item->type === "rich")
+                $components[] = TinyMce::make("Значение", "value");
+            else
+                $components[] = Image::make("Значение", "value")->dir('options');
+
+        }
+
+        return $components;
+    }
+
+    /**
+     * @param Option $item
+     *
+     * @return array<string, string[]|string>
+     * @see https://laravel.com/docs/validation#available-validation-rules
+     */
+    protected function rules(mixed $item): array
+    {
+        return [
+            'name' => [
+                'required',
+                Rule::unique('options')->ignore($item->id)
+            ],
+            'type' => ['required'],
+            'title' => ['required'],
+            'value' => ['required'],
         ];
     }
 
 
-    protected function onBoot(): void
+    protected function filters(): iterable
     {
-
+        return [
+            Text::make('Название', 'title'),
+            Text::make('Значение', 'value'),
+        ];
     }
 }

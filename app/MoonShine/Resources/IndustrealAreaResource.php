@@ -20,8 +20,10 @@ class IndustrealAreaResource extends ModelResource
 {
     protected string $model = IndustrealArea::class;
 
-    protected string $title = 'IndustrealAreas';
-    
+    protected string $title = 'Индустриальные парки';
+
+    protected string $column = 'title';
+
     /**
      * @return list<Page>
      */
@@ -42,6 +44,14 @@ class IndustrealAreaResource extends ModelResource
      */
     protected function rules(mixed $item): array
     {
-        return [];
+        return [
+            'title' => ['required'],
+            'title_en' => ['required'],
+            'img' => ($item->img === "")?['required']:[],
+            'uk_lnk' => ['required'],
+            'uk_name' => ['required'],
+            'uk_name_en' => ['required'],
+            'btn_lnk' => ['required'],
+        ];
     }
 }

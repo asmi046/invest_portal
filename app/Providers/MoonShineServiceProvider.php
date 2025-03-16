@@ -16,6 +16,9 @@ use MoonShine\Contracts\Core\DependencyInjection\ConfiguratorContract;
 use App\MoonShine\Resources\IndustrealAreaResource;
 use App\MoonShine\Resources\PageResource;
 use App\MoonShine\Resources\BannerResource;
+use App\MoonShine\Resources\RegionParametrResource;
+use App\MoonShine\Resources\NewsResource;
+use App\MoonShine\Resources\PolResursResource;
 
 class MoonShineServiceProvider extends ServiceProvider
 {
@@ -36,6 +39,9 @@ class MoonShineServiceProvider extends ServiceProvider
                 IndustrealAreaResource::class,
                 PageResource::class,
                 BannerResource::class,
+                RegionParametrResource::class,
+                NewsResource::class,
+                PolResursResource::class,
             ])
             ->pages([
                 ...$config->getPages(),

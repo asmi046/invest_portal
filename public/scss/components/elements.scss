@@ -185,6 +185,7 @@
         }
         &--down{
             transform: scale(-1);
+            background-color: var(--alert-color);
         }
 
     }

@@ -4,10 +4,12 @@ declare(strict_types=1);
 
 namespace App\MoonShine\Pages\IndustrealArea;
 
+use Throwable;
+use MoonShine\UI\Fields\Text;
+use MoonShine\UI\Fields\Image;
+use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Laravel\Pages\Crud\IndexPage;
 use MoonShine\Contracts\UI\ComponentContract;
-use MoonShine\Contracts\UI\FieldContract;
-use Throwable;
 
 
 class IndustrealAreaIndexPage extends IndexPage
@@ -17,7 +19,11 @@ class IndustrealAreaIndexPage extends IndexPage
      */
     protected function fields(): iterable
     {
-        return [];
+        return [
+            Text::make("Заголовок", 'title'),
+            Text::make("Заголовок (en)", 'title_en'),
+            Image::make("Изображение", 'img')->dir('invest_areas'),
+        ];
     }
 
     /**

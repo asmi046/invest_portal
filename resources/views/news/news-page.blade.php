@@ -18,8 +18,8 @@
             <x-breadcrumbs.main :news="$title"></x-breadcrumbs.main>
             {{-- <a href="{{route('news_list')}}" class="back-link">Назад к списку</a> --}}
             @if($news->img)
-                <a href="{{ $news->img }}" class="lg-gallery page-photo">
-                    <img src="{{$news->img}}" alt="">
+                <a href="{{ Storage::url($news->img)  }}" class="lg-gallery page-photo">
+                    <img src="{{ Storage::url($news->img) }}" alt="">
                 </a>
             @else
                 <a href="{{asset('img/nophoto.jpg')}}" class="lg-gallery page-photo">

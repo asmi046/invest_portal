@@ -48,6 +48,8 @@ class IndustrealAreaSeeder extends Seeder
                 Storage::disk('public')->put("invest_areas/".$item['img'], file_get_contents(public_path('old_data//industrial_areas//'.$item['img'])), 'public');
             }
 
+            $adding_item['img'] = "invest_areas/".$adding_item['img'];
+
             unset($adding_item['folder']);
             $p_id = DB::table("industreal_areas")->insertGetId(
                 $adding_item
