@@ -11,7 +11,11 @@ class Area extends Model
 
     protected $fillable = [
         'name',
+        'name_en',
+        'cadastral',
         'description',
+        'description_en',
         'lnk',
+        'img'
     ];
 }

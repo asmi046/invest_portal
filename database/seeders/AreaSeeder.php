@@ -733,7 +733,7 @@ class AreaSeeder extends Seeder
 
             if (isset($item['img']) && !empty($item['img'])) {
                 Storage::disk('public')->put("portal_areas/".$item['img'], file_get_contents(public_path('old_data/areas/'.$item['dir'].'/'.$item['img'])), 'public');
-                $insert_item['img'] = $item['img'];
+                $insert_item['img'] = "portal_areas/".$item['img'];
             }
 
 

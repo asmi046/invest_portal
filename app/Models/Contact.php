@@ -9,7 +9,12 @@ class Contact extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'selector',
+        'text_id',
+        'organ',
         'organ_en',
+        'adres',
+        'adres_en',
         'person',
         'person_en',
         'dolg',
@@ -17,6 +22,10 @@ class Contact extends Model
         'phone',
         'phone_dob',
         'email',
-        'img',
+        'vk_lnk',
+        'tg_lnk',
+        'ok_lnk',
+        'web',
+        'img'
     ];
 }
