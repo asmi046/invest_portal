@@ -265,7 +265,7 @@ class InvestDocumentSeeder extends Seeder
                         'title_en' => $item['title_en'],
                         'subtype' => $item['subtype'],
                         'subtype_en' => $item['subtype_en'],
-                        'file' => Storage::url("portal_documents/".$item['file']),
+                        'file' => "portal_documents/".$item['file'],
                 ]
 
             );
