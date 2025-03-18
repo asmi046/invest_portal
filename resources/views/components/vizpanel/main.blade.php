@@ -11,6 +11,8 @@
             <button class="vizpanel__block__btn vizpanel__block__btn-arrow white-theme" aria-label="Белая тема оформления">Ц</button>
             <button class="vizpanel__block__btn vizpanel__block__btn-arrow black-theme" aria-label="Черная тема оформления">Ц</button>
             <button class="vizpanel__block__btn vizpanel__block__btn-arrow blue-theme" aria-label="Синяя тема оформления">Ц</button>
+            <button class="vizpanel__block__btn vizpanel__block__btn-arrow brown-theme" aria-label="Коничневая тема оформления">Ц</button>
+            <button class="vizpanel__block__btn vizpanel__block__btn-arrow green-theme" aria-label="Зеленая тема оформления">Ц</button>
         </div>
         <div class="vizpanel__block">
             <div class="vizpanel__block__label">Изображение: </div>

@@ -10,6 +10,8 @@ import 'swiper/css/bundle';
 import Simplebar from 'simplebar'; // or "import SimpleBar from 'simplebar';" if you want to use it manually.
 // import 'simplebar/dist/simplebar.css';
 
+import PoorEyesight from './PoorEyesight.js';
+
 document.addEventListener('DOMContentLoaded', ()=>{
 
     function slideDown(el){
@@ -160,14 +162,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
         });
     }
 
-    let sversion = document.querySelector('.header-control-btn--poor-eyesight');
-    let regularVersion = document.querySelector('.regular-version');
-    sversion.addEventListener('click', function(){
-        document.body.classList.toggle('common-viz')
-    })
-    regularVersion.addEventListener('click', function(){
-        document.body.classList.toggle('common-viz')
-    });
 
 
     // подключаю слайдеры
@@ -179,10 +173,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
         // Optional parameters
         loop: true,
         spaceBetween: 0,
-        effect: "fade",
-        autoplay: {
-            delay: 5000,
-        },
+        // effect: "fade",
+        // autoplay: {
+        //     delay: 5000,
+        // },
         navigation: {
             nextEl: ".header-sl-box .swiper-button-next",
             prevEl: ".header-sl-box .swiper-button-prev",
@@ -237,7 +231,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     Array.prototype.forEach.call(
         document.querySelectorAll('.simplebar'),
         (el) => new Simplebar(el)
-      );
+    );
 
     let investMap = document.querySelector('.invest-map-link__map');
     let govementSupportImg = document.querySelector('.government-support-section__img');
@@ -257,12 +251,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     investMapAutoWidthRight(investMap);
 
-    investMapAutoWidthLeft(govementSupportImg);
-
-    window.addEventListener('resize', function(){
-        investMapAutoWidthRight(investMap);
+    if(govementSupportImg){
         investMapAutoWidthLeft(govementSupportImg);
-    });
+
+        window.addEventListener('resize', function(){
+            investMapAutoWidthRight(investMap);
+            investMapAutoWidthLeft(govementSupportImg);
+        });
+    }
+
 
          // работа видеоконтейнера
 
@@ -308,5 +305,139 @@ document.addEventListener('DOMContentLoaded', ()=>{
             );
         }
         // document.fueAddFile.getFileBank() - выдает массив с подгруженными файлами
+
+
+        // --------------------------------------------
+        // версия для слабовидящих
+        
+    let sversion = document.querySelector('.header-control-btn--poor-eyesight');
+    let regularVersion = document.querySelector('.regular-version');
+    sversion.addEventListener('click', function(){
+        document.body.classList.toggle('common-viz')
+    })
+    regularVersion.addEventListener('click', function(){
+        document.body.classList.toggle('common-viz')
+    });
+
+     // ------Версия для слабовидящих------
+     let peObj = new PoorEyesight;
+     let $poorEyesinghtBtn = document.querySelector('.header-control-btn--poor-eyesight'); //кнопка запуска версии для слабовидящих
+     let $regVersionBtn = document.querySelector('.regular-version'); //кнопка отключения версии для слабовидящих
+     let $showSettingsPanel = document.querySelector('.show-setting-panel');
+     let $visPanelASP = document.querySelector('.vizpanel-asp');
+     let $BtnFSNormal = document.querySelector('.fs_normal');
+     let $BtnFSLarge = document.querySelector('.fs_large');
+     let $BtnFSVeryLarge = document.querySelector('.fs_very_larg');
+
+     let $btnWhiteTheme = document.querySelectorAll('.white-theme');
+     let $btnBlackTheme = document.querySelectorAll('.black-theme');
+     let $btnBlueTheme = document.querySelectorAll('.blue-theme');
+     let $btnBrownTheme = document.querySelector('.brown-theme');
+     let $btnGreenTheme = document.querySelector('.green-theme');
+
+     let $btnOnImg = document.querySelector('.switch-img_on');
+     let $btnOffImg = document.querySelector('.switch-img_off');
+
+     let $sansSerifBtn = document.querySelector('.vizpanel-asp-btn--sans-serif'); //кнопка устанавливающая шрифт без засечек
+     let $SerifBtn = document.querySelector('.vizpanel-asp-btn--serif'); //кнопка устанавливающая шрифт с засечеками
+
+     let lsNormalBtn = document.querySelector('.vizpanel-asp-btn__ls-normal');
+     let lsLargeBtn = document.querySelector('.vizpanel-asp-btn__ls-large');
+     let lsVeryLargeBtn = document.querySelector('.vizpanel-asp-btn__ls-very-large');
+
+     let $defaultSettingsBtn = document.querySelector('.vizpanel__default-settings')
+     let $closeVizpanelASP = document.querySelector('.close-vizpanel-asp')
+
+     let $btnImgColored = document.querySelector('.switch-img__colored');
+     let $btnImgMonohrome = document.querySelector('.switch-img__monochrome');
+
+
+
+
+     $showSettingsPanel.addEventListener('click', function () {
+         $visPanelASP.classList.add('vizpanel-asp--show');
+     });
+     $closeVizpanelASP.addEventListener('click', function () {
+         $visPanelASP.classList.remove('vizpanel-asp--show');
+     });
+     $defaultSettingsBtn.addEventListener('click', () => {
+         peObj.setDefaultSettings();
+         peObj.setDefaultSettings();
+     });
+
+     lsNormalBtn.addEventListener('click', (e) => {
+         peObj.setLetterSpacing(0, true);
+     });
+     lsLargeBtn.addEventListener('click', (e) => {
+         peObj.setLetterSpacing(1, true);
+     });
+     lsVeryLargeBtn.addEventListener('click', (e) => {
+         peObj.setLetterSpacing(2, true);
+     });
+
+     $btnImgColored.addEventListener('click', () => {
+         peObj.makeImageColor(true);
+     })
+     $btnImgMonohrome.addEventListener('click', () => {
+         peObj.makeImageMonochrome(true);
+     });
+
+     $sansSerifBtn.addEventListener('click', () => {
+         peObj.setSansSerifFont();
+     });
+     $SerifBtn.addEventListener('click', () => {
+         peObj.setSerifFont();
+     });
+
+     window.addEventListener('load', () => {
+         peObj.loadPage();
+     })
+     $poorEyesinghtBtn.addEventListener('click', function () {
+         peObj.start();
+     });
+     $regVersionBtn.addEventListener('click', () => {
+         peObj.stop();
+         //startSliders(); //запускаем слайдеры на странице
+     });
+     $BtnFSNormal.addEventListener('click', () => {
+         peObj.fontSizeNormal();
+     })
+     $BtnFSLarge.addEventListener('click', () => {
+         peObj.fontSizeLarge();
+     })
+     $BtnFSVeryLarge.addEventListener('click', () => {
+         peObj.fontSizeVeryLarge();
+     })
+     $btnWhiteTheme.forEach(btn => {
+         btn.addEventListener('click', () => {
+             peObj.themeWhite();
+         });
+     });
+     $btnBlackTheme.forEach(btn => {
+         btn.addEventListener('click', () => {
+             peObj.themeBlack();
+         });
+     })
+     $btnBlueTheme.forEach(btn => {
+         btn.addEventListener('click', () => {
+             peObj.themeBlue();
+         });
+     });
+     $btnBrownTheme.addEventListener('click', () => {
+         peObj.themeBrown();
+     });
+     $btnGreenTheme.addEventListener('click', () => {
+         peObj.themeGreen();
+     });
+
+     $btnOnImg.addEventListener('click', () => {
+         peObj.showAllImg()
+     });
+
+     $btnOffImg.addEventListener('click', () => {
+         peObj.hideAllImg();
+     })
+     // ------Версия для слабовидящих конец------
+
 });
 

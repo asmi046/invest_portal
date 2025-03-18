@@ -1,17 +1,19 @@
-
 .common-viz {
 
-    #header{
+    #header {
         border-bottom: 1px solid var(--text-color);
-        .close_menu{
-            &.active{
+
+        .close_menu {
+            &.active {
                 display: block;
             }
         }
-        .burger{
+
+        .burger {
             z-index: 1;
         }
-        .poor_eyesight{
+
+        .poor_eyesight {
             display: none;
         }
     }
@@ -23,242 +25,168 @@
 
 
     .poor_eyesight,
-    .resource__sl  {
+    .resource__sl {
         display: none;
     }
 }
 
 
 // ===============стили текущего сайта===========
-
-.common-viz {
-    .material{
-        border: 1px solid var(--border-color);
-        box-shadow: none;
-        &:hover{
+.common-viz { 
+    .ip-tab-controller {
+        .ip-tab-controller__btn{
+            &.active { 
+                border-bottom: 2px solid var(--viz-yellow);
+            }
+        }
+    }
+    .header-control-btn--poor-eyesight{
+        display: none;
+    }
+    .form-elem {
+        .form-elem__field{
+            border: 1px solid var(--black);
+            box-shadow: none;
+        }
+        .form-elem__textarea{
+            border: 1px solid var(--black);
             box-shadow: none;
         }
     }
-    .menu-container {
-        height: 100% !important;
-        top: 0 !important;
+    .breadcrumbs { 
+        font-size: 1.4rem;
     }
-    .npa-hall{
-        &::after,
-        &::before{
-            display: none;
+    .btn {
+        &:hover {
+            background-color: var(--viz-yellow);
+            color: var(--active);
         }
     }
-    .actual-project{
-        border: 1px solid var(--border-color);
-        .actual-project__quantity{
-            color: var(--light);
-        }
-    }
-    .project-ct{
-        &::before{
-            display: none;
-        }
-    }
-    .psevdoselect .psevdoselect__value-list {
-        li{
-            &:hover {
-                background-color: var(--turquoise-soft);
-                color: var(--light);
-            }
-        }
-    }
-    #footer{
-        border-top: 1px solid var(--black);
+
+    .indecators,
+    .advantages,
+    .news,
+    .useful-resource,
+    .doc-link,
+    .industrial-area {
+        border: 1px solid var(--black);
+        box-shadow: none;
     }
 
     #header {
-        .header__btn{
-            border: 1px solid var(--black);
-        }
-        // .header__btn--auth,
-        // .header__btn--user{
-        //     margin-left: auto;
-        // }
-    }
-    .main-menu {
-        li {
-            a{
-                &:hover{
-                    text-decoration: underline;
-                }
-                &.active{
-                    text-decoration: underline;
-                }
-            }
-        }
-    }
-    .simplebar-content-wrapper{
-        border: 1px solid var(--black);
-    }
-    .conclusion-developer{
-        width: 99.9%;
-    }
-    .conclusion-developer th {
-        border: 1px solid var(--black);
-    }
-    .conclusion-columns__left-col{
-        border: 1px solid var(--black);
-        border-radius: 9px;
-    }
-    .top-project{
-        border: 1px solid var(--black);
-    }
+        background-image: none !important;
+        border-bottom: 1px solid var(--black);
 
-    .about-board{
-        padding: 0;
-    }
-    .support-board,
-    .direction-of-support .direction-of-support__panel,
-    .fly-block{
-        border: 1px solid var(--border-color);
-    }
-    .fly-block::before{
-        display: none;
-    }
-    .form-info {
-        background-color: transparent;
-    }
-    .captcha-box__img {
-        width: 50%;
-    }
-    .project-cell {
-        .project-cell__body{
-            background-color: transparent;
-        }
-    }
-    .project-cell-porgress {
-        border: 1px solid var(--border-color);
-
-        .project-cell-porgress__indicator {
-            background-color: #fffb00;
-        }
-    }
-    .project-history-item {
-        .project-history-item__the-end{
-            border: 1px solid var(--bg-color);
-            background-color: transparent;
-            color: var(--light);
-        }
-    }
-    .modal {
-        .btn-close-modal{
-            &:hover{
-                &::after,
-                &::before{
-                    background-color: #fffb00;
-                }
-            }
-        }
-    }
-    .attention-block {
-        border: none;
-        background-color: #fffb00;
-        color: #000000;
-        &::before{
-            background-color: #000000;
-        }
-    }
-    .user-menu .user-menu__item {
-        background-color: var(--light);
-        &:hover{
-            background-color: #fffb00;
-            color: #000000;
-            &::before{
-                background-color: #000000;
-            }
-        }
-    }
-    .btn{
-        &:hover{
-            background-color: #fffb00;
-            color: #000000;
-        }
-        &--message-icon{
-            &::before{
-                background-color: var(--text-color);
-            }
-            &:hover{
-                &::before{
-                    background-color: #000000;
-                }
-            }
-        }
-        &--esia{
-            &:hover{
-                &::before{
-                    background-color: #000000;
-                }
-            }
-        }
-    }
-    .callback-modal::before{
-        display: none;
-    }
-    .modal-warning{
-        background-color: transparent;
-    }
-    .control-page-btn{
-        &:hover{
-            background-color: #fffb00;
-        }
-    }
-    .share {
-        .share__panel{
-            border: 1px solid var(--black);
-        }
-        .share__link{
-            &:hover{
-                background-color: #fffb00;
-            }
-        }
-    }
-    .status-panel{
-        background-color: transparent !important;
-    }
-    .podpisant_wrapper {
-        grid-row-gap: 1rem;
-        .podpisant_blk{
-            border: 1px solid var(--black);
-            background-color: var(--light);
+        .page-title {
             color: var(--black);
-            .podpisant_blk__counter{
-                // border-left: 1px solid var(--black);
-                // border-bottom: 1px solid var(--black);
-                color: var(--light);
+        }
+
+        .header__top {
+            background-color: var(--black);
+        }
+    }
+
+    .header-sl-item {
+        .header-sl-item__title {
+            color: var(--black);
+        }
+    }
+
+    .header-sl-item-parameters {
+        .header-sl-item-parameters__value,
+        .header-sl-item-parameters__deskription {
+            color: var(--black);
+        }
+    }
+
+    .header-sl-box__pagination { 
+        .swiper-button-prev,
+        .swiper-button-next {
+            border: 1px solid var(--black);
+            &::after{
+                color:var(--black);
             }
             &:hover{
-                background-color: #fffb00;
-                color: var(--light);
+                background-color: var(--viz-yellow);
+            } 
+        }
+    }
+
+    .header-sl {
+        .header-sl__item {
+            background-image: none !important;
+            background-color: var(--bg);
+        }
+    }
+ 
+    .side-menu-container {
+        .close-cross {
+            &:hover { 
+                &::after,
+                &::before {
+                    background-color: var(--viz-yellow);
+                }
+            }
+
+        }
+    }
+    .indecators{
+        padding: 40px;
+    }
+    .indecators-grid, .advantages-grid, .news-grid{
+        grid-gap: 40px;
+    }
+    .indecators-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .government-support-section {
+        .government-support-section__left-col{
+            display: none;
+        }
+    }
+    .invest-map-link-section{
+        .inner{
+            grid-template-columns: 1fr;
+        }
+    }
+    .invest-map-link-section {
+        .invest-map-link__left-right{
+            display: none;
+        }
+    }
+    .useful-resources-sl-box {
+        .swiper-pagination {
+            .swiper-pagination-bullet {
+                background-color: var(--black);
+                &.swiper-pagination-bullet-active{
+                    background-color: var(--viz-yellow);
+                }
             }
         }
+    }
+    .area-card{
+        border: 1px solid var(--black);
+        background-color: var(--light);
+    }
+    .pagination { 
+        flex-wrap: wrap;
+        
+        .pagination__numbers {
+            border: 1px solid var(--black);
+        }
+
     }
 }
-// .btn__close-menu{
-//     display: block;
-// }
+
 
 // ============================================
-@media screen and (max-width: 1060px){
+@media screen and (max-width: 500px){
     .common-viz {
-        #header{
-            .menu-container{
-                border-top: none;
-                padding-top: 5rem;
-                .btn__close-menu{
-                    display: block;
-                }
-            }
-            .header__btn--auth,
-            .header__btn--user{
-                margin-left: auto;
-            }
+        .indecators-grid, 
+        .advantages-grid, 
+        .news-grid {
+            grid-gap: 20px;
         }
-
     }
+    
 }

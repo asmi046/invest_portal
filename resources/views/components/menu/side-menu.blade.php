@@ -1,4 +1,4 @@
-<div class="side-menu-container simplebar">
+<div class="side-menu-container">
     <button class="close-menu-btn close-cross"></button>
     <ul class="side-menu">
         @foreach ($all_menu['Общее меню'] as $item)

@@ -38,11 +38,11 @@
 
 // -----------------стили текущего сайта------------------------
 .theme_black{
-    // #header {
-    //     .header__btn{
-    //         border: 1px solid var(--black);
-    //     }
-    // }
+    .btn{
+        &:hover{
+            color: var(--light);
+        }
+    } 
     .project-stage--completed::after {
         border: none;
         background-repeat: no-repeat;
@@ -53,6 +53,33 @@
     .project-cell-porgress {
         .project-cell-porgress__text{
             color: #000000;
+        }
+    }
+    .fly-btn {
+        &:hover{
+            .fly-btn__icon{
+                background-color: var(--black);
+            }
+        } 
+    }
+    #header {
+        .page-title{
+            color: var(--black);
+        }
+    }
+    .header-sl-box__pagination { 
+        .swiper-button-prev,
+        .swiper-button-next {
+            border: 1px solid var(--black);
+            &::after{
+                color:var(--black);
+            }
+            &:hover{
+                background-color: var(--viz-yellow);
+                &::after{
+                    color:var(--light);
+                }
+            } 
         }
     }
 }

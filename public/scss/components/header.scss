@@ -536,6 +536,7 @@
     background-color: var(--active);
     z-index: 120;
     transition: var(--great-transition);
+    overflow: auto;
     &.show-menu{
         right: 0;
     }

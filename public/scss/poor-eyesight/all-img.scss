@@ -60,18 +60,12 @@
 
 // ------------------------стили сайта-------------------
 .all-img_off {
-    .open-data::before,
-    .email-subscription::before,
-    .rss-subscription::before,
-    .link-estimation::before,
-    .link-transformation::before{
-        display: none;
-    }
-    .captcha-box__img{
+    .useful-resource {
         img{
             display: block !important;
         }
     }
+   
 }
 .all-image-monochrome{
     .open-data::before,
