@@ -427,17 +427,17 @@ class PageSeeder extends Seeder
 
             if (!empty($item['banner'])) {
                 Storage::disk('public')->put("page_banners/".$item['banner'], file_get_contents(public_path('old_data/pages/banners/'.$item['banner'])), 'public');
-                $adding_item['banner'] = Storage::url("page_banners/".$item['banner']);
+                $adding_item['banner'] = "page_banners/".$item['banner'];
             }
 
             if (!empty($item['img'])) {
                 Storage::disk('public')->put("page_images/".$item['img'], file_get_contents(public_path('old_data/pages/img/'.$item['img'])), 'public');
-                $adding_item['img'] = Storage::url("page_images/".$item['img']);
+                $adding_item['img'] = "page_images/".$item['img'];
             }
 
             if (isset($item['img_en']) && !empty($item['img_en'])) {
                 Storage::disk('public')->put("page_images/".$item['img_en'], file_get_contents(public_path('old_data/pages/img/'.$item['img_en'])), 'public');
-                $adding_item['img_en'] = Storage::url("page_images/".$item['img_en']);
+                $adding_item['img_en'] = "page_images/".$item['img_en'];
             }
 
 
@@ -454,7 +454,7 @@ class PageSeeder extends Seeder
                         [
                             'title' => $fitem['title'],
                             'page_id' => $p_id,
-                            'lnk' => $fitem['title'],
+                            'lnk' => $fitem['file'],
                         ]
                     );
                 }
@@ -496,17 +496,17 @@ class PageSeeder extends Seeder
 
                     if (!empty($subitem['banner'])) {
                         Storage::disk('public')->put("page_banners/".$subitem['banner'], file_get_contents(public_path('old_data/pages/banners/'.$subitem['banner'])), 'public');
-                        $inserted_sub_item['banner'] = Storage::url("page_banners/".$subitem['banner']);
+                        $inserted_sub_item['banner'] = "page_banners/".$subitem['banner'];
                     }
 
                     if (!empty($subitem['img'])) {
                         Storage::disk('public')->put("page_images/".$subitem['img'], file_get_contents(public_path('old_data/pages/img/'.$subitem['img'])), 'public');
-                        $inserted_sub_item['img'] = Storage::url("page_images/".$subitem['img']);
+                        $inserted_sub_item['img'] = "page_images/".$subitem['img'];
                     }
 
                     if (isset($subitem['img_en']) && !empty($subitem['img_en'])) {
                         Storage::disk('public')->put("page_images/".$subitem['img_en'], file_get_contents(public_path('old_data/pages/img/'.$subitem['img_en'])), 'public');
-                        $inserted_sub_item['img_en'] = Storage::url("page_images/".$subitem['img_en']);
+                        $inserted_sub_item['img_en'] = "page_images/".$subitem['img_en'];
                     }
 
                     $ip_id = DB::table("pages")->insertGetId(
@@ -522,7 +522,7 @@ class PageSeeder extends Seeder
                                 [
                                     'title' => $fitem['title'],
                                     'page_id' => $ip_id,
-                                    'lnk' => $fitem['title'],
+                                    'lnk' => $fitem['file'],
                                 ]
                             );
                         }
