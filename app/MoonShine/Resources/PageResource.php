@@ -4,14 +4,26 @@ declare(strict_types=1);
 
 namespace App\MoonShine\Resources;
 
-use Illuminate\Database\Eloquent\Model;
 use App\Models\Page\Page;
-
-use MoonShine\Laravel\Resources\ModelResource;
-use MoonShine\UI\Components\Layout\Box;
 use MoonShine\UI\Fields\ID;
+
+use MoonShine\UI\Fields\File;
+use MoonShine\UI\Fields\Json;
+use MoonShine\UI\Fields\Text;
+use MoonShine\UI\Fields\Image;
+use MoonShine\UI\Components\Tabs;
+use MoonShine\UI\Fields\Position;
+use MoonShine\UI\Fields\Textarea;
+use MoonShine\Laravel\Fields\Slug;
+use MoonShine\TinyMce\Fields\TinyMce;
+use MoonShine\UI\Components\Tabs\Tab;
+use Illuminate\Database\Eloquent\Model;
+use MoonShine\UI\Components\Layout\Box;
+use Illuminate\Database\Eloquent\Builder;
 use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Contracts\UI\ComponentContract;
+use MoonShine\Laravel\Resources\ModelResource;
+use MoonShine\Laravel\Fields\Relationships\BelongsTo;
 
 /**
  * @extends ModelResource<Page>
@@ -20,7 +32,9 @@ class PageResource extends ModelResource
 {
     protected string $model = Page::class;
 
-    protected string $title = 'Pages';
+    protected string $title = 'Страницы';
+
+    protected string $column = 'title';
 
     /**
      * @return list<FieldContract>
@@ -29,6 +43,9 @@ class PageResource extends ModelResource
     {
         return [
             ID::make()->sortable(),
+            Text::make("Заголовок", 'title'),
+            Text::make("Заголовок (en)", 'title_en'),
+            BelongsTo::make("Родительская", 'parent_page', formatted: 'title', resource: PageResource::class)
         ];
     }
 
@@ -38,9 +55,47 @@ class PageResource extends ModelResource
     protected function formFields(): iterable
     {
         return [
-            Box::make([
-                ID::make(),
-            ])
+
+            Tabs::make([
+                Tab::make('Основная информация', [
+                    ID::make(),
+                    Text::make("Заголовок", 'title'),
+                    Text::make("Заголовок (en)", 'title_en'),
+                    Slug::make("Ссылка", 'slug'),
+                    BelongsTo::make("Родительская", 'parent_page', formatted: 'title', resource: PageResource::class),
+                    Text::make("Шаблон", 'template'),
+                    TinyMce::make('Описание', 'description'),
+                    TinyMce::make('Описание (en)', 'description_en'),
+                ]),
+                Tab::make('Изображения', [
+                    Image::make("Баннер", 'banner')->dir('page_banners'),
+                    Image::make("Картинка", 'img')->dir('page_images'),
+                    Image::make("Картинка (en)", 'img_en')->dir('page_images'),
+                    Json::make('Галерея', 'images')->fields([
+                        Position::make(),
+                        Text::make('Название', 'title'),
+                        Text::make('Название (en)', 'title_en'),
+                        Image::make("Изображение", 'img')->dir('page_inner_img')
+                    ]),
+                ]),
+
+                Tab::make('Файлы', [
+                    Json::make('Файлы', 'files')->fields([
+                        Position::make(),
+                        Text::make('Название', 'title'),
+                        Text::make('Название (en)', 'title_en'),
+                        Textarea::make('Описание', 'description'),
+                        Textarea::make('Описание (en)', 'description_en'),
+                        File::make("Файл", 'file')->dir('page_files')
+                    ]),
+                ]),
+
+                Tab::make('Файлы', [
+                    Text::make('SEO заголовок', 'seo_title'),
+                    Textarea::make('SEO описание', 'seo_description'),
+                ]),
+            ]),
+
         ];
     }
 
@@ -51,6 +106,50 @@ class PageResource extends ModelResource
     {
         return [
             ID::make(),
+            Text::make("Заголовок", 'title'),
+            Text::make("Заголовок (en)", 'title_en'),
+            Slug::make("Ссылка", 'slug'),
+            BelongsTo::make("Родительская", 'parent_page', formatted: 'title', resource: PageResource::class)->nullable(),
+            Text::make("Шаблон", 'template'),
+            Image::make("Баннер", 'banner')->dir('page_banners'),
+            Image::make("Картинка", 'img')->dir('page_images'),
+            Image::make("Картинка (en)", 'img_en')->dir('page_images'),
+            TinyMce::make('Описание', 'description'),
+            TinyMce::make('Описание (en)', 'description_en'),
+            Json::make('Галерея', 'images')->fields([
+                Position::make(),
+                Text::make('Название', 'title'),
+                Text::make('Название (en)', 'title_en'),
+                Image::make("Изображение", 'img')->dir('page_inner_img')
+            ]),
+
+            Json::make('Файлы', 'files')->fields([
+                Position::make(),
+                Text::make('Название', 'title'),
+                Text::make('Название (en)', 'title_en'),
+                Textarea::make('Описание', 'description'),
+                Textarea::make('Описание (en)', 'description_en'),
+                File::make("Файл", 'file')->dir('page_files')
+            ]),
+
+            Text::make('SEO заголовок', 'seo_title'),
+            Textarea::make('SEO описание', 'seo_description'),
+        ];
+    }
+
+
+    protected function filters(): iterable
+    {
+        return [
+            Text::make("Заголовок", 'title'),
+            Text::make("Описание", 'description'),
+            // BelongsTo::make("Родительская", 'parent_page', formatted: 'title', resource: PageResource::class)
+            // ->nullable()
+            // ->default(0)
+            // // ->onApply(function (Builder $query, mixed $value, BelongsTo $field) {
+            // //     // dd($field);
+            // //     // $q->where('title', $value);
+            // // })
         ];
     }
 
@@ -62,6 +161,9 @@ class PageResource extends ModelResource
      */
     protected function rules(mixed $item): array
     {
-        return [];
+        return [
+            'title' => ['required'],
+            'title_en' => ['required'],
+        ];
     }
 }

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title_en')->nullable()->comment('Название отчета (en)');
             $table->integer('month')->comment('Месяц');
             $table->integer('year')->comment('Год');
-            $table->string('file')->nullable()->comment('Файл отчета');
+            $table->string('file', 800)->nullable()->comment('Файл отчета');
         });
     }
 

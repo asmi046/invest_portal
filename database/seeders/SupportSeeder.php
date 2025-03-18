@@ -30,11 +30,21 @@ class SupportSeeder extends Seeder
                 Storage::disk('public')->put("support_m/".$item['inner_img'], file_get_contents(public_path('old_data//support_measures//'.$item['title']."//".$item['inner_img'])), 'public');
             }
 
+            if (isset($item['inner_img_en']) && !empty($item['inner_img_en'])) {
+                Storage::disk('public')->put("support_m/".$item['inner_img_en'], file_get_contents(public_path('old_data//support_measures//'.$item['title']."//".$item['inner_img_en'])), 'public');
+            }
+
             if (isset($adding_item['description']) && !empty($adding_item['description']))
                 $adding_item['description'] = file_get_contents(public_path('old_data//support_measures//'.$item['title']."//".$item['description']));
 
+            if (isset($adding_item['description_en']) && !empty($adding_item['description_en']))
+                $adding_item['description_en'] = file_get_contents(public_path('old_data//support_measures//'.$item['title']."//".$item['description_en']));
+
             if (isset($adding_item['short_description']) && !empty($adding_item['short_description']))
                 $adding_item['short_description'] = file_get_contents(public_path('old_data//support_measures//'.$item['title']."//".$item['short_description']));
+
+            if (isset($adding_item['short_description_en']) && !empty($adding_item['short_description_en']))
+                $adding_item['short_description_en'] = file_get_contents(public_path('old_data//support_measures//'.$item['title']."//".$item['short_description_en']));
 
             $adding_item['slug'] = Str::slug($item['title']);
 
