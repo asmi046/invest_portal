@@ -48,6 +48,7 @@ use App\MoonShine\Resources\InvestProjectResource;
 use App\MoonShine\Resources\InfrastricturPlaneResource;
 use App\MoonShine\Resources\SupportResource;
 use App\MoonShine\Resources\ProjectReestrResource;
+use App\MoonShine\Resources\SovetResource;
 
 final class MoonShineLayout extends AppLayout
 {
@@ -69,12 +70,14 @@ final class MoonShineLayout extends AppLayout
                 MenuItem::make('Меры поддержки', SupportResource::class),
                 MenuItem::make('Инвестиционные проекты', InvestProjectResource::class),
                 MenuItem::make('Реестр инвестпроектов', ProjectReestrResource::class),
+                MenuItem::make('Инвестиционный совет', SovetResource::class),
                 MenuItem::make('Инфраструктурные проекты', InfrastricturPlaneResource::class),
                 MenuItem::make('Документы', InvestDocumentResource::class),
                 MenuItem::make('Баннеры', BannerResource::class),
                 MenuItem::make('Показатели региона', RegionParametrResource::class),
                 MenuItem::make('Полезные ресурсы', PolResursResource::class),
                 MenuItem::make("Опции", OptionResource::class),
+
                 MenuItem::make('Контакты', ContactResource::class),
             ])->icon('circle-stack'),
 
@@ -89,10 +92,6 @@ final class MoonShineLayout extends AppLayout
                 fn() => route('cache_clear'),
             )->icon('arrow-path-rounded-square'),
 
-
-
-
-            MenuItem::make('ProjectReestrs', ProjectReestrResource::class),
         ];
     }
 

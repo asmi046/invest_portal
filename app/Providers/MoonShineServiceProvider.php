@@ -27,6 +27,7 @@ use App\MoonShine\Resources\InvestProjectResource;
 use App\MoonShine\Resources\InfrastricturPlaneResource;
 use App\MoonShine\Resources\SupportResource;
 use App\MoonShine\Resources\ProjectReestrResource;
+use App\MoonShine\Resources\SovetResource;
 
 class MoonShineServiceProvider extends ServiceProvider
 {
@@ -58,6 +59,7 @@ class MoonShineServiceProvider extends ServiceProvider
                 InfrastricturPlaneResource::class,
                 SupportResource::class,
                 ProjectReestrResource::class,
+                SovetResource::class,
             ])
             ->pages([
                 ...$config->getPages(),
