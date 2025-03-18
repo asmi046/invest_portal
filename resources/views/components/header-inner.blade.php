@@ -1,7 +1,7 @@
 @if($banner->isEmpty())
     <header id="header" style="background-image: url({{asset('img/ex-bg-header.jpg')}})">
 @else
-    <header id="header" style="background-image: url({{$banner}})">
+    <header id="header" style="background-image: url({{Storage::url($banner)}})">
 @endif
 
     <div class="header__top">

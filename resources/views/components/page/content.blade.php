@@ -6,8 +6,8 @@
 
 
     @if($img)
-        <a href="{{ $img }}" class="lg-gallery page-photo">
-            <img src="{{$img}}" alt="{{_tr($page->title, $page->title_en)}}">
+        <a href="{{ Storage::url($img) }}" class="lg-gallery page-photo">
+            <img src="{{Storage::url($img)}}" alt="{{_tr($page->title, $page->title_en)}}">
         </a>
     @endif
 
