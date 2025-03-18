@@ -11,8 +11,11 @@ class Menu extends Model
     use HasFactory;
 
     protected $fillable = [
-        'lnk',
-        'order',
+        'menu_name',
         'title',
+        'title_en',
+        'order',
+        'parent',
+        'lnk',
     ];
 }

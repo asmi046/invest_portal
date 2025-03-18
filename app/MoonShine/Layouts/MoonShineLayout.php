@@ -40,6 +40,14 @@ use MoonShine\MenuManager\MenuGroup;
 use App\MoonShine\Resources\RegionParametrResource;
 use App\MoonShine\Resources\NewsResource;
 use App\MoonShine\Resources\PolResursResource;
+use App\MoonShine\Resources\AreaResource;
+use App\MoonShine\Resources\ContactResource;
+use App\MoonShine\Resources\InvestDocumentResource;
+use App\MoonShine\Resources\MenuResource;
+use App\MoonShine\Resources\InvestProjectResource;
+use App\MoonShine\Resources\InfrastricturPlaneResource;
+use App\MoonShine\Resources\SupportResource;
+use App\MoonShine\Resources\ProjectReestrResource;
 
 final class MoonShineLayout extends AppLayout
 {
@@ -53,17 +61,26 @@ final class MoonShineLayout extends AppLayout
     protected function menu(): array
     {
         return [
+            MenuItem::make('Меню', MenuResource::class)->icon('bars-3-bottom-left'),
+
             MenuGroup::make('Контент', [
                 MenuItem::make('Индустриальные парки', IndustrealAreaResource::class),
+                MenuItem::make('Земельные участки', AreaResource::class),
+                MenuItem::make('Меры поддержки', SupportResource::class),
+                MenuItem::make('Инвестиционные проекты', InvestProjectResource::class),
+                MenuItem::make('Реестр инвестпроектов', ProjectReestrResource::class),
+                MenuItem::make('Инфраструктурные проекты', InfrastricturPlaneResource::class),
+                MenuItem::make('Документы', InvestDocumentResource::class),
                 MenuItem::make('Баннеры', BannerResource::class),
                 MenuItem::make('Показатели региона', RegionParametrResource::class),
                 MenuItem::make('Полезные ресурсы', PolResursResource::class),
                 MenuItem::make("Опции", OptionResource::class),
-            ]),
+                MenuItem::make('Контакты', ContactResource::class),
+            ])->icon('circle-stack'),
 
-            MenuItem::make('Новости', NewsResource::class),
+            MenuItem::make('Новости', NewsResource::class)->icon('chat-bubble-bottom-center-text'),
 
-            MenuItem::make("Страницы", PageResource::class),
+            MenuItem::make("Страницы", PageResource::class)->icon('document-text'),
 
             ...parent::menu(),
 
@@ -74,6 +91,8 @@ final class MoonShineLayout extends AppLayout
 
 
 
+
+            MenuItem::make('ProjectReestrs', ProjectReestrResource::class),
         ];
     }
 

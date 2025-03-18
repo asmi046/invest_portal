@@ -12,6 +12,8 @@ class InvestDocument extends Model
     protected $fillable = [
         'title',
         'subtype',
+        'title_en',
+        'subtype_en',
         'file'
     ];
 }

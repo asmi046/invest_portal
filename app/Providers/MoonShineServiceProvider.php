@@ -19,6 +19,14 @@ use App\MoonShine\Resources\BannerResource;
 use App\MoonShine\Resources\RegionParametrResource;
 use App\MoonShine\Resources\NewsResource;
 use App\MoonShine\Resources\PolResursResource;
+use App\MoonShine\Resources\AreaResource;
+use App\MoonShine\Resources\ContactResource;
+use App\MoonShine\Resources\InvestDocumentResource;
+use App\MoonShine\Resources\MenuResource;
+use App\MoonShine\Resources\InvestProjectResource;
+use App\MoonShine\Resources\InfrastricturPlaneResource;
+use App\MoonShine\Resources\SupportResource;
+use App\MoonShine\Resources\ProjectReestrResource;
 
 class MoonShineServiceProvider extends ServiceProvider
 {
@@ -42,6 +50,14 @@ class MoonShineServiceProvider extends ServiceProvider
                 RegionParametrResource::class,
                 NewsResource::class,
                 PolResursResource::class,
+                AreaResource::class,
+                ContactResource::class,
+                InvestDocumentResource::class,
+                MenuResource::class,
+                InvestProjectResource::class,
+                InfrastricturPlaneResource::class,
+                SupportResource::class,
+                ProjectReestrResource::class,
             ])
             ->pages([
                 ...$config->getPages(),
