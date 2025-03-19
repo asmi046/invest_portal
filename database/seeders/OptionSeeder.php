@@ -43,6 +43,13 @@ class OptionSeeder extends Seeder
                 ],
 
                 [
+                    "name" => "gubernator_foto_show",
+                    "type" => "plan",
+                    'title' => 'Показывать Фото губернатора (0/1)',
+                    "value" => "1",
+                ],
+
+                [
                     "name" => "gubernator_message",
                     "type" => "plan",
                     'title' => 'Написать губернатору',

@@ -1,7 +1,11 @@
 <section class="greeting-section">
     <div class="inner">
         <div class="governor">
-            <img src="{{ Storage::url($optionsa["gubernator_foto"])}}" alt="{{ _tr($optionsa["gubernator_dolg"], $optionsa["gubernator_dolg_en"]) }}" class="governor__photo">
+
+            @if ( $optionsa['gubernator_foto_show'] === "1" )
+                <img src="{{ Storage::url($optionsa["gubernator_foto"])}}" alt="{{ _tr($optionsa["gubernator_dolg"], $optionsa["gubernator_dolg_en"]) }}" class="governor__photo">
+            @endif
+
             <span class="governor__name">{{ _tr($optionsa["gubernator_name"], $optionsa["gubernator_name_en"]) }}</span>
             <span class="governor__position">{{ _tr($optionsa["gubernator_dolg"], $optionsa["gubernator_dolg_en"]) }}</span>
             <a target="_blank" href="{{ $optionsa["gubernator_message"] }}" class="btn" target="_blank">{{__('Написать губернатору')}}</a>
