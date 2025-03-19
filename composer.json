@@ -12,7 +12,8 @@
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.8",
         "moonshine/moonshine": "^3.0",
-        "moonshine/tinymce": "^1.0"
+        "moonshine/tinymce": "^1.0",
+        "unisharp/laravel-filemanager": "^2.10"
     },
     "require-dev": {
         "asmi046/site_skelet": "^1.0",

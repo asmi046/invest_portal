@@ -1,14 +1,18 @@
 @extends('layouts.all')
 
+
 @php
-    $title = "Инвестиционные площадки Курской области";
-    $description = "Инвестиционные площадки Курской области для реализации инвестиционных проектов"
+    extract(get_page_meta(
+        "Страница инвестийионного портала Курской области",
+        isset($info)? $info : null
+    ));
 @endphp
+
 
 @section('title', $title)
 @section('description', $description)
-@section('banner', 'img/top_img/areas.webp')
-@section('page_title', $title)
+@section('banner', $page_banner)
+@section('page_title', $page_title)
 
 
 @section('main')

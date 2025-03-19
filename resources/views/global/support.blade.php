@@ -1,14 +1,17 @@
 @extends('layouts.all')
 
 @php
-    $title = "Меры поддержки инвестора";
-    $description = "Меры поддержки инвестора при созданни инвестиционных проектов в Курской области"
+    extract(get_page_meta(
+        "Страница инвестийионного портала Курской области",
+        isset($info)? $info : null
+    ));
 @endphp
+
 
 @section('title', $title)
 @section('description', $description)
-@section('banner', '')
-@section('page_title', $title)
+@section('banner', $page_banner)
+@section('page_title', $page_title)
 
 @section('main')
     <div class="section-with-submenu">

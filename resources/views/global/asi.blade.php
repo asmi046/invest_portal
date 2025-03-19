@@ -1,14 +1,17 @@
 @extends('layouts.all')
 
 @php
-    $title = "Информация для экспертов АСИ";
-    $description = "Информация для экспертов АСИ"
+    extract(get_page_meta(
+        "Страница инвестийионного портала Курской области",
+        isset($info)? $info : null
+    ));
 @endphp
+
 
 @section('title', $title)
 @section('description', $description)
-@section('banner', 'img/top_img/asi.webp')
-@section('page_title', $title)
+@section('banner', $page_banner)
+@section('page_title', $page_title)
 
 @section('main')
     <div class="section-with-submenu">
@@ -21,7 +24,6 @@
                         :page="$info"
                     ></x-page.content>
                 @endif
-
 
             </div>
             <x-page.submenu :title="__('Подробнее').':'" :puncts="$puncts"></x-page.submenu>

@@ -16,7 +16,7 @@
     @if($page->files)
         @foreach ($page->files as $item)
             <x-widget-file
-            :lnk="Storage::url('page_files/'.$item['file'])"
+            :lnk="Storage::url($item['file'])"
             :title="_tr($item['title'], isset($item['title_en'])?$item['title_en']:null)"
             ></x-widget-file>
         @endforeach

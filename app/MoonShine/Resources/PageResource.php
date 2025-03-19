@@ -90,7 +90,7 @@ class PageResource extends ModelResource
                     ]),
                 ]),
 
-                Tab::make('Файлы', [
+                Tab::make('SEO', [
                     Text::make('SEO заголовок', 'seo_title'),
                     Textarea::make('SEO описание', 'seo_description'),
                 ]),

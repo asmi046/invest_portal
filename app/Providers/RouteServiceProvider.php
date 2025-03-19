@@ -38,6 +38,10 @@ class RouteServiceProvider extends ServiceProvider
 
             Route::middleware('web')
                 ->group(base_path('routes/asmi_consultation.php'));
+
+            Route::middleware('moonshine')
+                ->namespace($this->namespace)
+                ->group(base_path('routes/moonshine.php'));
         });
     }
 }

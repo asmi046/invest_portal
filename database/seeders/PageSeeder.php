@@ -419,8 +419,11 @@ class PageSeeder extends Seeder
                 $adding_item['description_en'] = file_get_contents(public_path('old_data//pages//'.$item['text_en']));
 
             if (isset($item['files']) && !empty($item['files'])) {
+                $fi = 0;
                 foreach ($item['files'] as $fitem) {
                     Storage::disk('public')->put("page_files/".$fitem['file'], file_get_contents(public_path('old_data/pages/files/'.$fitem['file'])), 'public');
+                    $item['files'][$fi]['file'] = "page_files/".$fitem['file'];
+                    $fi++;
                 }
                 $adding_item['files'] = json_encode($item['files']);
             }
@@ -488,8 +491,11 @@ class PageSeeder extends Seeder
 
 
                     if (isset($subitem['files']) && !empty($subitem['files'])) {
+                        $fi = 0;
                         foreach ($subitem['files'] as $fsitem) {
                             Storage::disk('public')->put("page_files/".$fsitem['file'], file_get_contents(public_path('old_data/pages/files/'.$fsitem['file'])), 'public');
+                            $subitem['files'][$fi]['file'] = "page_files/".$fitem['file'];
+                            $fi++;
                         }
                         $inserted_sub_item['files'] = json_encode($subitem['files']);
                     }

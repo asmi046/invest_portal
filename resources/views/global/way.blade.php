@@ -1,14 +1,18 @@
 @extends('layouts.all')
 
 @php
-    $title = "Путь инвестора";
-    $description = "Путь инвестора который необходимо пройти для создания инвестиционного проекта"
+    extract(get_page_meta(
+        "Страница инвестийионного портала Курской области",
+        isset($info)? $info : null
+    ));
 @endphp
+
+
 
 @section('title', $title)
 @section('description', $description)
-@section('banner', null)
-@section('page_title', $title)
+@section('banner', $page_banner)
+@section('page_title', $page_title)
 
 
 @section('main')

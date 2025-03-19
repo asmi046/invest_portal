@@ -7,7 +7,7 @@
             "text" => "RUS_analytics_ko.html",
             "text_en" => "ENG_analytics_ko.html",
             "img" => "",
-            "banner" => "",
+            "banner" => "analitics.webp",
         ],
 
         'Муниципальный инвестиционный стандарт в Курской области' => [
@@ -17,7 +17,7 @@
             "text_en" => "ENG_municipal_investment_standard.html",
             "img" => "",
 
-            "banner" => "",
+            "banner" => "crop.webp",
 
             "files" => [
                 [
@@ -44,7 +44,7 @@
             "text" => "RUS_investment_sites.html",
             "text_en" => "ENG_investment_sites.html",
             "img" => "",
-            "banner" => "",
+            "banner" => "areas.webp",
         ],
 
         'Путь инвестора' => [
@@ -53,7 +53,7 @@
             "text" => "RUS_investor_way.html",
             "text_en" => "ENG_investor_way.html",
             "img" => "",
-            "banner" => "",
+            "banner" => "way.webp",
         ],
 
         'Навигатор мер поддержки' => [
@@ -62,7 +62,7 @@
             "text" => "RUS_support_nav.html",
             "text_en" => "ENG_support_nav.html",
             "img" => "",
-            "banner" => "",
+            "banner" => "centre.webp",
         ],
 
         'Информация для экспертов АСИ' => [
