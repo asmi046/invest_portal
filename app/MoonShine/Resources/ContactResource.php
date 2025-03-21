@@ -124,6 +124,7 @@ class ContactResource extends ModelResource
     {
         return [
             Text::make('Орган', 'organ'),
+            Text::make('Контактное лицо', 'person'),
             Text::make('Телефон', 'phone'),
             Text::make('E-mail', 'email'),
         ];
