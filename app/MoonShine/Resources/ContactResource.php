@@ -123,10 +123,10 @@ class ContactResource extends ModelResource
     protected function filters(): iterable
     {
         return [
-            Text::make('Орган', 'organ'),
+            // Text::make('Орган', 'organ'),
             Text::make('Контактное лицо', 'person'),
-            Text::make('Телефон', 'phone'),
-            Text::make('E-mail', 'email'),
+            // Text::make('Телефон', 'phone'),
+            // Text::make('E-mail', 'email'),
         ];
     }
 
