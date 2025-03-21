@@ -7,7 +7,7 @@
     </div>
     <div class="official-person__img-box">
         @if ($item->img)
-            <img src="{{ Storage::url('contacts/'.$item->img)}}" alt="">
+            <img src="{{ Storage::url($item->img)}}" alt="">
         @endif
     </div>
 </div>
