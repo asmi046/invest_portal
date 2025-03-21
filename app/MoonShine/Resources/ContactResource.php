@@ -16,6 +16,8 @@ use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Contracts\UI\ComponentContract;
 use MoonShine\Laravel\Resources\ModelResource;
 
+use Illuminate\Contracts\Database\Eloquent\Builder;
+
 /**
  * @extends ModelResource<Contact>
  */
@@ -36,7 +38,7 @@ class ContactResource extends ModelResource
             ID::make()->sortable(),
             // Image::make('Фото/лого','img')->dir('contacts'),
             Text::make('Орган', 'organ'),
-            Text::make('Адрес', 'adres'),
+            // Text::make('Адрес', 'adres'),
             Text::make('Контактное лицо', 'person'),
             Text::make('Телефон', 'phone'),
             Text::make('E-mail', 'email'),
@@ -123,10 +125,18 @@ class ContactResource extends ModelResource
     protected function filters(): iterable
     {
         return [
-            // Text::make('Орган', 'organ'),
-            Text::make('Контактное лицо', 'person'),
-            // Text::make('Телефон', 'phone'),
-            // Text::make('E-mail', 'email'),
+            Text::make('Орган', 'organ')->onApply(function (Builder $query, mixed $value, Text $field) {
+                $query = (empty($value))?null:$query->where('organ', 'LIKE', "%$value%");
+            }),
+            Text::make('Контактное лицо', 'person')->onApply(function (Builder $query, mixed $value, Text $field) {
+                $query = (empty($value))?null:$query->where('person', 'LIKE', "%$value%");
+            }),
+            Text::make('Телефон', 'phone')->onApply(function (Builder $query, mixed $value, Text $field) {
+                $query = (empty($value))?null:$query->where('phone', 'LIKE', "%$value%");
+            }),
+            Text::make('E-mail', 'email')->onApply(function (Builder $query, mixed $value, Text $field) {
+                $query = (empty($value))?null:$query->where('email', 'LIKE', "%$value%");
+            }),
         ];
     }
 
