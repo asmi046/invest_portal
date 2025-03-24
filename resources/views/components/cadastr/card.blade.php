@@ -1,6 +1,6 @@
 <div class="area-card">
-    <div class="area-card__img-box" data-src="{{Storage::url("portal_areas/".$item->img)}}">
-        <img src="{{Storage::url("portal_areas/".$item->img)}}" alt="{{$item->name}}">
+    <div class="area-card__img-box" data-src="{{Storage::url($item->img)}}">
+        <img src="{{Storage::url($item->img)}}" alt="{{$item->name}}">
     </div>
     <div class="area-card__info">
         <h2 class="area-card__caption">{{ _tr($item->name, $item->name_en) }}</h2>
