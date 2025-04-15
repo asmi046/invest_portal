@@ -51,9 +51,10 @@ class MenuResource extends ModelResource
                 ID::make(),
                 Text::make('Название меню', 'menu_name'),
                 Text::make('Имя пункта', 'title'),
-                Number::make('Родитель', 'parent'),
+                Text::make('Имя пункта (en)', 'title_en'),
+                Number::make('Родитель', 'parent')->default(0),
                 Number::make('Порядок', 'order'),
-                Url::make("Ссылка", 'lnk')
+                Text::make("Ссылка", 'lnk')
             ])
         ];
     }
@@ -67,9 +68,10 @@ class MenuResource extends ModelResource
             ID::make(),
             Text::make('Название меню', 'menu_name'),
             Text::make('Имя пункта', 'title'),
+            Text::make('Имя пункта (en)', 'title_en'),
             Number::make('Родитель', 'parent'),
             Number::make('Порядок', 'order'),
-            Url::make("Ссылка", 'lnk')
+            Text::make("Ссылка", 'lnk')
         ];
     }
 

@@ -21,6 +21,7 @@ use Illuminate\Database\Eloquent\Model;
 use MoonShine\UI\Components\Layout\Box;
 use Illuminate\Database\Eloquent\Builder;
 use MoonShine\Contracts\UI\FieldContract;
+use MoonShine\UI\Components\ActionButton;
 use MoonShine\Contracts\UI\ComponentContract;
 use MoonShine\Laravel\Resources\ModelResource;
 use MoonShine\Laravel\Fields\Relationships\BelongsTo;
@@ -95,6 +96,13 @@ class PageResource extends ModelResource
                     Textarea::make('SEO описание', 'seo_description'),
                 ]),
             ]),
+
+            ActionButton::make(
+                label: 'Перейти к странице',
+                url: route('page', $this->getItem()['slug']),
+            )
+            ->success()
+            ->blank()
 
         ];
     }
