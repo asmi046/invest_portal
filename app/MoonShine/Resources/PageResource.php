@@ -99,7 +99,7 @@ class PageResource extends ModelResource
 
             ActionButton::make(
                 label: 'Перейти к странице',
-                url: route('page', $this->getItem()['slug']),
+                url: route('page', ($this->getItem())?$this->getItem()['slug']:"#"),
             )
             ->success()
             ->blank()
