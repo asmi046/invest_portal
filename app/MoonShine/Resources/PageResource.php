@@ -69,14 +69,14 @@ class PageResource extends ModelResource
                     TinyMce::make('Описание (en)', 'description_en'),
                 ]),
                 Tab::make('Изображения', [
-                    Image::make("Баннер", 'banner')->dir('page_banners'),
-                    Image::make("Картинка", 'img')->dir('page_images'),
-                    Image::make("Картинка (en)", 'img_en')->dir('page_images'),
+                    Image::make("Баннер", 'banner')->dir('page_banners')->removable(),
+                    Image::make("Картинка", 'img')->dir('page_images')->removable(),
+                    Image::make("Картинка (en)", 'img_en')->dir('page_images')->removable(),
                     Json::make('Галерея', 'images')->fields([
                         Position::make(),
                         Text::make('Название', 'title'),
                         Text::make('Название (en)', 'title_en'),
-                        Image::make("Изображение", 'img')->dir('page_inner_img')
+                        Image::make("Изображение", 'img')->dir('page_inner_img')->removable()
                     ]),
                 ]),
 
@@ -119,9 +119,9 @@ class PageResource extends ModelResource
             Slug::make("Ссылка", 'slug'),
             BelongsTo::make("Родительская", 'parent_page', formatted: 'title', resource: PageResource::class)->nullable(),
             Text::make("Шаблон", 'template'),
-            Image::make("Баннер", 'banner')->dir('page_banners'),
-            Image::make("Картинка", 'img')->dir('page_images'),
-            Image::make("Картинка (en)", 'img_en')->dir('page_images'),
+            Image::make("Баннер", 'banner')->dir('page_banners')->removable(),
+            Image::make("Картинка", 'img')->dir('page_images')->removable(),
+            Image::make("Картинка (en)", 'img_en')->dir('page_images')->removable(),
             TinyMce::make('Описание', 'description'),
             TinyMce::make('Описание (en)', 'description_en'),
             Json::make('Галерея', 'images')->fields([
