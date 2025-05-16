@@ -137,8 +137,8 @@ class PageResource extends ModelResource
                 Text::make('Название (en)', 'title_en'),
                 Textarea::make('Описание', 'description'),
                 Textarea::make('Описание (en)', 'description_en'),
-                File::make("Файл", 'file')->dir('page_files')->removable()
-            ]),
+                File::make("Файл", 'file')->dir('page_files')
+            ])->removable(),
 
             Text::make('SEO заголовок', 'seo_title'),
             Textarea::make('SEO описание', 'seo_description'),
