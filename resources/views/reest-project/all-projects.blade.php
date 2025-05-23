@@ -23,11 +23,37 @@
             ></x-page.content>
             <br>
             <br>
-            <div class="reestr-project-card-box">
+
+            <div class="ip-tab indecators-tab">
+            <div class="ip-tab-controller">
+                @foreach ($all_projects as $key => $items)
+                    <button @class(['ip-tab-controller__btn', 'active' => $loop->index == 0])>0{{$loop->index+1}} {{ __($key) }}</button>
+                @endforeach
+
+
+            </div>
+
+                        @foreach ($all_projects as $key => $items)
+                            <div
+                            @class(['ip-tab__display', 'active' => $loop->index == 0])>
+                                <div class="reestr-project-card-box">
+                                    @foreach ($items as $item)
+                                        <x-reestr-project.card :item="$item"></x-reestr-project.card>
+                                    @endforeach
+                                </div>
+                            </div>
+
+                        @endforeach
+
+            </div>
+
+            {{-- <div class="reestr-project-card-box">
                 @foreach ($all_projects as $item)
                     <x-reestr-project.card :item="$item"></x-reestr-project.card>
                 @endforeach
-            </div>
+            </div> --}}
+
+
         </div>
     </div>
 @endsection

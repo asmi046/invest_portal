@@ -12,8 +12,15 @@ class ProjectReestrController extends Controller
         $all_projects = ProjectReestr::all();
         $page = Page::where('title', "Реестр инвестиционных проектов")->first();
 
+        $all_projects_key = [];
+        foreach ($all_projects as $item) {
+            $all_projects_key[$item->state][] = $item;
+        }
+
+        // dd($all_projects_key);
+
         return view('reest-project.all-projects', [
-            'all_projects' => $all_projects,
+            'all_projects' => $all_projects_key,
             'page' => $page
         ]);
     }
