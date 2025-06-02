@@ -26,6 +26,8 @@
 
     <meta name="_token" content="{{ csrf_token() }}">
 
+    <meta name="yandex-verification" content="bf37792a96665959" />
+
     @vite([
         'resources/css/app.css',
         'public/scss/main.scss',
