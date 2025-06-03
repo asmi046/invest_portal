@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string('name')->unicue();
             $table->string('type')->default('plan');
             $table->string('title');
-            $table->text('value')->default("");
+            // $table->text('value')->default("");
+            $table->text('value');
         });
     }
 
