@@ -38,7 +38,7 @@
             <div class="columns-box columns-box--two-col">
                 @foreach ($page->sostav as $item)
                     <x-widget-file
-                        :lnk="Storage::url($subitem['lnk'])"
+                        :lnk="Storage::url($item['lnk'])"
                         :title="_tr($item['title'], isset($item['title_en'])?$item['title_en']:null)"
                     ></x-widget-file>
                 @endforeach
@@ -49,7 +49,7 @@
             <div class="columns-box columns-box--two-col">
                 @foreach ($page->work_planes as $item)
                     <x-widget-file
-                        :lnk="Storage::url($subitem['lnk'])"
+                        :lnk="Storage::url($item['lnk'])"
                         :title="_tr($item['title'], isset($item['title_en'])?$item['title_en']:null)"
                     ></x-widget-file>
                 @endforeach
