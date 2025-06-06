@@ -117,14 +117,14 @@ class SovetResource extends ModelResource
         return [
             ID::make(),
 
-                            Text::make("Название совета", "title"),
+                Text::make("Название совета", "title"),
                 Text::make("Название совета (en)", "title_en"),
                 Text::make("Ссылка", "slug"),
 
                 Text::make("Название положения о совете", "pologenie_title"),
                 Text::make("Название положения о совете (en)", "pologenie_title_en"),
 
-                File::make("Файл презентации", "presentation")->dir('sovets'),
+                File::make("Файл презентации", "pologenie")->dir('sovets'),
 
 
                 Json::make('Состав совета', 'sostav')
