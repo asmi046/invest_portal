@@ -28,7 +28,7 @@
 
             @if ($page->pologenie)
                 <x-widget-file
-                    :lnk="Storage::url('sovets/'.$page['pologenie'])"
+                    :lnk="Storage::url($page['pologenie'])"
                     :title="_tr($page['pologenie_title'], isset($page['pologenie_title_en'])?$page['pologenie_title_en']:null)"
                 ></x-widget-file>
             @endif
