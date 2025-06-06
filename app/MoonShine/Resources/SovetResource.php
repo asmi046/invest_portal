@@ -55,7 +55,7 @@ class SovetResource extends ModelResource
                 Text::make("Название положения о совете", "pologenie_title"),
                 Text::make("Название положения о совете (en)", "pologenie_title_en"),
 
-                File::make("Файл презентации", "presentation")->dir('sovets'),
+                File::make("Положение", "pologenie")->dir('sovets'),
 
 
                 Json::make('Состав совета', 'sostav')
@@ -124,7 +124,7 @@ class SovetResource extends ModelResource
                 Text::make("Название положения о совете", "pologenie_title"),
                 Text::make("Название положения о совете (en)", "pologenie_title_en"),
 
-                File::make("Файл презентации", "pologenie")->dir('sovets'),
+                File::make("Положение", "pologenie")->dir('sovets'),
 
 
                 Json::make('Состав совета', 'sostav')
