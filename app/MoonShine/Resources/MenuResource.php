@@ -36,8 +36,8 @@ class MenuResource extends ModelResource
             ID::make()->sortable(),
             Text::make('Название меню', 'menu_name'),
             Text::make('Имя пункта', 'title'),
-            Number::make('Родитель', 'parent'),
-            Number::make('Порядок', 'order')
+            Number::make('Родитель', 'parent')->sortable(),
+            Number::make('Порядок', 'order')->sortable()
         ];
     }
 

@@ -10,6 +10,7 @@ use MoonShine\UI\Fields\ID;
 use MoonShine\UI\Fields\File;
 use MoonShine\UI\Fields\Json;
 use MoonShine\UI\Fields\Text;
+use MoonShine\UI\Fields\Position;
 use MoonShine\UI\Fields\Textarea;
 use MoonShine\TinyMce\Fields\TinyMce;
 use Illuminate\Database\Eloquent\Model;
