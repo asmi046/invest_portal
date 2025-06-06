@@ -34,6 +34,7 @@ class SovetController extends Controller
             $video[$item['year']][] = $item;
         }
 
+        // dd($protocols);
 
         return view('sovet.sovet-page', [
             'page' => $sovet,
