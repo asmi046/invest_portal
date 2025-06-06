@@ -55,7 +55,7 @@ class SovetResource extends ModelResource
                 Text::make("Название положения о совете", "pologenie_title"),
                 Text::make("Название положения о совете (en)", "pologenie_title_en"),
 
-                File::make("Положение", "pologenie")->dir('sovets'),
+                File::make("Положение", "pologenie")->dir('sovets')->removable(),
 
 
                 Json::make('Состав совета', 'sostav')
@@ -65,8 +65,8 @@ class SovetResource extends ModelResource
                     Text::make('Нименование (en)', 'title_en')->unescape(),
                     Textarea::make('Описание', "description"),
                     Textarea::make('Описание (en)', "description_en"),
-                    File::make("Файл", "lnk")->dir('sovets'),
-                ]),
+                    File::make("Файл", "lnk")->dir('sovets')->removable(),
+                ])->removable(),
 
                 Json::make('Рабочий план', 'work_planes')
                 ->fields([
@@ -75,8 +75,8 @@ class SovetResource extends ModelResource
                     Text::make('Нименование (en)', 'title_en')->unescape(),
                     Textarea::make('Описание', "description"),
                     Textarea::make('Описание (en)', "description_en"),
-                    File::make("Файл", "lnk")->dir('sovets'),
-                ]),
+                    File::make("Файл", "lnk")->dir('sovets')->removable(),
+                ])->removable(),
 
                 Json::make('Протоколы', 'protocols')
                 ->fields([
@@ -86,8 +86,8 @@ class SovetResource extends ModelResource
                     Text::make('Год', 'year')->unescape(),
                     Textarea::make('Описание', "description"),
                     Textarea::make('Описание (en)', "description_en"),
-                    File::make("Файл", "lnk")->dir('sovets'),
-                ]),
+                    File::make("Файл", "lnk")->dir('sovets')->removable(),
+                ])->removable(),
 
                 Json::make('Видео заседаний совета', 'video')
                 ->fields([
@@ -97,8 +97,8 @@ class SovetResource extends ModelResource
                     Text::make('Год', 'year')->unescape(),
                     Textarea::make('Описание', "description"),
                     Textarea::make('Описание (en)', "description_en"),
-                    File::make("Файл", "lnk")->dir('sovets'),
-                ]),
+                    File::make("Файл", "lnk")->dir('sovets')->removable(),
+                ])->removable(),
 
                 TinyMce::make('Описание проекта', "description"),
                 TinyMce::make('Описание проекта  (en)', "description_en"),
