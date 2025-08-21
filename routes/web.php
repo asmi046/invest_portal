@@ -7,6 +7,7 @@ use App\Http\Controllers\LawController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\SovetController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\CadastrController;
 use App\Http\Controllers\SupportController;
 use App\Http\Controllers\MunicipalController;
@@ -52,6 +53,8 @@ Route::get('/news', [NewsController::class, "index"])->name('news_list');
 
 // --------------Обединяющие-разделы--------------
 
+
+Route::get('/search', [SearchController::class, "index"])->name('search');
 
 Route::get('/analitics', [GlobalPageController::class, "analitics"])->name('global_analitics');
 Route::get('/investor_way', [GlobalPageController::class, "investor_way"])->name('global_investor_way');
